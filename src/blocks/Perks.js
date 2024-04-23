@@ -6,10 +6,7 @@ import Title from '@/components/UI/Title'
 
 export default function Perks({ data }) {
   return (
-    <Section
-      settings={data?.settings}
-      className="bg-zinc-100 py-10 dark:bg-[#0d0d10] lg:py-20 "
-    >
+    <Section settings={data?.settings} className="bg-white py-10 lg:py-20 ">
       <Container>
         {data?.title && (
           <Title

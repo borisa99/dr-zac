@@ -5,7 +5,7 @@ import {
   SelectField,
   ImageField,
   SettingsGroup,
-} from '../fields';
+} from '../fields'
 
 const Config = {
   label: 'Blocks',
@@ -20,6 +20,7 @@ const Config = {
         Title,
         Content,
         Buttons,
+        ImageField(),
         SelectField('default', ['default', 'centered', 'full']),
         SettingsGroup,
       ],
@@ -87,6 +88,6 @@ const Config = {
       ],
     },
   ],
-};
+}
 
-export default Config;
+export default Config

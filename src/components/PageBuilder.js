@@ -41,12 +41,26 @@ export const query = graphql`
     blocks {
       type
       title
+      title2
       content
       columns {
         title
         content
       }
       photo {
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              quality: 72
+              placeholder: DOMINANT_COLOR
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+        alt
+      }
+      photo2 {
         image {
           childImageSharp {
             gatsbyImageData(

@@ -7,20 +7,22 @@ permalink: /
 thumbnail: ''
 blocks:
   - type: hero
-    title: Henlo.
+    title: Hello I'm
+    title2: Doctor Zac
     content: |-
-      ## The most advanced starter for Gatsby & Netlify CMS.
-
-      Extensible, block based starter for Netlify CMS.\
-      Built with performance in mind, styled with TailwindCSS.
-
-      **Think lightweight WordPress.**
-    variant: centered
+      I am passionate about proactive, preventative healthcare, and inspiring others to live happier and healthier for longer. My specialty is bespoke vitality, medication formulation, and aesthetics so that all my patients thrive in their everyday lives.
+    variant: full
     buttons:
       - button:
           variant: default
-          content: Documentation
-          url: https://github.com/clean-commit/gatsby-starter-henlo
+          content: Learn more
+          url: /
+    photo:
+      alt: Dr Zac signature
+      image: /img/header/signature.png
+    photo2:
+      alt: Dr Zac
+      image: /img/header/drzac.png
   - type: perks
     title: Features
     columns:

@@ -8,10 +8,10 @@ export default function Title({
   className,
   ...props
 }) {
-  let style = 'dark:text-white font-semibold'
+  let style = ''
   switch (variant) {
     case 'hero':
-      style = `${style} text-5xl lg:text-7xl max-w-5xl mb-4 md:mb-8 hero-title`
+      style = `${style} text-7xl leading-[5rem] tracking-tight text-textMain`
       break
     case 'xl':
       style = `${style} text-4xl md:text-5xl`
@@ -33,11 +33,9 @@ export default function Title({
   return (
     <>
       {children && (
-        <Tag
-          className={cn(style, className)}
-          dangerouslySetInnerHTML={{ __html: children }}
-          {...props}
-        />
+        <Tag className={cn(style, className)} {...props}>
+          {children}
+        </Tag>
       )}
     </>
   )
