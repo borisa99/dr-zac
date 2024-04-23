@@ -79,6 +79,14 @@ module.exports = {
         modulePath: `${__dirname}/cms/cms.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets\/Icons/,
+        },
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

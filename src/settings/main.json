@@ -1,12 +1,24 @@
 {
   "nav": [
     {
-      "name": "Example Blog",
-      "permalink": "/blog/"
+      "name": "About me",
+      "permalink": "/"
     },
     {
-      "name": "Documentation",
-      "permalink": "https://github.com/clean-commit/gatsby-starter-henlo"
+      "name": "Media",
+      "permalink": "/"
+    },
+    {
+      "name": "Video",
+      "permalink": "/"
+    },
+    {
+      "name": "Blog",
+      "permalink": "/"
+    },
+    {
+      "name": "Contact me",
+      "permalink": "/"
     }
   ]
 }
