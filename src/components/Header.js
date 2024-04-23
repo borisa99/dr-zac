@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '@/assets/Icons/logo.svg'
-import DarkmodeToggle from './DarkmodeToggle'
 import Button from './UI/Button'
 import Container from './UI/Container'
 import Link from '@/resolvers/Link'
