@@ -8,10 +8,8 @@ import { cn } from '@/lib/helper'
 import Image from '@/resolvers/Image'
 
 export default function Hero({ data }) {
-  const isCentered = data?.variant === 'centered'
+  const isCentered = data?.variant === 'center'
   const isFull = data?.variant === 'full'
-
-  console.log(data)
 
   return (
     <Section
@@ -19,24 +17,27 @@ export default function Hero({ data }) {
       className={cn(
         'bg-hero relative',
         {
-          ' flex  items-center': isFull,
+          'flex items-center': isFull,
         },
         {
-          'flex justify-center py-20 text-center lg:py-44': isCentered,
+          'flex justify-center py-[7rem] text-center': isCentered,
         },
       )}
     >
-      <Container className="flex items-center">
+      <Container
+        className={cn('flex items-center', { 'justify-center': isCentered })}
+      >
         <div>
-          {data?.title && data.title2 && (
-            <Title Tag="h1" variant="hero" className="mb-3">
-              {data?.title} <span className="text-blue ">{data.title2}</span>
-            </Title>
+          {data?.title && (
+            <Title
+              Tag="h1"
+              variant="hero"
+              className="mb-3"
+              children={data?.title}
+            />
           )}
 
-          <Paragraph variant="hero" className="">
-            {data?.content}
-          </Paragraph>
+          <Paragraph variant={data?.variant} children={data?.content} />
           {data?.buttons && (
             <Buttons
               buttons={data?.buttons}
@@ -61,7 +62,9 @@ export default function Hero({ data }) {
             />
           </div>
         )}
-        <div className="bg-blue absolute bottom-0 right-0 h-[25.625rem] w-[43.75rem] rounded-tl-[12.844rem]" />
+        {isFull && (
+          <div className="bg-blue absolute bottom-0 right-0 h-[25.625rem] w-[43.75rem] rounded-tl-[12.844rem]" />
+        )}
       </Container>
     </Section>
   )
