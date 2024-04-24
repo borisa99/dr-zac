@@ -10,7 +10,6 @@ blocks:
     title: Insights on how to live a <span class='text-blue'>healthier life</span>.
     content: |-
       Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live a healthier life. Follow Dr Zac on Instagram <a target='_blank' href='https://www.instagram.com/drzac.co/' class='underlined-link'>@drzac.co</a> for a daily dose of health tips, hacks and facts.
-
     variant: center
     buttons:
       - button:

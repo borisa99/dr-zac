@@ -22,27 +22,18 @@ blocks:
     photo2:
       alt: Dr Zac
       image: /img/header/drzac.png
-  - type: perks
-    title: Features
-    columns:
-      - title: Manual Initialization
-        content: Ditch yaml for CMS configuration, use JS instead
-      - title: Support For Local Development
-        content: Develop & test Netlify CMS configuration locally.
-      - title: Integrated Forms
-        content: Create forms with Netlify CMS, powered by
-          [react-hook-form](https://react-hook-form.com/).
-      - title: Integrated Previews
-        content:
-          Blocks created by developers are instantly available for previews from
-          Netlify CMS layout
-      - title: Permalink-based page generation
-        content: 'Automatically generated pages based on permalinks. '
-      - title: Modify Navigation with ease
-        content:
-          Navigation can be modified with ease, without a need for changing the
-          code base
-    content: ''
+  - type: heading
+    title: <span>#better<span class='text-blue'>lifechoices</span></span>
+    content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.
+    buttons:
+      - button:
+          variant: default
+          content: Read my blog
+          url: /
+      - button:
+          variant: secondary
+          content: Watch my videos
+          url: /
   - type: content_image
     variant: reversed
     title: Block-based page creator with Previews

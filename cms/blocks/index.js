@@ -26,6 +26,12 @@ const Config = {
       ],
     },
     {
+      label: 'Heading',
+      name: 'heading',
+      widget: 'object',
+      fields: [Title, Content, Buttons],
+    },
+    {
       label: 'Content',
       name: 'content',
       widget: 'object',

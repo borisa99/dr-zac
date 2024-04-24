@@ -3,7 +3,7 @@ import { cn } from '@/lib/helper'
 
 export default function Title({
   children,
-  variant = 'base',
+  variant = 'hero',
   Tag = 'h2',
   className,
   ...props
@@ -12,6 +12,8 @@ export default function Title({
   switch (variant) {
     case 'hero':
       style = `${style} text-7xl leading-[5rem] tracking-tight text-textMain`
+    case 'heading':
+      style = `${style} text-7xl leading-[5rem] tracking-tighter text-textMain`
   }
   return (
     <>

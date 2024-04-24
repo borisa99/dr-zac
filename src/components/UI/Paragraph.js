@@ -4,14 +4,14 @@ import { cn } from '@/lib/helper'
 
 export default function Paragraph({
   children,
-  variant = 'hero',
+  variant = 'full',
   Tag = 'p',
   className,
   ...props
 }) {
   let style = 'text-[0.938rem] leading-6  text-[#3D3D3D] '
   switch (variant) {
-    case 'hero':
+    case 'full':
       style = `${style}`
       break
     case 'center':

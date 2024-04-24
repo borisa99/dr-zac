@@ -14,6 +14,9 @@ export default function Button({ className, button, children, ...props }) {
     case 'instagram':
       buttonStyle = `${buttonStyle} text-[#E4405F] bg-transparent border-[1px] flex gap-1 border-[#E4405F]`
       break
+    case 'secondary':
+      buttonStyle = `${buttonStyle} text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
+      break
     default:
       buttonStyle = `${buttonStyle} text-white bg-blue`
   }

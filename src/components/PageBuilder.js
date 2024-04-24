@@ -1,6 +1,7 @@
 import React from 'react'
 import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
+import Heading from '@/blocks/Heading'
 import Hero from '@/blocks/Hero'
 import Perks from '@/blocks/Perks'
 import RecentArticles from '@/blocks/RecentArticles'
@@ -14,6 +15,8 @@ export default function PageBuilder({ blocks, preview = false }) {
           switch (block.type) {
             case 'hero':
               return <Hero key={i} data={block} />
+            case 'heading':
+              return <Heading key={i} data={block} preview={preview} />
             case 'recentArticles':
               return <RecentArticles key={i} data={block} preview={preview} />
             case 'content_image':
