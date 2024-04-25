@@ -15,17 +15,19 @@ export default function Hero({ data }) {
     <Section
       settings={data?.settings}
       className={cn(
-        'bg-hero relative',
+        'bg-hero relative  pt-[14.25rem]',
         {
-          'flex items-center': isFull,
+          'flex items-center pb-0': isFull,
         },
         {
-          'flex justify-center py-[7rem] text-center': isCentered,
+          'flex justify-center  pb-32 text-center': isCentered,
         },
       )}
     >
       <Container
-        className={cn('flex items-center', { 'justify-center': isCentered })}
+        className={cn('flex items-center', {
+          'justify-center': isCentered,
+        })}
       >
         <div>
           {data?.title && (
@@ -63,7 +65,7 @@ export default function Hero({ data }) {
           </div>
         )}
         {isFull && (
-          <div className="bg-blue absolute bottom-0 right-0 h-[25.625rem] w-[43.75rem] rounded-tl-[12.844rem]" />
+          <div className="bg-blue absolute bottom-0 right-0 h-[25.625rem] w-[40%] rounded-tl-[12.844rem]" />
         )}
       </Container>
     </Section>

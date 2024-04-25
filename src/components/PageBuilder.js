@@ -1,10 +1,10 @@
 import React from 'react'
+import Articles from '@/blocks/Articles'
 import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
 import Heading from '@/blocks/Heading'
 import Hero from '@/blocks/Hero'
 import Perks from '@/blocks/Perks'
-import RecentArticles from '@/blocks/RecentArticles'
 import { graphql } from 'gatsby'
 
 export default function PageBuilder({ blocks, preview = false }) {
@@ -17,8 +17,8 @@ export default function PageBuilder({ blocks, preview = false }) {
               return <Hero key={i} data={block} />
             case 'heading':
               return <Heading key={i} data={block} preview={preview} />
-            case 'recentArticles':
-              return <RecentArticles key={i} data={block} preview={preview} />
+            case 'articles':
+              return <Articles key={i} data={block} preview={preview} />
             case 'content_image':
               return <ContentImage key={i} data={block} preview={preview} />
             case 'perks':
@@ -48,6 +48,19 @@ export const query = graphql`
       columns {
         title
         content
+        photo {
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 800
+                quality: 72
+                placeholder: DOMINANT_COLOR
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+          alt
+        }
       }
       photo {
         image {

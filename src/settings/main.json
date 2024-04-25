@@ -2,7 +2,7 @@
   "nav": [
     {
       "name": "About me",
-      "permalink": "/"
+      "permalink": "/about/"
     },
     {
       "name": "Media",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Blog",
-      "permalink": "/"
+      "permalink": "/blog/"
     },
     {
       "name": "Contact me",

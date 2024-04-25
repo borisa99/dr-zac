@@ -34,47 +34,25 @@ blocks:
           variant: secondary
           content: Watch my videos
           url: /
-  - type: content_image
-    variant: reversed
-    title: Block-based page creator with Previews
-    content:
-      Create blocks and reuse them across different pages that can be created
-      using Netlify CMS UI. Previews will be generated automatically for all
-      blocks!
+  - type: articles
+    variant: homepage
+    title: Dr. Zac’s Blog
+    content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.
     buttons:
       - button:
           variant: default
-          content: Get it now
-          url: https://github.com/clean-commit/gatsby-starter-henlo
-    photo:
-      image: /img/frame-69.png
-      alt: Block based page creator
-  - type: content_image
-    variant: default
-    photo:
-      alt: Premade components schema
-      image: /img/frame-77.png
-    title: Premade components & Netlify CMS settings
-    content: >-
-      We've created a collection of basic UI elements, so you can quickly create
-      new blocks and style them from a single component.
-
-
-      We did the same for Netlify CMS configuration. You can use basic fields to create new blocks quicker then ever!
-    buttons:
-      - button:
-          variant: default
-          content: Get it now
-          url: https://github.com/clean-commit/gatsby-starter-henlo
-  - type: content_image
-    variant: reversed
-    title: Configuration exposed through Netlify CMS
-    content: >-
-      No need to change configuration using `gatsby-node.js` or `.env` files!
-
-
-      Admins of the site can setup options using Netlify CMS's UI instead. This allows for reusable themes & templates
-    photo:
-      image: /img/frame-72.png
-      alt: Netlify CMS configuration with Henlo
+          content: View all articles
+          url: /blog
+  - type: perks
+    columns:
+      - title: Dr Zac's Tips
+        content: Dr. Zac’s will help you hack your way to better health.
+        photo:
+          alt: Dr Zac
+          image: /img/columns/viewVideos.png
+      - title: Dr Zac in the media
+        content: Watch Dr. Zac strut his stuff on TV and beyond.
+        photo:
+          alt: Dr Zac
+          image: /img/columns/viewVideos.png
 ---

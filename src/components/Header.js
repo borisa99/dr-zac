@@ -7,8 +7,8 @@ import nav from '@/settings/main.json'
 
 export default function Header() {
   return (
-    <header className="bg-hero text-textMain flex py-5 text-[0.813rem]">
-      <Container className="m-auto flex items-start justify-between">
+    <header className="text-textMain absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2  bg-transparent  text-[0.813rem]">
+      <Container className="m-auto flex items-start justify-between border-[1px] border-transparent border-b-[#E7E7E7] py-5">
         <Link to="/" className="cursor-pointer text-2xl font-bold">
           <Logo />
         </Link>

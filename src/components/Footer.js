@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
-// import { ReactComponent as Facebook } from '@/assets/Icons/facebook.svg'
-// import { ReactComponent as Instagram } from '@/assets/Icons/instagram.svg'
 import Facebook from '@/assets/Icons/facebook.svg'
 import Instagram from '@/assets/Icons/instagram.svg'
 import Logo from '@/assets/Icons/logo.svg'
-// import { ReactComponent as X } from '@/assets/Icons/x.svg'
-// import { ReactComponent as Youtube } from '@/assets/Icons/youtube.svg'
 import X from '@/assets/Icons/x.svg'
 import Youtube from '@/assets/Icons/youtube.svg'
 import Input from './Form/partials/Input'
@@ -22,24 +18,21 @@ const socials = [
   { Icon: X, url: 'https://twitter.com' },
 ]
 
+const inputData = {
+  name: '',
+  label: 'Email',
+  value: '',
+  input_type: 'email',
+  autocomplete: 'email',
+}
+
 export default function Footer() {
-  const [isSend, setIsSend] = useState(false)
-  const [isSending, setIsSending] = useState(false)
   const {
     register,
     handleSubmit,
     setValue,
-    reset,
     formState: { errors: fieldErrors },
   } = useForm()
-
-  const inputData = {
-    name: '',
-    label: 'Email',
-    value: '',
-    input_type: 'email',
-    autocomplete: 'email',
-  }
 
   const onSubmit = async (formData) => {
     console.log(formData)

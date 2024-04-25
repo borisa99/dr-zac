@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 const Layout = ({ nav = false, children }) => {
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-white dark:bg-black ">
+      <div className="flex min-h-screen flex-col bg-white">
         {nav && <Header />}
         <main className="wrapper">{children}</main>
         <Footer />

@@ -1,21 +1,30 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import { cn } from '@/lib/helper'
 
 export default function Paragraph({
   children,
-  variant = 'full',
+  variant = 'center',
   Tag = 'p',
   className,
   ...props
 }) {
-  let style = 'text-[0.938rem] leading-6  text-[#3D3D3D] '
+  let style = 'text-[0.938rem] leading-6 text-[#3D3D3D]'
   switch (variant) {
-    case 'full':
-      style = `${style}`
-      break
     case 'center':
       style = `${style} w-[50rem] mx-auto`
+      break
+    case 'article':
+      style = `${style} w-full text-[#545454]`
+      break
+    case 'article-variant':
+      style = `${style} w-full text-[#6D6D6D]`
+      break
+    case 'post':
+      style = `${style} w-full text-[#181818] leading-8`
+      break
+    default:
+      style = `${style}`
+      break
   }
   return (
     <Tag

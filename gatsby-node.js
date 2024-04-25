@@ -49,6 +49,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     settings: Settings
   }
 
+
+
   type Settings {
     variant: String
     padding_top: String

@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const useRecentArticles = () => {
+export const useArticles = () => {
   const {
     allMarkdownRemark: { edges: posts },
   } = useStaticQuery(graphql`
-    query RecentArticlesQuery {
+    query ArticlesQuery {
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { type: { eq: "post" } } }

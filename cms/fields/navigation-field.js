@@ -34,7 +34,7 @@ export function Field(label = 'Navigation', name = 'nav') {
         ],
       },
     ],
-  };
+  }
 }
 
-export default Field;
+export default Field

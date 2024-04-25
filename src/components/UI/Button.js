@@ -6,7 +6,7 @@ import Link from '@/resolvers/Link'
 
 export default function Button({ className, button, children, ...props }) {
   let buttonStyle =
-    'group inline-block  rounded uppercase px-5 py-4 cursor-pointer text-[0.813rem]'
+    'group inline-block rounded uppercase px-5 py-4 cursor-pointer text-[0.813rem]'
   switch (button?.variant) {
     case 'youtube':
       buttonStyle = `${buttonStyle} text-[#FF0000] bg-transparent border-[1px] flex gap-1 border-[#FF0000]`
@@ -16,6 +16,9 @@ export default function Button({ className, button, children, ...props }) {
       break
     case 'secondary':
       buttonStyle = `${buttonStyle} text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
+      break
+    case 'blog':
+      buttonStyle = `${buttonStyle} rounded-full text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
       break
     default:
       buttonStyle = `${buttonStyle} text-white bg-blue`
