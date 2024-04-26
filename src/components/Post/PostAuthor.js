@@ -9,7 +9,7 @@ const PostAuthor = ({ data }) => {
   const date = data?.node?.frontmatter.date ?? data.post.frontmatter.date
 
   return (
-    <div className="flex items-start gap-3">
+    <div className="flex items-start justify-center gap-3 xl:justify-start">
       <Image
         src={author?.thumbnail}
         className="h-[2.75rem] w-[2.75rem] rounded-full border"

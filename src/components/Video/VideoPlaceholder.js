@@ -5,9 +5,9 @@ import Image from '@/resolvers/Image'
 export default function VideoPlaceholder({ data, onIsPlaying }) {
   return (
     <>
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0 z-20 w-full xl:h-[41.25rem]">
         {data?.photo?.image && (
-          <div className="relative h-[41.25rem] w-full rounded-[1.25rem]">
+          <div className="relative h-auto w-full rounded-[1.25rem] xl:h-full">
             <Image
               src={data?.photo?.image}
               alt={data?.photo?.alt}
@@ -16,7 +16,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
             <div className="absolute inset-0 flex items-center justify-center">
               <button
                 onClick={() => onIsPlaying(true)}
-                className="duration-300 ease-in hover:scale-110 active:scale-90"
+                className="scale-50 duration-300 ease-in hover:scale-110 active:scale-90 xl:scale-100"
                 aria-label="Play Video"
               >
                 <ButtonPlay />
@@ -26,7 +26,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
         )}
 
         {data?.node?.frontmatter.thumbnail && (
-          <div className="relative h-[16.375rem] w-[24.5rem] rounded-xl">
+          <div className="relative h-[16.375rem] w-full rounded-xl xl:w-[24.5rem]">
             <Image
               src={data.node.frontmatter.thumbnail}
               alt={data.node.frontmatter.title}

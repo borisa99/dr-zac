@@ -71,6 +71,7 @@ const Config = {
       fields: [
         Title,
         Content,
+        Buttons,
         {
           label: 'Columns',
           name: 'columns',

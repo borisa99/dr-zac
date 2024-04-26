@@ -8,10 +8,10 @@ import FooterSocials from './FooterSocials'
 
 export default function Footer() {
   return (
-    <footer className="text-paragraph bottom-0 mt-auto w-full bg-white pt-10 text-white">
+    <footer className="bottom-0 mt-auto w-full bg-white pt-10 text-paragraph text-white">
       <Container>
         <FooterNewsletter />
-        <div className="text-textMain flex items-start justify-between gap-6 pb-10 pt-[3.75rem]">
+        <div className="flex flex-col items-center justify-center gap-6 pb-10 pt-[3.75rem] text-textMain xl:flex-row xl:items-start xl:justify-between ">
           <Logo />
           <FooterCTA />
           <FooterNavMenu />

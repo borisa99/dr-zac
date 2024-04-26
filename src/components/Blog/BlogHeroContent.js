@@ -11,7 +11,7 @@ export default function BlogHeroContent({ data }) {
       <Paragraph
         variant="article"
         children={data?.content}
-        className="mb-[4.125rem]"
+        className="mb-10 text-center xl:mb-[4.125rem] xl:text-left"
       />
     </>
   )

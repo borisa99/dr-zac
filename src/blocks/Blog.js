@@ -2,7 +2,8 @@ import React from 'react'
 import BlogHeroButtons from '@/components/Blog/BlogHeroButtons'
 import BlogHeroContent from '@/components/Blog/BlogHeroContent'
 import BlogHeroTitle from '@/components/Blog/BlogHeroTitle'
-import BlogList from '@/components/Post/PostList'
+import PostList from '@/components/Post/PostList'
+import Buttons from '@/components/UI/Buttons'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 
@@ -15,12 +16,22 @@ export default function Blog({ data, preview }) {
   const isHomepage = data?.variant === 'homepage'
 
   return (
-    <Section settings={data?.settings} className="bg-white pt-28">
+    <Section settings={data?.settings} className="bg-white pb-40 pt-28">
       <Container>
         <BlogHeroTitle data={data} />
         <BlogHeroContent data={data} />
-        <BlogList isVariant={isVariantLarge || isHomepage} preview={preview} />
+        <PostList
+          type={data.title.toUpperCase()}
+          isVariant={isVariantLarge || isHomepage}
+          preview={preview}
+        />
         <BlogHeroButtons data={data} />
+        {!isHomepage ? (
+          <Buttons
+            buttons={data?.buttons}
+            className="mt-20 flex justify-center xl:hidden"
+          />
+        ) : null}
       </Container>
     </Section>
   )

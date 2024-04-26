@@ -14,7 +14,8 @@ export default function PostList({ isVariant, preview }) {
           {isVariant && posts.length > 0 && (
             <PostCard variant="1" key={0} data={posts[0]} />
           )}
-          <div className="flex gap-6">
+
+          <div className="flex flex-col gap-[10rem] gap-y-12  md:flex-row md:gap-x-[1vw]">
             {posts &&
               posts.map((item, i) => {
                 return <PostCard variant="2" key={i} data={item} />

@@ -16,7 +16,7 @@ export default function Hero({ data }) {
     <Section
       settings={data?.settings}
       className={cn(
-        'bg-hero relative  pt-[14.25rem]',
+        'relative bg-hero pt-[14.25rem]',
         {
           'flex items-center pb-0': isFull,
         },
@@ -26,20 +26,22 @@ export default function Hero({ data }) {
       )}
     >
       <Container
-        className={cn('flex items-center', {
+        className={cn('flex flex-col items-center xl:flex-row', {
           'justify-center': isCentered,
         })}
       >
         <div>
-          <HeroTitle data={data} />
+          <HeroTitle isCentered={isCentered} data={data} />
           <Paragraph variant={data?.variant} children={data?.content} />
           <HeroButtons isCentered={isCentered} data={data} />
           {data?.photo?.image && (
-            <Image
-              src={data?.photo?.image}
-              alt={data?.photo?.alt}
-              className="mt-8 h-auto w-[8rem]"
-            />
+            <div className="mb-8 flex w-full justify-center xl:justify-start">
+              <Image
+                src={data?.photo?.image}
+                alt={data?.photo?.alt}
+                className=" mt-8 h-auto w-[8rem]"
+              />
+            </div>
           )}
         </div>
         <HeroImage data={data} isFull={isFull} />

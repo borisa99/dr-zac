@@ -6,7 +6,7 @@ import VideoPlayer from '@/components/Video/VideoPlayer'
 export default function VideoCard({ data }) {
   return (
     <div>
-      <div className="h-[16.375rem] w-[24.5rem] ">
+      <div className="h-[16.375rem] w-full xl:w-[24.5rem] ">
         <VideoPlayer data={data} />
       </div>
       <Title

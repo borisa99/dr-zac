@@ -3,7 +3,7 @@ import Button from '../UI/Button'
 
 export default function FooterCTA() {
   return (
-    <div className="w-[31rem]">
+    <div className="w-full text-center xl:w-[31rem] xl:text-left">
       <p className="mb- mb-6 leading-6 text-[#5D5D5D]">
         I believe that making small changes to your daily routine can have
         massive lasting impact on the rest of your life. I’m passionate about

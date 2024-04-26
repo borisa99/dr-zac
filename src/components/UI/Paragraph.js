@@ -11,7 +11,7 @@ export default function Paragraph({
   let style = 'text-[0.938rem] leading-6 text-[#3D3D3D]'
   switch (variant) {
     case 'center':
-      style = `${style} w-[50rem] mx-auto`
+      style = `${style} xl:ow-[50rem] mx-auto`
       break
     case 'article':
       style = `${style} w-full text-[#545454]`
@@ -23,7 +23,7 @@ export default function Paragraph({
       style = `${style} w-full text-[#181818] leading-8`
       break
     default:
-      style = `${style}`
+      style = `${style} text-center xl:text-left`
       break
   }
   return (

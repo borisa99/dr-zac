@@ -24,7 +24,10 @@ export default function Input({
       })}
     >
       <label>
-        <span className="mb-2 inline-block"> {data?.label}</span>
+        <span className="mb-2 block w-full text-center xl:text-left">
+          {' '}
+          {data?.label}
+        </span>
         <input
           {...props}
           {...register(name)}
@@ -36,7 +39,7 @@ export default function Input({
           type={data?.input_type}
           placeholder={`${data?.name}${data?.required ? '*' : ''}`}
           className={cn('block h-14 w-full rounded-lg border', {
-            'text-textMain w-full border-gray-200 bg-white sm:w-96': white,
+            'w-full border-gray-200 bg-white text-textMain sm:w-96': white,
             'bg-gray-100': !white,
           })}
         />

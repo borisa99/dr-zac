@@ -15,13 +15,15 @@ const socials = [
 export default function FooterSocials() {
   return (
     <div>
-      <h3 className="mb-3 text-[0.813rem] uppercase text-[#888]">Socials</h3>
-      <ul className="flex gap-x-4">
+      <h3 className="mb-3 text-center text-[0.813rem] uppercase text-[#888] xl:text-left">
+        Socials
+      </h3>
+      <ul className="flex justify-center gap-x-4 xl:justify-start">
         {socials.map((social, index) => (
           <li key={index}>
             <Link
               to={social.url}
-              className="text-textMain cursor-pointer"
+              className="cursor-pointer text-textMain"
               target="_blank"
             >
               <social.Icon className="h-6 w-6" />

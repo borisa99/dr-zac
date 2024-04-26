@@ -9,10 +9,11 @@ export default function PostCardImage({ variant, data }) {
     <div
       className={cn(
         {
-          'h-[25rem] w-[37.5rem] rounded-[1.25rem] ': variant,
+          'h-auto w-full rounded-[1.25rem] xl:h-[25rem] xl:w-[37.5rem] ':
+            variant,
         },
         {
-          'h-[16.375rem] w-[24.5rem] rounded-xl ': !variant,
+          'h-auto w-full rounded-xl xl:h-[16.375rem] xl:w-[24.5rem] ': !variant,
         },
       )}
     >

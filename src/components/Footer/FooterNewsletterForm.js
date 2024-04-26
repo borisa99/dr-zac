@@ -25,7 +25,7 @@ export default function FooterNewsletterForm() {
 
   return (
     <form
-      className="flex items-end gap-[0.68rem]"
+      className="flex flex-col items-end gap-[0.68rem] xl:flex-row"
       // name={data.title}
       onSubmit={handleSubmit(onSubmit)}
       // data-netlify={data.settings.resolver === 'Form'}

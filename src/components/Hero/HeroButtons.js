@@ -8,7 +8,13 @@ export default function HeroButtons({ data, isCentered }) {
       {data?.buttons && (
         <Buttons
           buttons={data?.buttons}
-          className={cn('mt-6', { 'justify-center': isCentered })}
+          className={cn(
+            'mt-6 justify-center ',
+            {
+              'justify-center': isCentered,
+            },
+            { 'xl:justify-start': !isCentered },
+          )}
         />
       )}
     </>

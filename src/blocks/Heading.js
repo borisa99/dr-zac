@@ -8,7 +8,7 @@ import Section from '@/components/UI/Section'
 export default function Heading({ data }) {
   return (
     <Section settings={data?.settings} className="bg-white pb-16 pt-[7.063rem]">
-      <Container className="w-[50rem] text-center">
+      <Container className="w-full text-center xl:w-[50rem]">
         <HeadingTitle data={data} />
         <HeadingContent data={data} />
         <HeadingButtons data={data} />

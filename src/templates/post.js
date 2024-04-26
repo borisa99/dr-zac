@@ -21,12 +21,12 @@ const Post = ({ data }) => {
     <Layout nav={true}>
       <Section className="pt-[10.5rem]">
         <Container>
-          <div className="w-full px-56">
+          <div className="w-full xl:px-56">
             <PostTag data={data} />
             <Title
               Tag="h1"
               children={data.post.frontmatter.title}
-              className="mb-10 text-[4rem] leading-[4.5rem]"
+              className="title-font mb-10 text-[4rem] leading-[4.5rem]"
             />
             <PostAuthor author={author} data={data} />
           </div>

@@ -7,6 +7,7 @@ export default function PostCardTitle({ variant, data }) {
     <Title
       variant={variant ? 'article' : 'article-variant'}
       children={node.frontmatter.title}
+      className="title-font"
     />
   )
 }

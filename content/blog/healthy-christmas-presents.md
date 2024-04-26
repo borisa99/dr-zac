@@ -1,16 +1,14 @@
 ---
-id: 4d0d78e-1f11-4f92-85ac-d144d60bb573
+id: post-healthy-christmas-presents
 type: post
 layout: post
-title: Dr. Zac reveals real reason behind 3pm slump on Christmas Day.
-permalink: /blog/hello-world/
-thumbnail: /img/blog/3slumpreasons.jpg
-tags: [AESTHETICS, DIET & EXERCISE]
-date: 2022-05-11T19:16:41.067Z
+title: Doctor Zac debunks common ‘detox’ juice cleanse diet myth
+permalink: /blog/healthy-christmas-presents/
+thumbnail: /img/blog/christmas.jpg
+tags: [AESTHETICS, DIET & EXERCISE, LIFESTYLE, MEDICAL]
+date: 2024-04-11T13:16:41.067Z
 author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
-excerpt: If you’re a WordPress developer then you must have heard about a plugin
-  called Advanced Custom Fields and a Flexible Content field that allows editors
-  to generate new pages easily.
+excerpt: It’s often touted as the miracle answer to a heavy few days of eating and drinking but a doctor has slammed this diet trend as a “myth”.
 ---
 
 This week Dr. Zac Turner looks at why you go into a “food coma” after Christmas lunch.

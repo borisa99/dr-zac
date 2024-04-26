@@ -7,7 +7,7 @@ permalink: /
 thumbnail: ''
 blocks:
   - type: hero
-    title: Hello I'm <span class='text-blue'>Doctor Zac</span>
+    title: Hi, I'm <span class='text-blue'>Doctor Zac</span>
     content: |-
       I am passionate about proactive, preventative healthcare, and inspiring others to live happier and healthier for longer. My specialty is bespoke vitality, medication formulation, and aesthetics so that all my patients thrive in their everyday lives.
     variant: full
@@ -51,6 +51,15 @@ blocks:
           content: View all articles
           url: /blog
   - type: perks
+    buttons:
+      - button:
+          variant: default
+          content: View all articles
+          url: /blog
+      - button:
+          variant: default
+          content: Watch my videos
+          url: /video
     columns:
       - title: Dr Zac's Tips
         content: Dr. Zac’s will help you hack your way to better health.
