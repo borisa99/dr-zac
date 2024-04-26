@@ -24,6 +24,25 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
             </div>
           </div>
         )}
+
+        {data?.node?.frontmatter.thumbnail && (
+          <div className="bg-blue-700 relative h-[16.375rem] w-[24.5rem] rounded-xl">
+            <Image
+              src={data.node.frontmatter.thumbnail}
+              alt={data.node.frontmatter.title}
+              className="h-full w-full rounded-xl object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button
+                onClick={() => onIsPlaying(true)}
+                className="duration-300 ease-in hover:scale-110 active:scale-90"
+                aria-label="Play Video"
+              >
+                <ButtonPlay />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )

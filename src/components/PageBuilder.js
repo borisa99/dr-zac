@@ -48,6 +48,7 @@ export const query = graphql`
       type
       title
       content
+      url
       columns {
         title
         content

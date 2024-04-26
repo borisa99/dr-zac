@@ -35,7 +35,9 @@ blocks:
           content: Watch my videos
           url: /
   - type: video
-    title: <span>#better<span class='text-blue'>lifechoices</span></span>
+    title: <>#better<span class='text-blue'>lifechoices</span></>
+    variant: homepage
+    url: https://www.youtube.com/watch?v=Ao1n4G3mVdo
     photo:
       alt: Dr Zac Video
       image: /img/video/videoPlaceholder.jpg
@@ -53,11 +55,11 @@ blocks:
       - title: Dr Zac's Tips
         content: Dr. Zac’s will help you hack your way to better health.
         photo:
-          alt: Dr Zac
-          image: /img/columns/viewVideos.png
+          alt: Dr Zac Articles
+          image: /img/columns/drzac-articles.jpg
       - title: Dr Zac in the media
-        content: Watch Dr. Zac strut his stuff on TV and beyond.
+        content: Watch Dr. Zac strut his stuff TV and beyond.
         photo:
-          alt: Dr Zac
-          image: /img/columns/viewVideos.png
+          alt: Dr Zac Media Videos
+          image: /img/columns/drzac-videos.jpg
 ---
