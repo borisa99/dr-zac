@@ -26,7 +26,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
         )}
 
         {data?.node?.frontmatter.thumbnail && (
-          <div className="bg-blue-700 relative h-[16.375rem] w-[24.5rem] rounded-xl">
+          <div className="relative h-[16.375rem] w-[24.5rem] rounded-xl">
             <Image
               src={data.node.frontmatter.thumbnail}
               alt={data.node.frontmatter.title}

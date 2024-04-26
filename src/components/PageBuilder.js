@@ -4,6 +4,7 @@ import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
 import Heading from '@/blocks/Heading'
 import Hero from '@/blocks/Hero'
+import Media from '@/blocks/Media'
 import Perks from '@/blocks/Perks'
 import Video from '@/blocks/Video'
 import { graphql } from 'gatsby'
@@ -24,6 +25,8 @@ export default function PageBuilder({ blocks, preview = false }) {
               return <ContentImage key={i} data={block} preview={preview} />
             case 'video':
               return <Video key={i} data={block} preview={preview} />
+            case 'media':
+              return <Media key={i} data={block} preview={preview} />
             case 'perks':
               return <Perks key={i} data={block} preview={preview} />
             case 'content':

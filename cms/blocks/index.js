@@ -38,6 +38,12 @@ const Config = {
       fields: [Title, Content, ImageField()],
     },
     {
+      label: 'Media',
+      name: 'media',
+      widget: 'object',
+      fields: [Title, Content, ImageField()],
+    },
+    {
       label: 'Content',
       name: 'content',
       widget: 'object',
