@@ -32,6 +32,12 @@ const Config = {
       fields: [Title, Content, Buttons],
     },
     {
+      label: 'Video',
+      name: 'video',
+      widget: 'object',
+      fields: [Title, Content, ImageField()],
+    },
+    {
       label: 'Content',
       name: 'content',
       widget: 'object',

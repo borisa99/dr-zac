@@ -34,6 +34,11 @@ blocks:
           variant: secondary
           content: Watch my videos
           url: /
+  - type: video
+    title: <span>#better<span class='text-blue'>lifechoices</span></span>
+    photo:
+      alt: Dr Zac Video
+      image: /img/video/videoPlaceholder.jpg
   - type: blog
     variant: homepage
     title: Dr. Zac’s Blog

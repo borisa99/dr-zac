@@ -8,7 +8,7 @@ import { cn } from '@/lib/helper'
 export default function PostCard({ data, variant }) {
   const variant1 = variant === '1'
   const variant2 = variant === '2'
-  const variantVal = useMemo(() => variant1 ?? variant2, [variant])
+  const variantVal = useMemo(() => variant1 ?? variant2, [variant1, variant2])
 
   return (
     <article className={cn({ 'mb-16': variant1 })}>
