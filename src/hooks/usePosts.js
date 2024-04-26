@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const useArticles = () => {
+export const usePosts = () => {
   const {
     allMarkdownRemark: { edges: posts },
   } = useStaticQuery(graphql`
-    query ArticlesQuery {
+    query PostsQuery {
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { type: { eq: "post" } } }
@@ -21,6 +21,7 @@ export const useArticles = () => {
               title
               date(formatString: "MMMM DD, YYYY")
               author
+              tags
               thumbnail {
                 childImageSharp {
                   gatsbyImageData(

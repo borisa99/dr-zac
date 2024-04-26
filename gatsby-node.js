@@ -14,10 +14,16 @@ exports.createSchemaCustomization = ({ actions }) => {
     id: String
     title: String
     author: String
+    tags: [String]
     thumbnail: File @fileByRelativePath @dontInfer
     seo: MarkdownRemarkFrontmatterSeo
     rows: [MarkdownRemarkFrontmatterRows]
     blocks: [Blocks]
+  }
+
+  type Author implements Node @dontInfer {
+    id: ID!
+    title: String
   }
 
   type MarkdownRemarkFrontmatterRows {
@@ -48,8 +54,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     photo: Photo
     settings: Settings
   }
-
-
 
   type Settings {
     variant: String

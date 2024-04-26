@@ -70,8 +70,8 @@ const Config = {
       ],
     },
     {
-      label: 'Articles',
-      name: 'articles',
+      label: 'Blog',
+      name: 'blog',
       widget: 'object',
       fields: [Title, Content, Buttons, SettingsGroup],
     },

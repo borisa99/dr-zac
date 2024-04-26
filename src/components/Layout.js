@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from './Footer'
-import Header from '@/components/Header'
+import Footer from './Footer/Footer'
+import Header from '@/components/Header/Header'
 
 const Layout = ({ nav = false, children }) => {
   return (

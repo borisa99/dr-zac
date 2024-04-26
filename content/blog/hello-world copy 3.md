@@ -5,6 +5,7 @@ layout: post
 title: Philosophy behind Henlo.
 permalink: /blog/hello-world/
 thumbnail: /img/henlo-cover.png
+tags: [MEDICAL, LIFESTYLE]
 date: 2022-05-11T19:16:41.067Z
 author: a1d1172a-8736-47c1-831d-3e508729fee2
 excerpt: If you’re a WordPress developer then you must have heard about a plugin

@@ -1,9 +1,10 @@
 import React from 'react'
-import Buttons from '@/components/UI/Buttons'
+import HeroButtons from '@/components/Hero/HeroButtons'
+import HeroImage from '@/components/Hero/HeroImage'
+import HeroTitle from '@/components/Hero/HeroTitle'
 import Container from '@/components/UI/Container'
 import Paragraph from '@/components/UI/Paragraph'
 import Section from '@/components/UI/Section'
-import Title from '@/components/UI/Title'
 import { cn } from '@/lib/helper'
 import Image from '@/resolvers/Image'
 
@@ -30,22 +31,9 @@ export default function Hero({ data }) {
         })}
       >
         <div>
-          {data?.title && (
-            <Title
-              Tag="h1"
-              variant="hero"
-              className="mb-3"
-              children={data?.title}
-            />
-          )}
-
+          <HeroTitle data={data} />
           <Paragraph variant={data?.variant} children={data?.content} />
-          {data?.buttons && (
-            <Buttons
-              buttons={data?.buttons}
-              className={cn('mt-6', { 'justify-center': isCentered })}
-            />
-          )}
+          <HeroButtons isCentered={isCentered} data={data} />
           {data?.photo?.image && (
             <Image
               src={data?.photo?.image}
@@ -54,19 +42,7 @@ export default function Hero({ data }) {
             />
           )}
         </div>
-
-        {data?.photo2?.image && (
-          <div className="h-full w-full">
-            <Image
-              src={data?.photo2?.image}
-              alt={data?.photo2?.alt}
-              className="z-10 h-auto w-[37.5rem]"
-            />
-          </div>
-        )}
-        {isFull && (
-          <div className="bg-blue absolute bottom-0 right-0 h-[25.625rem] w-[40%] rounded-tl-[12.844rem]" />
-        )}
+        <HeroImage data={data} isFull={isFull} />
       </Container>
     </Section>
   )

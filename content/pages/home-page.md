@@ -34,7 +34,7 @@ blocks:
           variant: secondary
           content: Watch my videos
           url: /
-  - type: articles
+  - type: blog
     variant: homepage
     title: Dr. Zac’s Blog
     content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.

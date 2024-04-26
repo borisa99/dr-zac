@@ -1,5 +1,5 @@
 import React from 'react'
-import Articles from '@/blocks/Articles'
+import Blog from '@/blocks/Blog'
 import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
 import Heading from '@/blocks/Heading'
@@ -17,8 +17,8 @@ export default function PageBuilder({ blocks, preview = false }) {
               return <Hero key={i} data={block} />
             case 'heading':
               return <Heading key={i} data={block} preview={preview} />
-            case 'articles':
-              return <Articles key={i} data={block} preview={preview} />
+            case 'blog':
+              return <Blog key={i} data={block} preview={preview} />
             case 'content_image':
               return <ContentImage key={i} data={block} preview={preview} />
             case 'perks':

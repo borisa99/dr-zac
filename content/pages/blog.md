@@ -23,7 +23,7 @@ blocks:
       - button:
           variant: blog
           content: Lifestyle
-  - type: articles
+  - type: blog
     variant: blog-1
     title: Dr. Zac’s Blog
     content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.
@@ -32,7 +32,7 @@ blocks:
           variant: default
           content: View all articles
           url: /
-  - type: articles
+  - type: blog
     variant: blog-2
     title: Dr. Zac’s Blog
     content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.
