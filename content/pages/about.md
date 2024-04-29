@@ -17,18 +17,17 @@ blocks:
       alt: Premade components schema
       image: /img/about/drZac1.png
     title: Dr. Zac completed his medical studies at the <span class="text-blue">University of Sydney</span>, successfully gaining a Bachelor of Medicine and Bachelor of Surgery.
-    content: >-
-      <p style='margin-bottom:20px'>Before his studies, Dr. Zac trained and worked as a Registered Nurse, both in Australia and internationally.<p/>
+    content:
+      <span style='margin-bottom:16px;display:block;'>Before his studies, Dr. Zac trained and worked as a Registered Nurse, both in Australia and internationally.</span>
 
-       <p>Growing up in rural Queensland, Dr. Zac found a love of volunteering in areas of need, including Arnhem Land, the Philippines, Cambodia, and the Congo.</p>
+      Growing up in rural Queensland, Dr. Zac found a love of volunteering in areas of need, including Arnhem Land, the Philippines, Cambodia, and the Congo.
   - type: content_image
     variant: reversed
     photo:
       alt: Premade components schema
       image: /img/about/drZac2.png
     title: I’m a specialist in bespoke vitality, longevity, medication formulation, and aesthetics.
-    content: >-
-      <p style='margin-bottom:20px'>With a broad spectrum of surgical experience across orthopedics, plastics and reconstructive surgery, Dr. Zac also has a keen interest in sports and preventative health and wellness programming.<p/>
-
-      <p>Dr. Zac is also an officer of the Royal Australian Navy and represented Australia in Basketball and Volleyball.</p>
+    content:
+      <span style='margin-bottom:16px;display:block;'>With a broad spectrum of surgical experience across orthopedics, plastics and reconstructive surgery, Dr. Zac also has a keen interest in sports and preventative health and wellness programming.</span>
+      Dr. Zac is also an officer of the Royal Australian Navy and represented Australia in Basketball and Volleyball.
 ---

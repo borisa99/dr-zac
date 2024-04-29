@@ -4,9 +4,11 @@ import Paragraph from '@/components/UI/Paragraph'
 export default function ContentImageContent({ data }) {
   return (
     <>
-      {data?.content && (
-        <Paragraph className="w-full">{data?.content}</Paragraph>
-      )}
+      <Paragraph
+        variant="default"
+        children={data?.content}
+        className="w-full"
+      />
     </>
   )
 }

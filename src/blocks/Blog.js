@@ -11,9 +11,10 @@ import Section from '@/components/UI/Section'
 //blog-1
 //blog-2
 
-export default function Blog({ data, preview }) {
+export default function Blog({ data, preview, query }) {
   const isVariantLarge = data?.variant === 'blog-1'
   const isHomepage = data?.variant === 'homepage'
+  console.log(query)
 
   return (
     <Section settings={data?.settings} className="bg-white pb-40 pt-28">
@@ -36,3 +37,28 @@ export default function Blog({ data, preview }) {
     </Section>
   )
 }
+
+export const query = graphql`
+  query BlogPageQuery {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
+      nodes {
+        id
+        frontmatter {
+          title
+          permalink
+          excerpt
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                quality: 71
+                layout: FULL_WIDTH
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
+      }
+    }
+  }
+`

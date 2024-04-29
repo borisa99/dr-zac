@@ -26,7 +26,7 @@ export default function FooterSocials() {
               className="cursor-pointer text-textMain"
               target="_blank"
             >
-              <social.Icon className="h-6 w-6" />
+              {/* <social.Icon className="h-6 w-6" /> */}
             </Link>
           </li>
         ))}

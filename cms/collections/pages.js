@@ -1,7 +1,7 @@
-import seo from '../fields/seo';
-import { ID } from '../fields';
-import Blocks from '../blocks';
-import { PermalinkField } from '../fields/permalink-field';
+import Blocks from '../blocks'
+import { ID } from '../fields'
+import { PermalinkField } from '../fields/permalink-field'
+import seo from '../fields/seo'
 
 const collection = {
   name: 'pages',
@@ -32,6 +32,6 @@ const collection = {
     Blocks,
     seo,
   ],
-};
+}
 
-export default collection;
+export default collection

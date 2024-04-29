@@ -1,9 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const useMedia = () => {
-  const {
-    allMarkdownRemark: { edges: media },
-  } = useStaticQuery(graphql`
+  const { allMarkdownRemark: media } = useStaticQuery(graphql`
     query MediaQuery {
       allMarkdownRemark(filter: { frontmatter: { type: { eq: "media" } } }) {
         edges {

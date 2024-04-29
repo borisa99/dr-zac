@@ -3,8 +3,6 @@ import { cn } from '@/lib/helper'
 import Image from '@/resolvers/Image'
 
 export default function PostCardImage({ variant, data }) {
-  const { node } = data
-
   return (
     <div
       className={cn(
@@ -19,7 +17,7 @@ export default function PostCardImage({ variant, data }) {
     >
       <Image
         fill="true"
-        src={node.frontmatter?.thumbnail}
+        src={data.frontmatter?.thumbnail}
         className="rounded-[1.25rem] object-cover"
       />
     </div>

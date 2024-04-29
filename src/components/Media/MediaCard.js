@@ -5,7 +5,7 @@ import Link from '@/resolvers/Link'
 
 export default function MediaCard({ data }) {
   return (
-    <Link internal={false} to={data.node.frontmatter.permalink}>
+    <Link internal="false" to={data.node.frontmatter.permalink}>
       <MediaCardImage data={data} />
       <Title
         Tag="h3"

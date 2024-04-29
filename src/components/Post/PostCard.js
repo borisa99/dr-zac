@@ -12,7 +12,7 @@ export default function PostCard({ data, variant }) {
   const variantVal = useMemo(() => variant1 ?? variant2, [variant1, variant2])
 
   return (
-    <Link to={data.node.fields.slug}>
+    <Link to={data.frontmatter.permalink}>
       <article className={cn({ 'mb-16': variant1 })}>
         <div
           className={cn(
@@ -34,7 +34,7 @@ export default function PostCard({ data, variant }) {
             <div className="flex flex-col items-center justify-between text-center xl:h-[11.75rem] xl:items-start xl:text-left">
               <PostCardTitle data={data} variant={variantVal} />
               <PostCardContent data={data} variant={variantVal} />
-              <PostAuthor data={data} />
+              {/* <PostAuthor data={data} /> */}
             </div>
           </div>
         </div>
