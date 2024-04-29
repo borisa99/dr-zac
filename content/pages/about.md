@@ -14,7 +14,7 @@ blocks:
   - type: content_image
     variant: default
     photo:
-      alt: Premade components schema
+      alt: Dr Zac
       image: /img/about/drZac1.png
     title: Dr. Zac completed his medical studies at the <span class="text-blue">University of Sydney</span>, successfully gaining a Bachelor of Medicine and Bachelor of Surgery.
     content:
@@ -24,7 +24,7 @@ blocks:
   - type: content_image
     variant: reversed
     photo:
-      alt: Premade components schema
+      alt: Dr Zac
       image: /img/about/drZac2.png
     title: I’m a specialist in bespoke vitality, longevity, medication formulation, and aesthetics.
     content:

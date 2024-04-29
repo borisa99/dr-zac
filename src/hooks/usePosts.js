@@ -1,23 +1,37 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const UsePosts = () => {
-  const { allMarkdownRemark } = useStaticQuery(graphql`
+export const usePosts = () => {
+  const {
+    allMarkdownRemark: { edges: posts },
+  } = useStaticQuery(graphql`
     query PostsQuery {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
-        nodes {
-          frontmatter {
-            type
-            title
-            permalink
-            excerpt
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  quality: 71
-                  layout: FULL_WIDTH
-                  formats: [AUTO, WEBP, AVIF]
-                )
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { type: { eq: "post" } } }
+        limit: 4
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              excerpt
+              title
+              date(formatString: "MMMM DD, YYYY")
+              author
+              tags
+              thumbnail {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 690
+                    quality: 72
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
               }
             }
           }
@@ -25,6 +39,5 @@ export const UsePosts = () => {
       }
     }
   `)
-
-  return allMarkdownRemark
+  return posts
 }

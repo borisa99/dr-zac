@@ -17,7 +17,7 @@ export default function PostCardImage({ variant, data }) {
     >
       <Image
         fill="true"
-        src={data.frontmatter?.thumbnail}
+        src={data?.node.frontmatter?.thumbnail}
         className="rounded-[1.25rem] object-cover"
       />
     </div>

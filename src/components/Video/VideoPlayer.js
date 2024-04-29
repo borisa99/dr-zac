@@ -23,7 +23,9 @@ export default function VideoPlayer({ data }) {
             className={`absolute inset-0 h-full w-full rounded-[1.25rem] object-cover`}
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
-          />
+          >
+            <track kind="captions" default />
+          </video>
         </div>
         {!isPlaying && (
           <VideoPlaceholder onIsPlaying={setIsPlaying} data={data} />

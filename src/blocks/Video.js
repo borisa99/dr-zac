@@ -8,7 +8,7 @@ import { useVideos } from '@/hooks/useVideos'
 export default function Video({ data }) {
   const isHomepage = data.variant === 'homepage'
   const videos = useVideos()
-  // console.log(videos)
+
 
   return (
     <Section

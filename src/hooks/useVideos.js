@@ -12,6 +12,7 @@ export const useVideos = () => {
               type
               id
               title
+              excerpt
               thumbnail {
                 childImageSharp {
                   gatsbyImageData(
