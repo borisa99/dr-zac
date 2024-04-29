@@ -14,7 +14,7 @@ export default function PostCardImage({ variant, data }) {
         },
         {
           'h-auto w-full rounded-xl xl:h-[16.375rem] xl:w-[24.5rem] ': !variant,
-        },
+        }
       )}
     >
       <Image

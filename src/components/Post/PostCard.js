@@ -20,7 +20,7 @@ export default function PostCard({ data, variant }) {
             { 'xl:flex-row xl:gap-16 ': variant1 },
             {
               'flex-col gap-6': variant2,
-            },
+            }
           )}
         >
           <PostCardImage data={data} variant={variantVal} />
@@ -28,7 +28,7 @@ export default function PostCard({ data, variant }) {
             className={cn(
               'h-full',
               { 'w-full lg:w-[35rem]': variant1 },
-              { 'w-full lg:w-[24.5rem]': variant2 },
+              { 'w-full lg:w-[24.5rem]': variant2 }
             )}
           >
             <div className="flex flex-col items-center justify-between text-center xl:h-[11.75rem] xl:items-start xl:text-left">

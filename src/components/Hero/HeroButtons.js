@@ -13,7 +13,7 @@ export default function HeroButtons({ data, isCentered }) {
             {
               'justify-center': isCentered,
             },
-            { 'xl:justify-start': !isCentered },
+            { 'xl:justify-start': !isCentered }
           )}
         />
       )}

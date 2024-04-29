@@ -16,7 +16,7 @@ export default function ContentImage({ data }) {
           className={cn(
             'flex flex-row items-center justify-center gap-32',
             { 'flex-row-reverse': isReversed },
-            { 'flex-row': !isReversed },
+            { 'flex-row': !isReversed }
           )}
         >
           <ContentImagePhoto data={data} />

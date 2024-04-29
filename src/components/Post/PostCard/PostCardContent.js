@@ -8,7 +8,7 @@ export default function PostCardContent({ variant, data }) {
       node?.excerpt?.length < 100
         ? node?.excerpt
         : node?.excerpt?.slice(0, 100) + '...',
-    [node],
+    [node]
   )
 
   return (
