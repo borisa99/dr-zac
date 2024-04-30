@@ -1,6 +1,6 @@
 import React from 'react'
-import InstagramColored from '@/assets/Icons/instagramColored.svg'
-import YoutubeColored from '@/assets/Icons/youtubeColored.svg'
+// import InstagramColored from '@/assets/Icons/instagramColored.svg'
+// import YoutubeColored from '@/assets/Icons/youtubeColored.svg'
 import { cn } from '@/lib/helper'
 import Link from '@/resolvers/Link'
 
@@ -24,12 +24,12 @@ export default function Button({ className, button, children, ...props }) {
       buttonStyle = `${buttonStyle} text-white bg-blue`
   }
 
-  const buttonIcon =
-    button?.variant === 'youtube' ? (
-      <YoutubeColored />
-    ) : button?.variant === 'instagram' ? (
-      <InstagramColored />
-    ) : null
+  // const buttonIcon =
+  //   button?.variant === 'youtube' ? (
+  //     <YoutubeColored />
+  //   ) : button?.variant === 'instagram' ? (
+  //     <InstagramColored />
+  //   ) : null
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function Button({ className, button, children, ...props }) {
           className={cn(buttonStyle, className)}
           {...props}
         >
-          {buttonIcon} {children}
+          {children}
         </Link>
       ) : (
         <button className={cn(buttonStyle, className)} {...props}>

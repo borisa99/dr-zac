@@ -1,10 +1,12 @@
 import React from 'react'
-import Logo from '@/assets/Icons/logo.svg'
+import logo from '@/assets/Images/logo.png'
 import Container from '../UI/Container'
 import FooterCTA from './FooterCTA'
 import FooterNavMenu from './FooterNavMenu'
 import FooterNewsletter from './FooterNewsletter'
 import FooterSocials from './FooterSocials'
+import Image from '@/resolvers/Image'
+import Link from '@/resolvers/Link'
 
 export default function Footer() {
   return (
@@ -12,7 +14,9 @@ export default function Footer() {
       <Container>
         <FooterNewsletter />
         <div className="flex flex-col items-center justify-center gap-6 pb-10 pt-[3.75rem] text-textMain xl:flex-row xl:items-start xl:justify-between ">
-          <Logo />
+          <Link to="/" className="cursor-pointer text-2xl font-bold">
+            <Image alt="Dr Zac Logo" src={logo} />
+          </Link>
           <FooterCTA />
           <FooterNavMenu />
           <FooterSocials />

@@ -14,13 +14,13 @@ export default function ContentImage({ data }) {
       <Container>
         <div
           className={cn(
-            'flex flex-row items-center justify-center gap-32',
-            { 'flex-row-reverse': isReversed },
-            { 'flex-row': !isReversed },
+            'flex flex-col items-center justify-center gap-32 xl:flex-row',
+            { 'flex-col-reverse xl:flex-row-reverse': isReversed },
+            { 'flex-col xl:flex-row': !isReversed },
           )}
         >
           <ContentImagePhoto data={data} />
-          <div className="w-1/2">
+          <div className="w-full max-w-[37.5rem] xl:w-1/2">
             <ContentImageTitle data={data} />
             <ContentImageContent data={data} />
             <ContentImageButtons data={data} />

@@ -14,7 +14,6 @@ import { useAuthors } from '@/hooks/useAuthors'
 
 const Post = ({ data }) => {
   const getAuthor = useAuthors()
-
   const author = useMemo(() => getAuthor(data), [getAuthor, data])
 
   return (

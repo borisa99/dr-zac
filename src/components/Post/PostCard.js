@@ -12,7 +12,7 @@ export default function PostCard({ data, variant }) {
   const variantVal = useMemo(() => variant1 ?? variant2, [variant1, variant2])
 
   return (
-    <Link to={data?.node.frontmatter.permalink}>
+    <Link to={data?.node.fields.slug}>
       <article className={cn({ 'mb-16': variant1 })}>
         <div
           className={cn(

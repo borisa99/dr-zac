@@ -37,7 +37,7 @@ export default function FooterNewsletterForm() {
         register={register}
         errors={fieldErrors}
       />
-      <Button children="Sign up" className="w-full" type="submit" />
+      <Button children="Sign up" className="h-14 w-full" type="submit" />
     </form>
   )
 }

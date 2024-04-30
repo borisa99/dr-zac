@@ -32,10 +32,10 @@ export default function Blog({ data, preview }) {
         <BlogHeroTitle data={data} />
         <BlogHeroContent data={data} />
         <PostList
-          type={data.title.toUpperCase()}
+          // type={data.title.toUpperCase()}
           isVariant={isVariantLarge || isHomepage}
           posts={filteredPosts}
-          preview={preview}
+          // preview={preview}
         />
         <BlogHeroButtons data={data} />
         {!isHomepage ? (
