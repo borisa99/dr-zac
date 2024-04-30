@@ -1,10 +1,149 @@
-import navigationField from '../fields/navigation-field';
+import { SelectField } from '../fields'
+import navigationField from '../fields/navigation-field'
 
 const collection = {
   name: 'settings',
   label: 'Settings',
   description: 'Settings for theme',
   files: [
+    {
+      label: 'Hero block',
+      name: 'hero',
+      file: 'src/settings/hero.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+      ],
+    },
+    {
+      label: 'Video block',
+      name: 'video',
+      file: 'src/settings/video.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+      ],
+    },
+    {
+      label: 'Media block',
+      name: 'media',
+      file: 'src/settings/media.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+      ],
+    },
+    {
+      label: 'Perks block',
+      name: 'perks',
+      file: 'src/settings/perks.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: SelectField(false, [false, true]),
+        },
+      ],
+    },
+    {
+      label: 'Blog block',
+      name: 'blog',
+      file: 'src/settings/blog.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+      ],
+    },
+    {
+      label: 'Content Image block',
+      name: 'contentImage',
+      file: 'src/settings/contentImage.json',
+      editor: {
+        preview: false,
+      },
+      fields: [
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Reversed',
+          name: 'reversed',
+          widget: 'boolean',
+          required: false,
+        },
+      ],
+    },
     {
       label: 'Main Navigation',
       name: 'nav',
@@ -21,7 +160,21 @@ const collection = {
       editor: {
         preview: false,
       },
-      fields: [navigationField()],
+      fields: [
+        navigationField(),
+        {
+          label: 'Paddings',
+          name: 'paddings',
+          widget: 'string',
+          required: false,
+        },
+        {
+          label: 'Backgrounds',
+          name: 'backgrounds',
+          widget: 'string',
+          required: false,
+        },
+      ],
     },
     {
       label: 'Site Metadata & SEO Settings',
@@ -89,6 +242,6 @@ const collection = {
       ],
     },
   ],
-};
+}
 
-export default collection;
+export default collection

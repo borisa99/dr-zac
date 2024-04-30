@@ -29,19 +29,19 @@ const Config = {
       label: 'Heading',
       name: 'heading',
       widget: 'object',
-      fields: [Title, Content, Buttons],
+      fields: [Title, Content, Buttons, SettingsGroup],
     },
     {
       label: 'Video',
       name: 'video',
       widget: 'object',
-      fields: [Title, Content, ImageField()],
+      fields: [Title, Content, ImageField(), SettingsGroup],
     },
     {
       label: 'Media',
       name: 'media',
       widget: 'object',
-      fields: [Title, Content, ImageField()],
+      fields: [Title, Content, ImageField(), SettingsGroup],
     },
     {
       label: 'Content',
