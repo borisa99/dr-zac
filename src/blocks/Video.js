@@ -3,12 +3,9 @@ import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 import VideoCard from '@/components/Video/VideoCard'
 import VideoPlayer from '@/components/Video/VideoPlayer'
-import { useVideos } from '@/hooks/useVideos'
 
-export default function Video({ data }) {
+export default function Video({ data, videos }) {
   const isHomepage = data.variant === 'homepage'
-  const videos = useVideos()
-
 
   return (
     <Section

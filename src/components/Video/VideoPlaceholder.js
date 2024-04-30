@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonPlay from '@/assets/Icons/ButtonPlay.svg'
+import buttonPlay from '@/assets/Images/Icons/iconPlay.png'
 import Image from '@/resolvers/Image'
 
 export default function VideoPlaceholder({ data, onIsPlaying }) {
@@ -19,7 +19,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
                 className="scale-50 duration-300 ease-in hover:scale-110 active:scale-90 xl:scale-100"
                 aria-label="Play Video"
               >
-                <ButtonPlay />
+                <Image alt="Button play" src={buttonPlay} />
               </button>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
                 className="duration-300 ease-in hover:scale-110 active:scale-90"
                 aria-label="Play Video"
               >
-                <ButtonPlay />
+                <Image alt="Button play" src={buttonPlay} />
               </button>
             </div>
           </div>

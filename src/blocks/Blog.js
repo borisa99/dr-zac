@@ -7,24 +7,23 @@ import PostList from '@/components/Post/PostList'
 import Buttons from '@/components/UI/Buttons'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
-import { usePosts } from '@/hooks/usePosts'
 
 //homepage
 //blog-1
 //blog-2
 
-export default function Blog({ data, preview }) {
+export default function Blog({ data, posts }) {
   const isVariantLarge = data?.variant === 'blog-1'
   const isHomepage = data?.variant === 'homepage'
   const category = isHomepage ? 'MEDICAL' : data.title.toUpperCase()
-  const posts = usePosts()
 
   const filteredPosts = useMemo(() => {
+    if (isHomepage) return posts
     return posts.filter((post) => {
       const tags = post.node.frontmatter.tags || []
       return tags.includes(category.toUpperCase())
     })
-  }, [posts, category])
+  }, [posts, category, isHomepage])
 
   return (
     <Section settings={data?.settings} className="bg-white pb-40 pt-28">

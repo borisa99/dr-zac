@@ -8,7 +8,11 @@ import PageBuilder from '@/components/PageBuilder'
 const Page = ({ data }) => {
   return (
     <Layout nav={true}>
-      <PageBuilder blocks={data.page.frontmatter.blocks} />
+      <PageBuilder
+        blocks={data.page.frontmatter.blocks}
+        posts={data.postData.edges}
+        videos={data.videoData.edges}
+      />
     </Layout>
   )
 }
@@ -42,6 +46,62 @@ export const basicPageQuery = graphql`
         title
         ...Blocks
         ...Seo
+      }
+    }
+    postData: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { type: { eq: "post" } } }
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            excerpt
+            title
+            date(formatString: "MMMM DD, YYYY")
+            author
+            tags
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 690
+                  quality: 72
+                  layout: FULL_WIDTH
+                  placeholder: DOMINANT_COLOR
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+    videoData: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "videos" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            type
+            id
+            title
+            excerpt
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  quality: 71
+                  layout: FULL_WIDTH
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
       }
     }
   }

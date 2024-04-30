@@ -1,8 +1,8 @@
 import React from 'react'
-import fb from '@/assets/Images/socials/logo-facebook.png'
-import inst from '@/assets/Images/socials/logo-instagram.png'
-import twit from '@/assets/Images/socials/logo-twitter.png'
-import yt from '@/assets/Images/socials/logo-youtube.png'
+import fb from '@/assets/Images/Socials/logo-facebook.png'
+import inst from '@/assets/Images/Socials/logo-instagram.png'
+import twit from '@/assets/Images/Socials/logo-twitter.png'
+import yt from '@/assets/Images/Socials/logo-youtube.png'
 import Image from '@/resolvers/Image'
 import Link from '@/resolvers/Link'
 

@@ -6,7 +6,7 @@ export default function VideoPlayer({ data }) {
   const videoRef = useRef(null)
 
   const videoUrl = useMemo(
-    () => data?.url ?? data.node.frontmatter.permalink,
+    () => data?.url ?? data?.node?.frontmatter.permalink,
     [data],
   )
 
