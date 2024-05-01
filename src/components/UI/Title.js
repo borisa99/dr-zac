@@ -3,39 +3,35 @@ import { cn } from '@/lib/helper'
 
 export default function Title({
   children,
-  variant = 'base',
+  variant = 'hero',
   Tag = 'h2',
   className,
   ...props
 }) {
-  let style = 'dark:text-white font-semibold'
+  let style = 'leading-[5rem] text-textMain'
   switch (variant) {
     case 'hero':
-      style = `${style} text-5xl lg:text-7xl max-w-5xl mb-4 md:mb-8 hero-title`
+      style = `${style} tracking-tight text-5xl  xl:text-7xl  text-center xl:text-left title-font`
       break
-    case 'xl':
-      style = `${style} text-4xl md:text-5xl`
+    case 'heading':
+      style = `${style} tracking-tighter text-4xl title-font`
       break
-    case 'lg':
-      style = `${style} text-3xl md:text-4xl`
+    case 'article':
+      style = `${style} text-[1.25rem] xl:text-[2rem] tracking-tight leading-10`
       break
-    case 'base':
+    case 'article-variant':
+      style = `${style} text-[1.25rem] -tracking-[0.3px] leading-10`
+      break
     default:
-      style = `${style} text-2xl md:text-3xl`
-      break
-    case 'sm':
-      style = `${style} text-2xl`
-      break
-    case 'xs':
-      style = `${style} text-xl`
+      style = `${style}`
       break
   }
   return (
     <>
       {children && (
         <Tag
-          className={cn(style, className)}
           dangerouslySetInnerHTML={{ __html: children }}
+          className={cn(style, className)}
           {...props}
         />
       )}

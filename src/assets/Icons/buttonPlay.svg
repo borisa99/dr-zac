@@ -1,0 +1,19 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="88"
+  height="88"
+  viewBox="0 0 88 88"
+  fill="none"
+>
+
+<circle cx="44" cy="44" r="44" fill="white" />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M4.5 5.65299C4.5 4.22599 6.029 3.32299 7.279 4.00999L18.819 10.357C20.114 11.069 20.114 12.93 18.819 13.643L7.28 19.99C6.03 20.677 4.501 19.773 4.501 18.347L4.5 5.65299Z"
+    fill="#408CFF"
+    style='transform:translate(34px,34px);'
+  />
+
+
+</svg>

@@ -1,21 +1,39 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import DefaultHead from '@/components/Head/DefaultHead'
 import Layout from '@/components/Layout'
+import PostAuthor from '@/components/Post/PostAuthor'
+import PostContent from '@/components/Post/PostContent'
+import PostRecentBlock from '@/components/Post/PostRecentBlock'
+import PostTag from '@/components/Post/PostTag'
+import Container from '@/components/UI/Container'
+import Section from '@/components/UI/Section'
+import Title from '@/components/UI/Title'
+import { useAuthors } from '@/hooks/useAuthors'
 
 const Post = ({ data }) => {
+  const getAuthor = useAuthors()
+
+  const author = useMemo(() => getAuthor(data), [getAuthor, data])
+
   return (
     <Layout nav={true}>
-      <section className="container mx-auto px-4 py-24">
-        <h1 className="mx-auto my-12 max-w-3xl text-6xl font-bold dark:text-white">
-          {data.post.frontmatter.title}
-        </h1>
-        <div
-          className="prose prose-lg mx-auto max-w-3xl dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: data?.post.html }}
-        ></div>
-      </section>
+      <Section className="pt-[10.5rem]">
+        <Container>
+          <div className="w-full xl:px-56">
+            <PostTag data={data} />
+            <Title
+              Tag="h1"
+              children={data.post.frontmatter.title}
+              className="title-font mb-10 text-[4rem] leading-[4.5rem]"
+            />
+            <PostAuthor author={author} data={data} />
+          </div>
+          <PostContent data={data} />
+          <PostRecentBlock />
+        </Container>
+      </Section>
     </Layout>
   )
 }
@@ -30,7 +48,6 @@ Post.propTypes = {
 
 export const Head = ({ data }) => (
   <DefaultHead data={data.post.frontmatter.seo}>
-    {/* Additonal values here */}
     <meta id="oty" property="og:type" content="article" />
   </DefaultHead>
 )
@@ -45,7 +62,20 @@ export const basicPageQuery = graphql`
       frontmatter {
         id
         title
+        date(formatString: "MMMM DD, YYYYY")
         author
+        tags
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(
+              width: 690
+              quality: 72
+              layout: FULL_WIDTH
+              placeholder: DOMINANT_COLOR
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
         ...Seo
       }
     }

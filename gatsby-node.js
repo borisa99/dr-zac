@@ -14,10 +14,16 @@ exports.createSchemaCustomization = ({ actions }) => {
     id: String
     title: String
     author: String
+    tags: [String]
     thumbnail: File @fileByRelativePath @dontInfer
     seo: MarkdownRemarkFrontmatterSeo
     rows: [MarkdownRemarkFrontmatterRows]
     blocks: [Blocks]
+  }
+
+  type Author implements Node @dontInfer {
+    id: ID!
+    title: String
   }
 
   type MarkdownRemarkFrontmatterRows {
@@ -112,7 +118,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       let pathName = edge.node.frontmatter.permalink || edge.node.fields.slug
       let component = path.resolve(
-        `src/templates/${String(edge.node.frontmatter.layout)}.js`,
+        `src/templates/${String(edge.node.frontmatter.layout)}.js`
       )
 
       if (fs.existsSync(component)) {

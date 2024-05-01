@@ -1,4 +1,4 @@
-import { ID } from '../fields';
+import { ID } from '../fields'
 
 const collection = {
   name: 'authors',
@@ -40,6 +40,6 @@ const collection = {
       required: false,
     },
   ],
-};
+}
 
-export default collection;
+export default collection

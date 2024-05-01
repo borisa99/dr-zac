@@ -17,6 +17,7 @@
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-preload-fonts": "^4.3.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-root-import": "^2.0.6",
     "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-plugin-sitemap": "^6.3.1",
@@ -37,6 +38,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.41.3",
     "react-markdown": "^8.0.4",
+    "react-player": "^2.16.0",
     "tailwind-merge": "^2.2.2"
   },
   "keywords": [

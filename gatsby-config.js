@@ -64,6 +64,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/authors`,
+        name: 'authors',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         '@': path.join(__dirname, 'src'),
@@ -77,6 +84,14 @@ module.exports = {
       options: {
         manualInit: true,
         modulePath: `${__dirname}/cms/cms.js`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets\/Icons/,
+        },
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array

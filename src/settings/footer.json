@@ -1,0 +1,24 @@
+{
+  "footer": [
+    {
+      "name": "About me",
+      "permalink": "/"
+    },
+    {
+      "name": "Media",
+      "permalink": "/"
+    },
+    {
+      "name": "Video",
+      "permalink": "/"
+    },
+    {
+      "name": "Blog",
+      "permalink": "/"
+    },
+    {
+      "name": "Contact me",
+      "permalink": "/"
+    }
+  ]
+}

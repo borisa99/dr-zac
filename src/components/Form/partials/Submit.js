@@ -27,7 +27,7 @@ export default function Submit({ data, sending }) {
               },
               {
                 'opacity-0': !sending,
-              },
+              }
             )}
           >
             <div className="scale-50">
