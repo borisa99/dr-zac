@@ -22,7 +22,7 @@ export default function Hero({ data }) {
         },
         {
           'flex justify-center  pb-32 text-center': isCentered,
-        },
+        }
       )}
     >
       <Container
