@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 export const useVideos = () => {
   const {
-    allMarkdownRemark: { edges: videos },
+    allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
     query VideosQuery {
       allMarkdownRemark(filter: { frontmatter: { type: { eq: "videos" } } }) {
@@ -10,8 +10,8 @@ export const useVideos = () => {
           node {
             frontmatter {
               type
+              id
               title
-              permalink
               excerpt
               thumbnail {
                 childImageSharp {
@@ -30,5 +30,5 @@ export const useVideos = () => {
     }
   `)
 
-  return videos
+  return edges
 }

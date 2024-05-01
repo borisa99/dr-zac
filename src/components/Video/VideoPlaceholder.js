@@ -1,17 +1,17 @@
 import React from 'react'
-import ButtonPlay from '@/assets/Icons/ButtonPlay.svg'
+import buttonPlay from '@/assets/Images/Icons/iconPlay.png'
 import Image from '@/resolvers/Image'
 
 export default function VideoPlaceholder({ data, onIsPlaying }) {
   return (
     <>
-      <div className="absolute inset-0 z-20 w-full xl:h-[41.25rem]">
+      <div className="absolute inset-0 z-20 w-full  xl:h-[41.25rem]">
         {data?.photo?.image && (
-          <div className="relative h-auto w-full rounded-[1.25rem] xl:h-full">
+          <div className="relative h-auto w-full xl:h-full">
             <Image
               src={data?.photo?.image}
               alt={data?.photo?.alt}
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded-[1.25rem] object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <button
@@ -19,7 +19,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
                 className="scale-50 duration-300 ease-in hover:scale-110 active:scale-90 xl:scale-100"
                 aria-label="Play Video"
               >
-                <ButtonPlay />
+                <Image alt="Button play" src={buttonPlay} />
               </button>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
                 className="duration-300 ease-in hover:scale-110 active:scale-90"
                 aria-label="Play Video"
               >
-                <ButtonPlay />
+                <Image alt="Button play" src={buttonPlay} />
               </button>
             </div>
           </div>

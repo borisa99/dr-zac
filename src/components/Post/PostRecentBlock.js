@@ -1,10 +1,13 @@
 import React from 'react'
-import BlogList from '@/components/Post/PostList'
+import PostList from '@/components/Post/PostList'
 import Button from '@/components/UI/Button'
 import Paragraph from '@/components/UI/Paragraph'
 import Title from '@/components/UI/Title'
+import { usePosts } from '@/hooks/usePosts'
 
 const PostRecentBlock = () => {
+  const posts = usePosts()
+
   return (
     <div className="mb-[9.5rem] mt-40">
       <div className="mb-4 flex w-full items-center justify-center xl:justify-between">
@@ -27,7 +30,7 @@ const PostRecentBlock = () => {
         children="Got any medical questions or concerns? Dr. Zac’s got your back."
         className="mb-[4.125rem] text-center xl:text-left"
       />
-      <BlogList isVariant={false} />
+      <PostList posts={posts} isVariant={false} />
       <div className="mt-20 flex w-full justify-center xl:hidden">
         <Button
           children="View more posts"

@@ -5,7 +5,11 @@ export default function ContentImageTitle({ data }) {
   return (
     <>
       {data?.title && (
-        <Title Tag="h2" variant="article" className="mb-5 text-[#181818]">
+        <Title
+          Tag="h2"
+          variant="article"
+          className="font-400 title-font mb-5 text-center text-[#181818] xl:text-left"
+        >
           {data?.title}
         </Title>
       )}

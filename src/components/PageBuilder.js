@@ -9,7 +9,12 @@ import Perks from '@/blocks/Perks'
 import Video from '@/blocks/Video'
 import { graphql } from 'gatsby'
 
-export default function PageBuilder({ blocks, preview = false }) {
+export default function PageBuilder({
+  blocks,
+  posts,
+  videos,
+  preview = false,
+}) {
   return (
     <>
       {blocks &&
@@ -20,11 +25,15 @@ export default function PageBuilder({ blocks, preview = false }) {
             case 'heading':
               return <Heading key={i} data={block} preview={preview} />
             case 'blog':
-              return <Blog key={i} data={block} preview={preview} />
+              return (
+                <Blog key={i} posts={posts} data={block} preview={preview} />
+              )
             case 'content_image':
               return <ContentImage key={i} data={block} preview={preview} />
             case 'video':
-              return <Video key={i} data={block} preview={preview} />
+              return (
+                <Video key={i} videos={videos} data={block} preview={preview} />
+              )
             case 'media':
               return <Media key={i} data={block} preview={preview} />
             case 'perks':
@@ -51,7 +60,6 @@ export const query = graphql`
       type
       title
       content
-      url
       columns {
         title
         content

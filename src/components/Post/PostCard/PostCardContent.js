@@ -2,13 +2,12 @@ import React, { useMemo } from 'react'
 import Paragraph from '@/components/UI/Paragraph'
 
 export default function PostCardContent({ variant, data }) {
-  const { node } = data
   const text = useMemo(
     () =>
-      node?.excerpt?.length < 100
-        ? node?.excerpt
-        : node?.excerpt?.slice(0, 100) + '...',
-    [node]
+      data?.node.frontmatter?.excerpt?.length < 100
+        ? data?.node.frontmatter?.excerpt
+        : data?.node.frontmatter?.excerpt?.slice(0, 100) + '...',
+    [data],
   )
 
   return (

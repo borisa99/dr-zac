@@ -1,15 +1,16 @@
 import React from 'react'
-import Facebook from '@/assets/Icons/facebook.svg'
-import Instagram from '@/assets/Icons/instagram.svg'
-import X from '@/assets/Icons/x.svg'
-import Youtube from '@/assets/Icons/youtube.svg'
+import fb from '@/assets/Images/Socials/logo-facebook.png'
+import inst from '@/assets/Images/Socials/logo-instagram.png'
+import twit from '@/assets/Images/Socials/logo-twitter.png'
+import yt from '@/assets/Images/Socials/logo-youtube.png'
+import Image from '@/resolvers/Image'
 import Link from '@/resolvers/Link'
 
 const socials = [
-  { Icon: Facebook, url: 'https://www.facebook.com' },
-  { Icon: Instagram, url: 'https://www.instagram.com' },
-  { Icon: Youtube, url: 'https://www.youtube.com' },
-  { Icon: X, url: 'https://twitter.com' },
+  { src: fb, url: 'https://www.facebook.com' },
+  { src: inst, url: 'https://www.instagram.com' },
+  { src: yt, url: 'https://www.youtube.com' },
+  { src: twit, url: 'https://twitter.com' },
 ]
 
 export default function FooterSocials() {
@@ -26,7 +27,8 @@ export default function FooterSocials() {
               className="cursor-pointer text-textMain"
               target="_blank"
             >
-              <social.Icon className="h-6 w-6" />
+              {/* <social.Icon /> */}
+              <Image src={social.src} />
             </Link>
           </li>
         ))}

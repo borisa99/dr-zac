@@ -1,10 +1,14 @@
 ---
-id: UJUDCFVbWC
+id: UDUJKHVbWC
 type: page
-layout: page-builder
-title: Video page
+layout: videos-page
+title: Videos page
 permalink: /video/
 thumbnail: ''
+seo:
+  title: Videos Page
+  description: ''
+  ogimage: /img/frame-72.png
 blocks:
   - type: hero
     title: Insights on how to live a <span class='text-blue'>healthier life</span>.
@@ -20,6 +24,4 @@ blocks:
           variant: instagram
           content: Visit instagram
           url: /
-  - type: video
-    variant: default
 ---

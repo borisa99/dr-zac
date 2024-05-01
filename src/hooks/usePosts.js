@@ -8,16 +8,16 @@ export const usePosts = () => {
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { type: { eq: "post" } } }
-        limit: 3
+        limit: 4
       ) {
         edges {
           node {
             id
-            excerpt(pruneLength: 120)
             fields {
               slug
             }
             frontmatter {
+              excerpt
               title
               date(formatString: "MMMM DD, YYYY")
               author

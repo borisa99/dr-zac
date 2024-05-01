@@ -6,7 +6,7 @@ const PostAuthor = ({ data }) => {
   const getAuthor = useAuthors()
   const author = useMemo(() => getAuthor(data), [getAuthor, data])
 
-  const date = data?.node?.frontmatter.date ?? data.post.frontmatter.date
+  const date = data?.node?.frontmatter.date ?? data?.post.frontmatter.date
 
   return (
     <div className="flex items-start justify-center gap-3 xl:justify-start">

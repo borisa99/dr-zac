@@ -8,7 +8,7 @@ export default function ContentImagePhoto({ data }) {
         <Image
           src={data?.photo?.image}
           alt={data?.photo?.alt}
-          className="w-full rounded-[1.25rem]"
+          className="w-full max-w-[37.5rem] rounded-[1.25rem]"
         />
       )}
     </div>

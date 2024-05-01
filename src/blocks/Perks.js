@@ -22,7 +22,7 @@ export default function Perks({ data }) {
                       <Image
                         src={col?.photo?.image}
                         alt={col?.photo?.alt}
-                        className="mb-8 h-auto w-full"
+                        className="mb-8 h-auto w-full max-w-[37.5rem]"
                       />
                     )}
                     {col?.title && (
