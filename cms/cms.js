@@ -10,6 +10,7 @@ import settings from './collections/settings'
 import videos from './collections/videos'
 import FormPreview from './previews/FormPreview'
 import PagePreview from './previews/Page'
+import PostPreview from './previews/PostPreview'
 
 const config = {
   config: {
@@ -33,6 +34,7 @@ const config = {
 CMS.registerPreviewStyle('../commons.css')
 CMS.registerPreviewTemplate('pages', PagePreview)
 CMS.registerPreviewTemplate('forms', FormPreview)
+CMS.registerPreviewTemplate('blog', PostPreview)
 
 const injectCustomStyle = () => {
   const style = document.createElement('style')

@@ -8,21 +8,7 @@ export const useAuthors = () => {
       allMarkdownRemark(filter: { frontmatter: { type: { eq: "author" } } }) {
         edges {
           node {
-            frontmatter {
-              type
-              id
-              title
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 200
-                    quality: 71
-                    layout: FULL_WIDTH
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
+            ...AuthorData
           }
         }
       }

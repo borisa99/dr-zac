@@ -94,24 +94,10 @@ export const videoPageQuery = graphql`
   query VideoPageQuery {
     pageData: markdownRemark(frontmatter: { id: { eq: "UDUJKHVbWC" } }) {
       frontmatter {
+        id
         title
-        seo {
-          title
-          description
-        }
-        blocks {
-          type
-          title
-          content
-          variant
-          buttons {
-            button {
-              variant
-              content
-              url
-            }
-          }
-        }
+        ...Seo
+        ...Blocks
       }
     }
     videoData: allMarkdownRemark(
@@ -119,22 +105,7 @@ export const videoPageQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            type
-            id
-            title
-            excerpt
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  quality: 71
-                  layout: FULL_WIDTH
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+          ...VideoData
         }
       }
     }

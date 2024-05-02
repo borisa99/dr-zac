@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { filterPosts } from '@/utils/helpers'
-import { graphql } from 'gatsby'
+import { useLocation } from '@reach/router'
+import { graphql, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import BlogHeroContent from '@/components/Blog/BlogHeroContent'
 import DefaultHead from '@/components/Head/DefaultHead'
@@ -10,45 +11,85 @@ import PostList from '@/components/Post/PostList'
 import Button from '@/components/UI/Button'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
+import Spinner from '@/components/UI/Spinner'
 import Title from '@/components/UI/Title'
 import { cn } from '@/lib/helper'
 
-const postCategories = ['Medical', 'Aesthetics', 'Diet & Exercise', 'Lifestyle']
+const postCategories = [
+  { title: 'Medical', category: 'medical' },
+  { title: 'Aesthetics', category: 'aesthetics' },
+  { title: 'Diet & Exercise', category: 'diet & exercise' },
+  { title: 'Lifestyle', category: 'lifestyle' },
+]
 
 const Blog = ({ data }) => {
   const { postData, pageData } = data
+  const location = useLocation()
+  const queryParams = new URLSearchParams(location.search)
+  const [categoryFilter, setCategoryFilter] = useState('load')
+
+  const handleCategoryChange = (category, event) => {
+    event.preventDefault()
+    const encodedCategory = encodeURIComponent(category)
+    navigate(`/blog?cat=${encodedCategory}`)
+  }
+
+  useEffect(() => {
+    const catFilter = queryParams.get('cat')
+    setCategoryFilter(catFilter)
+    return () => {
+      setCategoryFilter('load')
+    }
+  }, [queryParams])
+
   return (
     <Layout nav={true}>
       <PageBuilder blocks={pageData.frontmatter.blocks} />
       <Section settings={pageData?.settings} className="bg-white pb-40 pt-28">
         <Container>
-          {postCategories.map((category, index) => {
-            const filteredPosts = filterPosts(postData?.edges, category)
-            return (
-              <div key={index} className="mb-40">
-                <div className="mb-4 flex w-full flex-col justify-center xl:flex-row xl:items-end xl:justify-between">
-                  <Title
-                    variant="article"
-                    children={category}
-                    className="title-font text-center text-[2.2rem] xl:text-[3rem]"
-                  />
-                  <Button
-                    button={{
-                      url: '/',
-                    }}
-                    className={cn('hidden xl:inline-block')}
-                    children={`View all ${category} articles`}
+          {categoryFilter === 'load' ? (
+            <Spinner />
+          ) : (
+            postCategories.map(({ title, category }, index) => {
+              const filteredPosts = filterPosts(postData?.edges, title)
+
+              if (categoryFilter && category !== categoryFilter) return
+
+              return (
+                <div key={index} className="mb-40">
+                  <div
+                    className={`mb-4 flex w-full flex-col justify-center xl:flex-row xl:items-end  ${categoryFilter ? 'xl:justify-center' : 'xl:justify-between'}`}
+                  >
+                    <Title
+                      variant="article"
+                      children={title}
+                      className="title-font text-center text-[2.2rem] xl:text-[3rem]"
+                    />
+                    {!categoryFilter ? (
+                      <Button
+                        onClick={(e) => handleCategoryChange(category, e)}
+                        className={cn('hidden xl:inline-block')}
+                        children={`View all ${title} articles`}
+                      />
+                    ) : null}
+                  </div>
+                  {!categoryFilter ? (
+                    <BlogHeroContent
+                      data={{
+                        content: `Got any ${title.toLowerCase()} questions or concerns? Dr. Zac's got your back.`,
+                      }}
+                    />
+                  ) : null}
+
+                  <PostList
+                    categoryFilter={categoryFilter}
+                    isVariant={index === 0}
+                    posts={filteredPosts}
                   />
                 </div>
-                <BlogHeroContent
-                  data={{
-                    content: `Got any ${category.toLowerCase()} questions or concerns? Dr. Zac's got your back.`,
-                  }}
-                />
-                <PostList isVariant={index === 0} posts={filteredPosts} />
-              </div>
-            )
-          })}
+              )
+            })
+          )}
         </Container>
       </Section>
     </Layout>

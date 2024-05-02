@@ -94,24 +94,10 @@ export const mediaPageQuery = graphql`
   query MediaPageQuery {
     pageData: markdownRemark(frontmatter: { id: { eq: "UKUHBNtTTC" } }) {
       frontmatter {
+        id
         title
-        seo {
-          title
-          description
-        }
-        blocks {
-          type
-          title
-          content
-          variant
-          buttons {
-            button {
-              variant
-              content
-              url
-            }
-          }
-        }
+        ...Seo
+        ...Blocks
       }
     }
     mediaData: allMarkdownRemark(
@@ -119,23 +105,7 @@ export const mediaPageQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            id
-            type
-            title
-            permalink
-            excerpt
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  quality: 71
-                  layout: FULL_WIDTH
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+          ...MediaData
         }
       }
     }

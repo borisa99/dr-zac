@@ -14,13 +14,17 @@ blocks:
       - button:
           variant: blog
           content: Medical
+          url: '/blog/?cat=medical'
       - button:
           variant: blog
           content: Aesthetics
+          url: '/blog/?cat=aesthetics'
       - button:
           variant: blog
           content: Diet & Exercise
+          url: '/blog/?cat=diet%20%26%20exercise'
       - button:
           variant: blog
           content: Lifestyle
+          url: '/blog/?cat=lifestyle'
 ---

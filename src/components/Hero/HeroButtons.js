@@ -7,6 +7,7 @@ export default function HeroButtons({ data, isCentered }) {
     <>
       {data?.buttons && (
         <Buttons
+          target="undefined"
           buttons={data?.buttons}
           className={cn(
             'mt-6 justify-center ',

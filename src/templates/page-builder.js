@@ -51,7 +51,6 @@ export const basicPageQuery = graphql`
     postData: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { type: { eq: "post" } } }
-      limit: 4
     ) {
       edges {
         node {
@@ -59,24 +58,7 @@ export const basicPageQuery = graphql`
           fields {
             slug
           }
-          frontmatter {
-            excerpt
-            title
-            date(formatString: "MMMM DD, YYYY")
-            author
-            tags
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 690
-                  quality: 72
-                  layout: FULL_WIDTH
-                  placeholder: DOMINANT_COLOR
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+          ...PostData
         }
       }
     }
@@ -85,22 +67,7 @@ export const basicPageQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            type
-            id
-            title
-            excerpt
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  quality: 71
-                  layout: FULL_WIDTH
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+          ...VideoData
         }
       }
     }

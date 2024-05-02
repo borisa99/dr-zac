@@ -6,7 +6,7 @@ import VideoPlayer from '@/components/Video/VideoPlayer'
 
 export default function Video({ data, videos }) {
   const isHomepage = data.variant === 'homepage'
-
+  
   return (
     <Section
       settings={data?.settings}

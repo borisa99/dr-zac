@@ -1,11 +1,11 @@
 {
   "separator": "|",
-  "baseTitle": "Henlo.",
-  "keyword": "gatsby-starter, blazing fast static site",
+  "baseTitle": "Dr Zac",
+  "keyword": "Dr Zac, concierge of doctors",
   "lang": "en",
-  "title": "The most advanced starter for Gatsby & Netlify CMS.",
+  "title": "Dr. Zac: Expert in Bespoke Vitality, Medication Formulation, and Aesthetics for Enhanced Wellbeing",
   "themeColor": "#000",
-  "image": "/img/henlo-cover.png",
-  "twitterHandle": "@cleancommit",
-  "description": "Think lightweight WordPress. Extensible, block based starter for Netlify CMS. Built with performance in mind, styled with TailwindCSS. "
+  "image": "/img/header/signature.png",
+  "twitterHandle": "",
+  "description": "Dr. Zac specializes in proactive, preventative healthcare designed to inspire a healthier, happier life. Offering bespoke vitality services, personalized medication formulations, and aesthetic solutions, Dr. Zac ensures you thrive every day."
 }

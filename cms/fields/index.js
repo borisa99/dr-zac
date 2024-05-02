@@ -41,7 +41,13 @@ export const Button = {
       widget: 'string',
       required: false,
     },
-    SelectField('default', ['default', 'arrow', 'button', 'outlined']),
+    SelectField('default', [
+      'default',
+      'youtube',
+      'instagram',
+      'secondary',
+      'blog',
+    ]),
   ],
 }
 

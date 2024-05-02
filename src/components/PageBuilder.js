@@ -60,6 +60,8 @@ export const query = graphql`
       type
       title
       content
+      posts
+      permalink
       columns {
         title
         content

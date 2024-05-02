@@ -37,13 +37,14 @@ blocks:
   - type: video
     title: <>#better<span class='text-blue'>lifechoices</span></>
     variant: homepage
-    url: https://www.youtube.com/watch?v=Ao1n4G3mVdo
+    permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
     photo:
       alt: Dr Zac Video
       image: /img/video/videoPlaceholder.jpg
   - type: blog
     variant: homepage
     title: Dr. Zac’s Blog
+    posts: [post-christmas-slump, post-detox-juice-myth]
     content: I believe that making small changes to your daily routine can have massive lasting impact on the rest of your life.
     buttons:
       - button:
