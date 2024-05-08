@@ -6,13 +6,20 @@ import Layout from '@/components/Layout'
 import PageBuilder from '@/components/PageBuilder'
 
 const Page = ({ data }) => {
+  const blocksUpdated = data.page.frontmatter.blocks.map((block) => {
+    if (block.type === 'blog') {
+      return {
+        ...block,
+        authors: data.authorData.edges,
+      }
+    }
+
+    return block
+  })
+
   return (
     <Layout nav={true}>
-      <PageBuilder
-        blocks={data.page.frontmatter.blocks}
-        posts={data.postData.edges}
-        videos={data.videoData.edges}
-      />
+      <PageBuilder blocks={blocksUpdated} />
     </Layout>
   )
 }
@@ -48,9 +55,8 @@ export const basicPageQuery = graphql`
         ...Seo
       }
     }
-    postData: allMarkdownRemark(
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { type: { eq: "post" } } }
+    authorData: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "author" } } }
     ) {
       edges {
         node {
@@ -58,16 +64,7 @@ export const basicPageQuery = graphql`
           fields {
             slug
           }
-          ...PostData
-        }
-      }
-    }
-    videoData: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "videos" } } }
-    ) {
-      edges {
-        node {
-          ...VideoData
+          ...AuthorData
         }
       }
     }

@@ -24,4 +24,17 @@ blocks:
           variant: instagram
           content: Visit instagram
           url: /
+  - type: video
+    videos:
+      [
+        drzac-tips-summerbody,
+        drzac-tips-summerbody-1,
+        drzac-tips-summerbody-2,
+        drzac-tips-superfoods,
+        drzac-tips-superfoods-1,
+        drzac-tips-superfoods-2,
+        drzac-tips-supplements,
+        drzac-tips-supplements-1,
+        drzac-tips-supplements-2,
+      ]
 ---

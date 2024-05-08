@@ -27,4 +27,20 @@ blocks:
           variant: blog
           content: Lifestyle
           url: '/blog/?cat=lifestyle'
+  - type: blog
+    title: Medical
+    category: Medical
+    variant: blog-1
+  - type: blog
+    title: Aesthetics
+    category: Aesthetics
+    variant: blog-2
+  - type: blog
+    title: Diet & Exercise
+    category: Diet & Exercise
+    variant: blog-2
+  - type: blog
+    title: Lifestyle
+    category: Lifestyle
+    variant: blog-2
 ---

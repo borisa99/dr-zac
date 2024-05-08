@@ -25,11 +25,16 @@ export default function VideoPlaceholder({ data, onIsPlaying }) {
           </div>
         )}
 
-        {data?.node?.frontmatter.thumbnail && (
+        {(data?.frontmatter?.thumbnail || data.thumbnail) && (
           <div className="relative h-[16.375rem] w-full rounded-xl xl:w-[24.5rem]">
             <Image
-              src={data.node.frontmatter.thumbnail}
-              alt={data.node.frontmatter.title}
+              src={
+                data.thumbnail
+                  ? data?.thumbnail?.childImageSharp?.gatsbyImageData?.images
+                      .fallback.src
+                  : data.frontmatter.thumbnail
+              }
+              alt={data.title ? data.title : data.frontmatter.title}
               className="h-full w-full rounded-xl object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center">

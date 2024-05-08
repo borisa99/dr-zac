@@ -27,7 +27,7 @@ export default class PagePreview extends React.Component {
             />
           </div>
         ) : (
-          <div class="flex items-center justify-center py-24 text-center">
+          <div className="flex items-center justify-center py-24 text-center">
             <h1>Add first block to start creating your form</h1>
           </div>
         )}

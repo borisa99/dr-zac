@@ -4,9 +4,9 @@ import Section from '@/components/UI/Section'
 import VideoCard from '@/components/Video/VideoCard'
 import VideoPlayer from '@/components/Video/VideoPlayer'
 
-export default function Video({ data, videos }) {
+export default function Video({ data }) {
   const isHomepage = data.variant === 'homepage'
-  
+
   return (
     <Section
       settings={data?.settings}
@@ -17,9 +17,9 @@ export default function Video({ data, videos }) {
         <div> {isHomepage && <VideoPlayer data={data} />}</div>
 
         {/* Video page block list */}
-        {!isHomepage && videos.length > 0 && (
+        {!isHomepage && data.videos.length > 0 && (
           <div className="grid grid-cols-1 gap-x-6 gap-y-[5.563rem] lg:grid-cols-2 xl:grid-cols-3">
-            {videos.map((videoData, index) => {
+            {data.videos.map((videoData, index) => {
               return <VideoCard data={videoData} key={index} />
             })}
           </div>

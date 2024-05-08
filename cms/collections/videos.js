@@ -17,15 +17,15 @@ const collection = {
       label: 'Type',
       name: 'type',
       widget: 'hidden',
-      default: 'author',
+      default: 'video',
     },
     {
       label: 'Name',
       name: 'title',
       widget: 'string',
       default: '',
+      required: false,
     },
-
     {
       label: 'Featured Image',
       name: 'thumbnail',

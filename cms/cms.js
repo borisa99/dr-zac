@@ -34,7 +34,7 @@ const config = {
 CMS.registerPreviewStyle('../commons.css')
 CMS.registerPreviewTemplate('pages', PagePreview)
 CMS.registerPreviewTemplate('forms', FormPreview)
-CMS.registerPreviewTemplate('blog', PostPreview)
+// CMS.registerPreviewTemplate('blog', PostPreview)
 
 const injectCustomStyle = () => {
   const style = document.createElement('style')
