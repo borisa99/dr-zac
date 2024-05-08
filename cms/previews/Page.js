@@ -64,14 +64,16 @@ export default class PagePreview extends React.Component {
         case 'video':
           return {
             ...block.data,
-            videos: videos.filter(
-              (video) => block.data.videos?.includes(video.id) || [],
-            ),
+            videos:
+              videos.filter((vid) => block.data.videos?.includes(vid.id)) || [],
           }
         default:
           return block.data
       }
     })
+
+    console.log(videos)
+    console.log(blocks)
 
     return (
       <div>
