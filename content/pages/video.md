@@ -5,15 +5,15 @@ layout: videos-page
 title: Videos page
 permalink: /video/
 thumbnail: ''
-seo:
-  title: Videos Page
-  description: ''
-  ogimage: /img/frame-72.png
 blocks:
   - type: hero
     title: Insights on how to live a <span class='text-blue'>healthier life</span>.
-    content: |-
-      Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live a healthier life. Follow Dr Zac on<br/> Instagram <a target='_blank' href='https://www.instagram.com/drzac.co/' class='underlined-link'>@drzac.co</a> for a daily dose of health tips, hacks and facts.
+    content:
+      "Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live
+      a healthier life. Follow Dr Zac on<br/> Instagram <a target='_blank'
+      href='https://www.instagram.com/drzac.co/'
+      class='underlined-link'>@drzac.co</a> for a daily dose of health tips,
+      hacks and facts."
     variant: center
     buttons:
       - button:
@@ -24,4 +24,19 @@ blocks:
           variant: instagram
           content: Visit instagram
           url: /
+  - type: video
+    videos:
+      - drzac-tips-summerbody-1
+      - drzac-tips-summerbody-2
+      - drzac-tips-summerbody
+      - drzac-tips-superfoods-1
+      - drzac-tips-superfoods-2
+      - drzac-tips-superfoods
+      - drzac-tips-supplements-1
+      - drzac-tips-supplements-2
+      - drzac-tips-supplements
+seo:
+  title: Videos Page
+  description: ''
+  ogimage: /img/frame-72.png
 ---

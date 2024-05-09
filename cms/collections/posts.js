@@ -6,7 +6,7 @@ const collection = {
   name: 'blog',
   label: 'Posts',
   editor: {
-    preview: false,
+    preview: true,
   },
   description: 'Blog posts collection',
   folder: 'content/blog',

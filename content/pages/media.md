@@ -15,4 +15,17 @@ blocks:
     content: |-
       If you would like to get in touch with Dr. Zac regarding media and public speaking, please email <a href='mailto:info@doctorzac.com' class='text-blue underlined-link'>info@doctorzac.com</a>.
     variant: center
+  - type: media
+    media:
+      [
+        drzac-media-bloodcloth,
+        drzac-media-bloodcloth-1,
+        drzac-media-cupboardremedies,
+        drzac-media-cupboardremedies-1,
+        drzac-media-heatwave,
+        drzac-media-heatwave-1,
+        drzac-media-measles,
+        drzac-media-measles-1,
+        drzac-media-measles-2,
+      ]
 ---

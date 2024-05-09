@@ -16,24 +16,7 @@ export const usePosts = () => {
             fields {
               slug
             }
-            frontmatter {
-              excerpt
-              title
-              date(formatString: "MMMM DD, YYYY")
-              author
-              tags
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 690
-                    quality: 72
-                    layout: FULL_WIDTH
-                    placeholder: DOMINANT_COLOR
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
+            ...PostData
           }
         }
       }

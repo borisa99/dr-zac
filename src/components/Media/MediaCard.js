@@ -5,12 +5,15 @@ import Link from '@/resolvers/Link'
 
 export default function MediaCard({ data }) {
   return (
-    <Link internal="false" to={data.node.frontmatter.permalink}>
+    <Link
+      internal="false"
+      to={data.permalink ? data.permalink : data.frontmatter.permalink}
+    >
       <MediaCardImage data={data} />
       <Title
         Tag="h3"
         variant="article-variant"
-        children={data.node.frontmatter.title}
+        children={data.title ? data.title : data.frontmatter.title}
         className="title-font mt-6 text-left"
       />
     </Link>

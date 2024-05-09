@@ -1,10 +1,24 @@
-import React from 'react'
-// import InstagramColored from '@/assets/Icons/instagramColored.svg'
-// import YoutubeColored from '@/assets/Icons/youtubeColored.svg'
+import React, { useEffect, useState } from 'react'
+import instagram from '@/assets/Images/Socials/instagramColored.png'
+import youtube from '@/assets/Images/Socials/youtubeColored.png'
+import { useLocation } from '@reach/router'
 import { cn } from '@/lib/helper'
+import Image from '@/resolvers/Image'
 import Link from '@/resolvers/Link'
 
 export default function Button({ className, button, children, ...props }) {
+  const location = useLocation()
+  const [isActiveBlogCat, setIsActiveBlogCat] = useState('')
+
+  useEffect(() => {
+    const url =
+      location.search === button?.url.replace('/blog/', '')
+        ? 'text-[#BCDCFF]  bg-blue border-transparent'
+        : 'text-blue bg-transparent'
+
+    setIsActiveBlogCat(url)
+  }, [button, location])
+
   let buttonStyle =
     'group inline-block rounded uppercase px-5 py-4 cursor-pointer text-[0.813rem]'
   switch (button?.variant) {
@@ -18,18 +32,18 @@ export default function Button({ className, button, children, ...props }) {
       buttonStyle = `${buttonStyle} text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
       break
     case 'blog':
-      buttonStyle = `${buttonStyle} rounded-full text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
+      buttonStyle = `${buttonStyle} rounded-full  border-[1px] flex gap-1 border-[#BCDCFF] ${isActiveBlogCat}`
       break
     default:
       buttonStyle = `${buttonStyle} text-white bg-blue`
   }
 
-  // const buttonIcon =
-  //   button?.variant === 'youtube' ? (
-  //     <YoutubeColored />
-  //   ) : button?.variant === 'instagram' ? (
-  //     <InstagramColored />
-  //   ) : null
+  const buttonIcon =
+    button?.variant === 'youtube' ? (
+      <Image alt="Youtube icon" src={youtube} />
+    ) : button?.variant === 'instagram' ? (
+      <Image alt="Instagram icon" src={instagram} />
+    ) : null
 
   return (
     <>
@@ -39,7 +53,7 @@ export default function Button({ className, button, children, ...props }) {
           className={cn(buttonStyle, className)}
           {...props}
         >
-          {children}
+          {buttonIcon} {children}
         </Link>
       ) : (
         <button className={cn(buttonStyle, className)} {...props}>

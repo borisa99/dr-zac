@@ -10,11 +10,14 @@ import PostTag from '@/components/Post/PostTag'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 import Title from '@/components/UI/Title'
-import { useAuthors } from '@/hooks/useAuthors'
 
 const Post = ({ data }) => {
-  const getAuthor = useAuthors()
-  const author = useMemo(() => getAuthor(data), [getAuthor, data])
+  const author = useMemo(() => {
+    const authorID = data.post.frontmatter.author
+    return data.authorData.edges.find((authorData) => {
+      return authorData.node.frontmatter.id === authorID
+    })
+  }, [data])
 
   return (
     <Layout nav={true}>
@@ -27,10 +30,10 @@ const Post = ({ data }) => {
               children={data.post.frontmatter.title}
               className="title-font mb-10 text-[4rem] leading-[4.5rem]"
             />
-            <PostAuthor author={author} data={data} />
+            <PostAuthor author={author.node.frontmatter} data={data} />
           </div>
           <PostContent data={data} />
-          <PostRecentBlock />
+          <PostRecentBlock authors={data.authorData.edges} />
         </Container>
       </Section>
     </Layout>
@@ -76,6 +79,20 @@ export const basicPageQuery = graphql`
           }
         }
         ...Seo
+      }
+    }
+    authorData: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { type: { eq: "author" } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          ...AuthorData
+        }
       }
     }
   }

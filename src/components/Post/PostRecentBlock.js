@@ -5,7 +5,7 @@ import Paragraph from '@/components/UI/Paragraph'
 import Title from '@/components/UI/Title'
 import { usePosts } from '@/hooks/usePosts'
 
-const PostRecentBlock = () => {
+const PostRecentBlock = ({ authors }) => {
   const posts = usePosts()
 
   return (
@@ -30,7 +30,7 @@ const PostRecentBlock = () => {
         children="Got any medical questions or concerns? Dr. Zac’s got your back."
         className="mb-[4.125rem] text-center xl:text-left"
       />
-      <PostList posts={posts} isVariant={false} />
+      <PostList authors={authors} posts={posts} isVariant={false} />
       <div className="mt-20 flex w-full justify-center xl:hidden">
         <Button
           children="View more posts"

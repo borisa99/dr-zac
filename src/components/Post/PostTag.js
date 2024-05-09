@@ -1,6 +1,7 @@
 import React from 'react'
 
 const PostTag = ({ data }) => {
+  
   return (
     <div className="mb-5 flex flex-wrap justify-center gap-2 xl:justify-start">
       {data.post.frontmatter.tags &&

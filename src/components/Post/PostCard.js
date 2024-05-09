@@ -6,13 +6,23 @@ import PostCardTitle from './PostCard/PostCardTitle'
 import { cn } from '@/lib/helper'
 import Link from '@/resolvers/Link'
 
-export default function PostCard({ data, variant }) {
+export default function PostCard({ data, variant, authors, preview }) {
   const variant1 = variant === '1'
   const variant2 = variant === '2'
   const variantVal = useMemo(() => variant1 ?? variant2, [variant1, variant2])
 
+  const author = useMemo(() => {
+    const authorID =
+      data?.author ??
+      data?.frontmatter?.author ??
+      data?.node?.frontmatter?.author
+    return authors.find((authorData) => {
+      return (authorData?.node?.frontmatter.id || authorData.id) === authorID
+    })
+  }, [data, authors])
+
   return (
-    <Link to={data?.node.fields.slug}>
+    <Link to={data?.fields?.slug ?? data?.node?.fields.slug}>
       <article className={cn({ 'mb-16': variant1 })}>
         <div
           className={cn(
@@ -27,14 +37,18 @@ export default function PostCard({ data, variant }) {
           <div
             className={cn(
               'h-full',
-              { 'w-full lg:w-[35rem]': variant1 },
-              { 'w-full lg:w-[24.5rem]': variant2 }
+              { 'w-full xl:w-[35rem]': variant1 },
+              { 'w-full xl:w-[24.5rem]': variant2 },
             )}
           >
             <div className="flex flex-col items-center justify-between text-center xl:h-[11.75rem] xl:items-start xl:text-left">
               <PostCardTitle data={data} variant={variantVal} />
               <PostCardContent data={data} variant={variantVal} />
-              <PostAuthor data={data} />
+              <PostAuthor
+                author={author?.node?.frontmatter ?? author}
+                data={data}
+                preview={preview}
+              />
             </div>
           </div>
         </div>
