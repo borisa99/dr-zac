@@ -117,7 +117,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       let pathName = edge.node.frontmatter.permalink || edge.node.fields.slug
       let component = path.resolve(
-        `src/templates/${String(edge.node.frontmatter.layout)}.js`,
+        `src/templates/${String(edge.node.frontmatter.layout)}.js`
       )
 
       if (fs.existsSync(component)) {

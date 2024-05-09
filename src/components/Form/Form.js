@@ -68,7 +68,7 @@ export default function Form({ data, white }) {
           'absolute z-10 flex h-full w-full items-center justify-center transition-all',
           {
             '-translate-y-full opacity-0': !isSend,
-          },
+          }
         )}
       >
         <div className="text-center text-2xl">
@@ -94,7 +94,7 @@ export default function Form({ data, white }) {
                 },
                 {
                   'items-end': row.position === 'bottom',
-                },
+                }
               )}
             >
               {row.fields &&
