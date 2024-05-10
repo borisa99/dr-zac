@@ -24,7 +24,7 @@ export default function FooterSocials() {
           <li key={index}>
             <Link
               to={social.url}
-              className="cursor-pointer text-textMain"
+              className="cursor-pointer text-black"
               target="_blank"
             >
               {/* <social.Icon /> */}

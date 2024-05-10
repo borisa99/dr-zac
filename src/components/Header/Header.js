@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import logo from '@/assets/Images/header/drzac.svg'
 import Button from '../UI/Button'
 import Container from '../UI/Container'
-import HeaderHamburgerButton from './HeaderHamburgerButton'
-import HeaderLogo from './HeaderLogo'
 import HeaderNavList from './HeaderNavList'
 import HeaderNavMobileList from './HeaderNavMobileList'
+import Image from '@/resolvers/Image'
+import Link from '@/resolvers/Link'
 
 // Gatsby's underlying routing library
 
@@ -29,17 +30,36 @@ function Header() {
   }, [isOpen])
 
   return (
-    <header className="absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2 bg-transparent  text-[0.813rem]  text-textMain">
+    <header className="absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2 bg-transparent  text-[0.813rem]  text-black">
       <Container className="m-auto flex items-start justify-between  border-[1px] border-transparent border-b-[#E7E7E7] py-5 xl:justify-between">
-        <HeaderLogo />
+        <Link to="/" className="cursor-pointer text-2xl font-bold">
+          <Image alt="Dr Zac Logo" src={logo} className="antialiased" />
+        </Link>
         <div className="flex items-center gap-[2rem]">
           <HeaderNavList />
-          {/* <button className="z-[50]" onClick={handleNav}> */}
-          <HeaderHamburgerButton isOpen={isOpen} handleNav={handleNav} />
+          <button
+            aria-label={isOpen ? 'Close' : 'Open'}
+            onClick={handleNav}
+            className="relative z-50 h-14 w-14 rounded bg-transparent focus:outline-none xl:hidden"
+          >
+            <div className="absolute left-6 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
+              <span
+                className={`text-blue-500 absolute block h-0.5 w-7 transform bg-current transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : ' -translate-y-1.5'}`}
+              ></span>
+              <span
+                className={`text-blue-500 absolute  block h-0.5 w-5 transform   bg-current transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
+              ></span>
+              <span
+                className={`text-blue-500 absolute  block h-0.5 w-7 transform bg-current  transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : ' translate-y-1.5'}`}
+              ></span>
+            </div>
+          </button>
           {isOpen && <HeaderNavMobileList />}
           <Button
+            button={{
+              url: 'https://conciergedoctors.com.au/pages/new-patient?ref=drzac',
+            }}
             children="Book a consultation"
-            url="/"
             className="hidden xl:inline-block"
           />
         </div>

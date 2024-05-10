@@ -11,7 +11,7 @@ export default function HeaderNavMobileList() {
     >
       <nav className="flex h-full w-full max-w-[76.5rem] flex-col items-center justify-center gap-10 px-4">
         <Link
-          className={`cursor-pointer text-[0.938rem] font-semibold leading-4  ${location.pathname === '/' ? 'text-blue' : ''}`}
+          className={`cursor-pointer text-[0.938rem] font-semibold leading-4  ${location.pathname === '/' ? 'text-blue-500' : ''}`}
           to="/"
         >
           Home
@@ -21,7 +21,7 @@ export default function HeaderNavMobileList() {
 
           return (
             <Link
-              className={`cursor-pointer text-[0.938rem] font-semibold leading-4  ${isActive ? 'text-blue' : ''}`}
+              className={`cursor-pointer text-[0.938rem] font-semibold leading-4  ${isActive ? 'text-blue-500' : ''}`}
               to={item.permalink}
               key={i}
             >

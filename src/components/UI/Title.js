@@ -8,7 +8,7 @@ export default function Title({
   className,
   ...props
 }) {
-  let style = 'leading-[5rem] text-textMain'
+  let style = 'leading-[5rem] text-black'
   switch (variant) {
     case 'hero':
       style = `${style} tracking-tight text-5xl  xl:text-7xl  text-center xl:text-left title-font`
@@ -17,10 +17,10 @@ export default function Title({
       style = `${style} tracking-tighter text-4xl title-font`
       break
     case 'article':
-      style = `${style} text-[1.25rem] xl:text-[2rem] tracking-tight leading-10`
+      style = `${style} text-[1.25rem] xl:text-[2rem] tracking-tight`
       break
     case 'article-variant':
-      style = `${style} text-[1.25rem] -tracking-[0.3px] leading-10`
+      style = `${style} text-[1.25rem] -tracking-[0.3px]`
       break
     default:
       style = `${style}`

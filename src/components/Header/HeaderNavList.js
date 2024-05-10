@@ -14,7 +14,7 @@ export default function HeaderNavList() {
 
           return (
             <Link
-              className={`cursor-pointer text-[0.938rem] font-semibold leading-4 ${isActive ? 'text-blue' : ''}`}
+              className={`cursor-pointer text-[0.938rem] font-semibold leading-4 ${isActive ? 'text-blue-500' : ''}`}
               to={item.permalink}
               key={i}
             >

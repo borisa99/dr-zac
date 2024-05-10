@@ -7,7 +7,7 @@ permalink: /
 thumbnail: ''
 blocks:
   - type: hero
-    title: Hi, I'm <span class='text-blue'>Doctor Zac</span>
+    title: Hi, I'm <span class='text-blue-500'>Doctor Zac</span>
     content:
       I am passionate about proactive, preventative healthcare, and inspiring
       others to live happier and healthier for longer. My specialty is bespoke
@@ -20,13 +20,13 @@ blocks:
           content: Learn more
           url: /
     photo:
-      alt: Dr Zac signature
-      image: /img/header/signature.png
-    photo2:
       alt: Dr Zac
       image: /img/header/drzac.png
+    photo2:
+      alt: Dr Zac signature
+      image: /img/header/signature.png
   - type: heading
-    title: <span>#better<span class='text-blue'>lifechoices</span></span>
+    title: <span>#better<span class='text-blue-500'>lifechoices</span></span>
     content: I believe that making small changes to your daily routine can have
       massive lasting impact on the rest of your life.
     buttons:
@@ -39,7 +39,7 @@ blocks:
           content: Watch my videos
           url: /
   - type: video
-    title: <>#better<span class='text-blue'>lifechoices</span></>
+    title: <>#better<span class='text-blue-500'>lifechoices</span></>
     variant: homepage
     permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
     photo:

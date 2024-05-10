@@ -39,7 +39,7 @@ export default function Input({
           type={data?.input_type}
           placeholder={`${data?.name}${data?.required ? '*' : ''}`}
           className={cn('block h-14 w-full rounded-lg border', {
-            'w-full border-gray-200 bg-white text-textMain sm:w-96': white,
+            'w-full border-gray-200 bg-white text-black sm:w-96': white,
             'bg-gray-100': !white,
           })}
         />

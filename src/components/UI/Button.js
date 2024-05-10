@@ -13,8 +13,8 @@ export default function Button({ className, button, children, ...props }) {
   useEffect(() => {
     const url =
       location.search === button?.url.replace('/blog/', '')
-        ? 'text-[#BCDCFF]  bg-blue border-transparent'
-        : 'text-blue bg-transparent'
+        ? 'text-[#BCDCFF]  bg-blue-500 border-transparent'
+        : 'text-blue-500 bg-transparent'
 
     setIsActiveBlogCat(url)
   }, [button, location])
@@ -29,13 +29,13 @@ export default function Button({ className, button, children, ...props }) {
       buttonStyle = `${buttonStyle} text-[#E4405F] bg-transparent border-[1px] flex gap-1 border-[#E4405F]`
       break
     case 'secondary':
-      buttonStyle = `${buttonStyle} text-blue bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
+      buttonStyle = `${buttonStyle} text-blue-500 bg-transparent border-[1px] flex gap-1 border-[#BCDCFF]`
       break
     case 'blog':
       buttonStyle = `${buttonStyle} rounded-full  border-[1px] flex gap-1 border-[#BCDCFF] ${isActiveBlogCat}`
       break
     default:
-      buttonStyle = `${buttonStyle} text-white bg-blue`
+      buttonStyle = `${buttonStyle} text-white bg-blue-500`
   }
 
   const buttonIcon =

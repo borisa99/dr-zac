@@ -7,7 +7,7 @@ title: About
 permalink: /about/
 blocks:
   - type: hero
-    title: About <span class='text-blue'>me</span>
+    title: About <span class='text-blue-500'>me</span>
     variant: center
     content: >-
       I am passionate about proactive, preventative healthcare, and inspiring others to live happier and healthier for longer.
@@ -16,7 +16,7 @@ blocks:
     photo:
       alt: Dr Zac
       image: /img/about/drZac1.png
-    title: Dr. Zac completed his medical studies at the <span class="text-blue">University of Sydney</span>, successfully gaining a Bachelor of Medicine and Bachelor of Surgery.
+    title: Dr. Zac completed his medical studies at the <span class="text-blue-500">University of Sydney</span>, successfully gaining a Bachelor of Medicine and Bachelor of Surgery.
     content:
       <span style='margin-bottom:16px;display:block;'>Before his studies, Dr. Zac trained and worked as a Registered Nurse, both in Australia and internationally.</span>
 

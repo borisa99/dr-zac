@@ -7,7 +7,7 @@ permalink: /video/
 thumbnail: ''
 blocks:
   - type: hero
-    title: Insights on how to live a <span class='text-blue'>healthier life</span>.
+    title: Insights on how to live a <span class='text-blue-500'>healthier life</span>.
     content:
       "Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live
       a healthier life. Follow Dr Zac on<br/> Instagram <a target='_blank'

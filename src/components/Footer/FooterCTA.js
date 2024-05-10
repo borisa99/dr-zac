@@ -10,7 +10,12 @@ export default function FooterCTA() {
         pro-active preventative care and inspiring others to live happier and
         healthier for longer.
       </p>
-      <Button>Book a consultation</Button>
+      <Button
+        button={{
+          url: 'https://conciergedoctors.com.au/pages/new-patient?ref=drzac',
+        }}
+        children="Book a consultation"
+      />
     </div>
   )
 }

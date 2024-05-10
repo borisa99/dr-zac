@@ -16,13 +16,13 @@ export default function Hero({ data }) {
     <Section
       settings={data?.settings}
       className={cn(
-        'relative bg-hero pt-[14.25rem]',
+        'bg-blue-100 relative pt-[14.25rem]',
         {
           'flex items-center pb-0': isFull,
         },
         {
           'flex justify-center  pb-32 text-center': isCentered,
-        }
+        },
       )}
     >
       <Container
@@ -34,11 +34,11 @@ export default function Hero({ data }) {
           <HeroTitle isCentered={isCentered} data={data} />
           <Paragraph variant={data?.variant} children={data?.content} />
           <HeroButtons isCentered={isCentered} data={data} />
-          {data?.photo?.image && (
+          {data?.photo2?.image && (
             <div className="mb-8 flex w-full justify-center xl:justify-start">
               <Image
-                src={data?.photo?.image}
-                alt={data?.photo?.alt}
+                src={data?.photo2?.image}
+                alt={data?.photo2?.alt}
                 className=" mt-8 h-auto w-[8rem]"
               />
             </div>
