@@ -1,4 +1,4 @@
-export const ID = { label: 'ID', name: 'id', widget: 'uuid' };
+export const ID = { label: 'ID', name: 'id', widget: 'uuid' }
 
 export const SelectField = (
   initial,
@@ -11,7 +11,7 @@ export const SelectField = (
   widget: 'select',
   options,
   ...(initial ? { default: initial } : null),
-});
+})
 
 export const ImageField = (name = 'image', fieldName = 'photo') => ({
   label: 'Image',
@@ -21,7 +21,7 @@ export const ImageField = (name = 'image', fieldName = 'photo') => ({
     { label: 'Image', name, widget: 'image', required: false },
     { label: 'Alt', name: 'alt', widget: 'string', required: false },
   ],
-});
+})
 
 export const Button = {
   label: 'Button',
@@ -41,30 +41,36 @@ export const Button = {
       widget: 'string',
       required: false,
     },
-    SelectField('default', ['default', 'arrow', 'button', 'outlined']),
+    SelectField('default', [
+      'default',
+      'youtube',
+      'instagram',
+      'secondary',
+      'blog',
+    ]),
   ],
-};
+}
 
 export const Buttons = {
   label: 'Buttons',
   name: 'buttons',
   widget: 'list',
   fields: [Button],
-};
+}
 
 export const Title = {
   label: 'Title',
   name: 'title',
   widget: 'string',
   required: false,
-};
+}
 
 export const Content = {
   label: 'Content',
   name: 'content',
   widget: 'markdown',
   required: false,
-};
+}
 
 export const SettingsGroup = {
   label: 'Settings',
@@ -98,4 +104,4 @@ export const SettingsGroup = {
       'margin_bottom',
     ),
   ],
-};
+}

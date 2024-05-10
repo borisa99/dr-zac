@@ -6,9 +6,20 @@ import Layout from '@/components/Layout'
 import PageBuilder from '@/components/PageBuilder'
 
 const Page = ({ data }) => {
+  const blocksUpdated = data.page.frontmatter.blocks.map((block) => {
+    if (block.type === 'blog') {
+      return {
+        ...block,
+        authors: data.authorData.edges,
+      }
+    }
+
+    return block
+  })
+
   return (
     <Layout nav={true}>
-      <PageBuilder blocks={data.page.frontmatter.blocks} />
+      <PageBuilder blocks={blocksUpdated} />
     </Layout>
   )
 }
@@ -42,6 +53,19 @@ export const basicPageQuery = graphql`
         title
         ...Blocks
         ...Seo
+      }
+    }
+    authorData: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "author" } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          ...AuthorData
+        }
       }
     }
   }

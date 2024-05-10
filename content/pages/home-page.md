@@ -7,82 +7,80 @@ permalink: /
 thumbnail: ''
 blocks:
   - type: hero
-    title: Henlo.
-    content: |-
-      ## The most advanced starter for Gatsby & Netlify CMS.
-
-      Extensible, block based starter for Netlify CMS.\
-      Built with performance in mind, styled with TailwindCSS.
-
-      **Think lightweight WordPress.**
-    variant: centered
-    buttons:
-      - button:
-          variant: default
-          content: Documentation
-          url: https://github.com/clean-commit/gatsby-starter-henlo
-  - type: perks
-    title: Features
-    columns:
-      - title: Manual Initialization
-        content: Ditch yaml for CMS configuration, use JS instead
-      - title: Support For Local Development
-        content: Develop & test Netlify CMS configuration locally.
-      - title: Integrated Forms
-        content: Create forms with Netlify CMS, powered by
-          [react-hook-form](https://react-hook-form.com/).
-      - title: Integrated Previews
-        content:
-          Blocks created by developers are instantly available for previews from
-          Netlify CMS layout
-      - title: Permalink-based page generation
-        content: 'Automatically generated pages based on permalinks. '
-      - title: Modify Navigation with ease
-        content:
-          Navigation can be modified with ease, without a need for changing the
-          code base
-    content: ''
-  - type: content_image
-    variant: reversed
-    title: Block-based page creator with Previews
+    title: Hi, I'm <span class='text-blue'>Doctor Zac</span>
     content:
-      Create blocks and reuse them across different pages that can be created
-      using Netlify CMS UI. Previews will be generated automatically for all
-      blocks!
+      I am passionate about proactive, preventative healthcare, and inspiring
+      others to live happier and healthier for longer. My specialty is bespoke
+      vitality, medication formulation, and aesthetics so that all my patients
+      thrive in their everyday lives.
+    variant: full
     buttons:
       - button:
           variant: default
-          content: Get it now
-          url: https://github.com/clean-commit/gatsby-starter-henlo
+          content: Learn more
+          url: /
     photo:
-      image: /img/frame-69.png
-      alt: Block based page creator
-  - type: content_image
-    variant: default
-    photo:
-      alt: Premade components schema
-      image: /img/frame-77.png
-    title: Premade components & Netlify CMS settings
-    content: >-
-      We've created a collection of basic UI elements, so you can quickly create
-      new blocks and style them from a single component.
-
-
-      We did the same for Netlify CMS configuration. You can use basic fields to create new blocks quicker then ever!
+      alt: Dr Zac signature
+      image: /img/header/signature.png
+    photo2:
+      alt: Dr Zac
+      image: /img/header/drzac.png
+  - type: heading
+    title: <span>#better<span class='text-blue'>lifechoices</span></span>
+    content: I believe that making small changes to your daily routine can have
+      massive lasting impact on the rest of your life.
     buttons:
       - button:
           variant: default
-          content: Get it now
-          url: https://github.com/clean-commit/gatsby-starter-henlo
-  - type: content_image
-    variant: reversed
-    title: Configuration exposed through Netlify CMS
-    content: >-
-      No need to change configuration using `gatsby-node.js` or `.env` files!
-
-
-      Admins of the site can setup options using Netlify CMS's UI instead. This allows for reusable themes & templates
+          content: Read my blog
+          url: /
+      - button:
+          variant: secondary
+          content: Watch my videos
+          url: /
+  - type: video
+    title: <>#better<span class='text-blue'>lifechoices</span></>
+    variant: homepage
+    permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
     photo:
-      image: /img/frame-72.png
-      alt: Netlify CMS configuration with Henlo
+      alt: Dr Zac Video
+      image: /img/video/videoPlaceholder.jpg
+  - type: blog
+    variant: homepage
+    title: Dr. Zac’s Blog
+    posts:
+      - post-detox-juice-myth
+      - post-prefect-sleeping-hours
+      - post-christmas-slump
+      - post-healthy-christmas-presents
+    content: I believe that making small changes to your daily routine can have
+      massive lasting impact on the rest of your life.
+    buttons:
+      - button:
+          variant: default
+          content: View all articles
+          url: /blog
+  - type: perks
+    buttons:
+      - button:
+          variant: default
+          content: View all articles
+          url: /blog
+      - button:
+          variant: default
+          content: Watch my videos
+          url: /video
+    columns:
+      - title: Dr Zac's Tips
+        content: Dr. Zac’s will help you hack your way to better health.
+        photo:
+          alt: Dr Zac Articles
+          image: /img/columns/drzac-articles.jpg
+      - title: Dr Zac in the media
+        content: Watch Dr. Zac strut his stuff TV and beyond.
+        photo:
+          alt: Dr Zac Media Videos
+          image: /img/columns/drzac-videos.jpg
+seo:
+  ogimage: /img/dr-zac-home-two_1-removebg-1.png
 ---

@@ -1,12 +1,12 @@
-import { PermalinkField } from '../fields/permalink-field';
-import seo from '../fields/seo';
-import { ID } from '../fields';
+import { ID } from '../fields'
+import { PermalinkField } from '../fields/permalink-field'
+import seo from '../fields/seo'
 
 const collection = {
   name: 'blog',
   label: 'Posts',
   editor: {
-    preview: false,
+    preview: true,
   },
   description: 'Blog posts collection',
   folder: 'content/blog',
@@ -33,6 +33,15 @@ const collection = {
       name: 'title',
       widget: 'string',
       default: '',
+    },
+    {
+      label: 'Tags',
+      name: 'tags',
+      widget: 'select',
+      options: ['MEDICAL', 'AESTHETICS', 'DIET & EXERCISE', 'LIFESTYLE'],
+      multiple: true,
+      default: 'MEDICAL',
+      required: false,
     },
     PermalinkField('blog'),
     {
@@ -76,6 +85,6 @@ const collection = {
     },
     seo,
   ],
-};
+}
 
-export default collection;
+export default collection
