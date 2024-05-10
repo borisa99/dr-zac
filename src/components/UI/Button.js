@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import instagram from '@/assets/Images/Socials/instagramColored.png'
-import youtube from '@/assets/Images/Socials/youtubeColored.png'
+import instagram from '@/assets/Images/socials/instagramColored.png'
+import youtube from '@/assets/Images/socials/youtubeColored.png'
 import { useLocation } from '@reach/router'
 import { cn } from '@/lib/helper'
 import Image from '@/resolvers/Image'
