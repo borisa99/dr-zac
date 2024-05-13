@@ -14,16 +14,16 @@ export default Section
 function resolveSettings(settings) {
   const settingsMap = {
     padding_top: {
-      sm: 'pt-10',
-      md: 'pt-16',
-      lg: 'pt-24',
-      xl: 'pt-32',
+      sm: 'pt-6 lg:pt-10',
+      md: 'pt-10 lg:pt-16',
+      lg: 'pt-12 lg:pt-24',
+      xl: 'pt-16 lg:pt-32',
     },
     padding_bottom: {
-      sm: 'pb-10',
-      md: 'pb-16',
-      lg: 'pb-24',
-      xl: 'pb-32',
+      sm: 'pb-6 lg:pb-10',
+      md: 'pb-10 lg:pb-16',
+      lg: 'pb-12 lg:pb-24',
+      xl: 'pb-16 lg:pb-32',
     },
     margin_top: {
       sm: 'mt-5',

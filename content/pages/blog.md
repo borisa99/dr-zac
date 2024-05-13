@@ -1,7 +1,7 @@
 ---
-id: cf54cef7-dddb-48cc-835e-ce80ed5f9122
+id: TDMgHSWvW
 type: page
-layout: blog-page
+layout: page-builder
 title: Blog
 permalink: /blog/
 blocks:
@@ -12,6 +12,7 @@ blocks:
     photo:
       image: /img/dr-zacs-blog.jpg
       alt: Dr Zac in scrubs
+    decoration: none
   - type: blog
     title: Medical
     category: Medical

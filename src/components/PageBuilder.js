@@ -1,11 +1,11 @@
 import React from 'react'
 import Blog from '@/blocks/Blog'
+import Columns from '@/blocks/Columns'
 import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
-import Heading from '@/blocks/Heading'
 import Hero from '@/blocks/Hero'
 import Media from '@/blocks/Media'
-import Perks from '@/blocks/Perks'
+import TitleBlock from '@/blocks/TitleBlock'
 import Video from '@/blocks/Video'
 import { LocationProvider } from '@reach/router'
 import { graphql } from 'gatsby'
@@ -21,7 +21,7 @@ export default function PageBuilder({ blocks, preview = false }) {
               case 'hero':
                 return <Hero key={i} data={block} preview={preview} />
               case 'title':
-                return <Heading key={i} data={block} preview={preview} />
+                return <TitleBlock key={i} data={block} preview={preview} />
               case 'blog':
                 return <Blog key={i} data={block} preview={preview} />
               case 'content_image':
@@ -30,8 +30,8 @@ export default function PageBuilder({ blocks, preview = false }) {
                 return <Video key={i} data={block} preview={preview} />
               case 'media':
                 return <Media key={i} data={block} preview={preview} />
-              case 'perks':
-                return <Perks key={i} data={block} preview={preview} />
+              case 'columns':
+                return <Columns key={i} data={block} preview={preview} />
               case 'content':
                 return <Content key={i} data={block} preview={preview} />
               default:
@@ -56,6 +56,7 @@ export const query = graphql`
       title
       category
       content
+      decoration
       videos {
         fields {
           slug
@@ -143,19 +144,6 @@ export const query = graphql`
         }
       }
       photo {
-        image {
-          childImageSharp {
-            gatsbyImageData(
-              width: 800
-              quality: 72
-              placeholder: DOMINANT_COLOR
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
-        }
-        alt
-      }
-      photo2 {
         image {
           childImageSharp {
             gatsbyImageData(

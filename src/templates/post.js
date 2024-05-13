@@ -28,7 +28,7 @@ const Post = ({ data }) => {
             <Title
               Tag="h1"
               children={data.post.frontmatter.title}
-              className="title-font mb-10 text-[4rem] leading-[4.5rem]"
+              className="font-title mb-10 text-[4rem] leading-[4.5rem]"
             />
             <PostAuthor author={author.node.frontmatter} data={data} />
           </div>

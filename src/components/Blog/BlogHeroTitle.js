@@ -13,7 +13,7 @@ export default function BlogHeroTitle({ data }) {
         <Title
           variant="article"
           children={data?.title}
-          className="title-font text-center text-[2.2rem] xl:text-[3rem]"
+          className="font-title text-center text-[2.2rem] xl:text-[3rem]"
         />
       ) : null}
       {(isVariantSmall || isVariantLarge) && data?.buttons ? (

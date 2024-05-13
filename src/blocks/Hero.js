@@ -1,4 +1,5 @@
 import React from 'react'
+import { Signature } from '../components/Icons/Signature'
 import Buttons from '../components/UI/Buttons'
 import Text from '../components/UI/Text'
 import Title from '../components/UI/Title'
@@ -61,13 +62,9 @@ export default function Hero({ data }) {
               )}
             />
           )}
-          {data?.photo2?.image && (
-            <div className="mb-8 flex w-full justify-center xl:justify-start">
-              <Image
-                src={data?.photo2?.image}
-                alt={data?.photo2?.alt}
-                className=" mt-8 h-auto w-[8rem]"
-              />
+          {data?.decoration == 'signature' && (
+            <div className="mt-8">
+              <Signature width={129} height={64} />
             </div>
           )}
         </div>

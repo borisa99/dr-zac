@@ -14,7 +14,7 @@ export default function MediaCard({ data }) {
         Tag="h3"
         variant="article-variant"
         children={data.title ? data.title : data.frontmatter.title}
-        className="title-font mt-6 text-left"
+        className="font-title mt-6 text-left"
       />
     </Link>
   )

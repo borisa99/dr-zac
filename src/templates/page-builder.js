@@ -10,7 +10,6 @@ const Page = ({ data }) => {
     if (block.type === 'blog') {
       return {
         ...block,
-        authors: data.authorData.edges,
       }
     }
 
@@ -47,25 +46,11 @@ export const basicPageQuery = graphql`
       fields {
         slug
       }
-      html
       frontmatter {
         id
         title
         ...Blocks
         ...Seo
-      }
-    }
-    authorData: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "author" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          ...AuthorData
-        }
       }
     }
   }

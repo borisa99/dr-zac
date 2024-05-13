@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        title: ['ArgestaDisplay', 'sans-serif'],
+      },
       colors: {
         hero: '#EEF6FF',
         black: '#181818',

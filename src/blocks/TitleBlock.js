@@ -5,12 +5,12 @@ import Title from '../components/UI/Title'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 
-export default function Heading({ data }) {
+export default function TitleBlock({ data }) {
   return (
     <Section settings={data?.settings} className="bg-white">
-      <Container className="w-full text-center xl:w-[50rem]">
+      <Container className="mx-auto max-w-[808px] text-center">
         {data?.title && (
-          <Title variant="heading" children={data?.title} className="mb-4 " />
+          <Title variant="heading" children={data?.title} className="mb-4" />
         )}
         {data?.content && (
           <Text className="mx-auto mb-8 w-full">{data?.content}</Text>

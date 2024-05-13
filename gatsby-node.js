@@ -47,7 +47,9 @@ exports.createSchemaCustomization = ({ actions }) => {
   type Blocks  {
     type: String
     category: String
+    decoration: String
     photo: Photo
+    permalink: String
     settings: Settings
     posts: [MarkdownRemark] @link(by: "frontmatter.id")
     media: [MarkdownRemark] @link(by: "frontmatter.id")
@@ -63,8 +65,8 @@ exports.createSchemaCustomization = ({ actions }) => {
   }
 
   type Photo @dontInfer  {
-    alt: String
     image: File @fileByRelativePath
+    alt: String
   }
 
   type MarkdownRemarkFrontmatterSeo {
@@ -117,7 +119,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       let pathName = edge.node.frontmatter.permalink || edge.node.fields.slug
       let component = path.resolve(
-        `src/templates/${String(edge.node.frontmatter.layout)}.js`
+        `src/templates/${String(edge.node.frontmatter.layout)}.js`,
       )
 
       if (fs.existsSync(component)) {

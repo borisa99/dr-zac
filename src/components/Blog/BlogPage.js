@@ -45,7 +45,7 @@ const BlogPage = ({ data, preview }) => {
           <Title
             variant="article"
             children={data.title}
-            className="title-font text-center text-[2.2rem] xl:text-[3rem]"
+            className="font-title text-center text-[2.2rem] xl:text-[3rem]"
           />
           {!categoryFilter ? (
             <Button

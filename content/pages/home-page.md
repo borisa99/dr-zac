@@ -25,6 +25,7 @@ blocks:
     photo2:
       alt: Dr Zac signature
       image: /img/header/signature.png
+    decoration: signature
   - type: blog
     variant: homepage
     title: Dr. Zac’s Blog
@@ -40,14 +41,7 @@ blocks:
           variant: default
           content: View all articles
           url: /blog
-  - type: video
-    title: <>#better<span class='text-blue-500'>lifechoices</span></>
-    variant: homepage
-    permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
-    photo:
-      alt: Dr Zac Video
-      image: /img/video/videoPlaceholder.jpg
-  - type: perks
+  - type: columns
     buttons:
       - button:
           variant: default
@@ -62,16 +56,16 @@ blocks:
         content: Dr. Zac’s will help you hack your way to better health.
         photo:
           alt: Dr Zac Articles
-          image: /img/columns/drzac-articles.jpg
+          image: /img/dr-zac-tips.jpg
       - title: Dr Zac in the media
         content: Watch Dr. Zac strut his stuff TV and beyond.
         photo:
           alt: Dr Zac Media Videos
-          image: /img/columns/drzac-videos.jpg
+          image: /img/dr-zac-in-media.jpg
     settings:
       variant: default
-      padding_top: none
-      padding_bottom: none
+      padding_top: md
+      padding_bottom: md
       margin_top: none
       margin_bottom: none
 seo:
