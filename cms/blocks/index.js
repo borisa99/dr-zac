@@ -31,7 +31,84 @@ const Config = {
       name: 'title',
       widget: 'object',
       summary: '{{fields.title}}',
-      fields: [Title, Content, Buttons, SettingsGroup],
+      fields: [
+        Title,
+        Content,
+        Buttons,
+        SelectField('default', ['default', 'quote', 'small']),
+        SelectField(
+          'centered',
+          ['default', 'centered'],
+          'Alignment',
+          'alignment',
+        ),
+        SettingsGroup,
+      ],
+    },
+    {
+      label: 'Content',
+      name: 'content',
+      widget: 'object',
+      fields: [Content, SettingsGroup],
+    },
+    {
+      label: 'Content with Image',
+      name: 'content_image',
+      widget: 'object',
+      summary: '{{fields.title}}',
+      fields: [
+        ImageField(),
+        Title,
+        Content,
+        Buttons,
+        SelectField('default', ['default', 'reversed']),
+        SettingsGroup,
+      ],
+    },
+    {
+      label: 'Columns',
+      name: 'columns',
+      summary: '{{fields.title}}',
+      widget: 'object',
+      fields: [
+        {
+          label: 'Columns',
+          name: 'columns',
+          widget: 'list',
+          summary: '{{fields.title}}',
+          fields: [Title, Content, ImageField()],
+        },
+        SettingsGroup,
+      ],
+    },
+    {
+      label: 'Articles',
+      name: 'blog',
+      widget: 'object',
+      summary: '{{fields.title}}',
+      fields: [
+        Title,
+        Content,
+        {
+          label: 'Category',
+          name: 'category',
+          widget: 'string',
+          required: false,
+        },
+        Buttons,
+        {
+          label: 'Posts',
+          name: 'posts',
+          widget: 'relation',
+          collection: 'blog', // This should match the name of your posts collection
+          search_fields: ['title'], // Fields to search for to populate the dropdown
+          display_fields: ['{{id}} - {{title}}'], // Fields to display in the dropdown
+          value_field: 'id', // Usually the id, but could be any unique aspect of the posts
+          multiple: true, // Set to true if you want to allow selection of multiple posts
+          required: false,
+        },
+        SettingsGroup,
+      ],
     },
     {
       label: 'Video',
@@ -72,70 +149,6 @@ const Config = {
           display_fields: ['title'],
           value_field: 'id',
           multiple: true,
-          required: false,
-        },
-      ],
-    },
-    {
-      label: 'Content',
-      name: 'content',
-      widget: 'object',
-      fields: [Content, SettingsGroup],
-    },
-    {
-      label: 'Content with Image',
-      name: 'content_image',
-      widget: 'object',
-      summary: '{{fields.title}}',
-      fields: [
-        ImageField(),
-        Title,
-        Content,
-        Buttons,
-        SelectField('default', ['default', 'reversed']),
-        SettingsGroup,
-      ],
-    },
-    {
-      label: 'Perks',
-      name: 'perks',
-      summary: '{{fields.title}}',
-      widget: 'object',
-      fields: [
-        {
-          label: 'Columns',
-          name: 'columns',
-          widget: 'list',
-          summary: '{{fields.title}}',
-          fields: [Title, Content, ImageField()],
-        },
-        SettingsGroup,
-      ],
-    },
-    {
-      label: 'Blog',
-      name: 'blog',
-      widget: 'object',
-      summary: '{{fields.title}}',
-      fields: [
-        Title,
-        {
-          label: 'Category',
-          name: 'category',
-          widget: 'string',
-          required: false,
-        },
-        Content,
-        Buttons,
-        {
-          label: 'Posts',
-          name: 'posts',
-          widget: 'relation',
-          collection: 'blog', // This should match the name of your posts collection
-          search_fields: ['title'], // Fields to search for to populate the dropdown
-          display_fields: ['{{id}} - {{title}}'], // Fields to display in the dropdown
-          value_field: 'id', // Usually the id, but could be any unique aspect of the posts
-          multiple: true, // Set to true if you want to allow selection of multiple posts
           required: false,
         },
       ],

@@ -4,20 +4,24 @@ type: page
 layout: videos-page
 title: Videos page
 permalink: /video/
-thumbnail: ""
+thumbnail: ''
 blocks:
   - type: hero
     title: Insights on how to live a <span class='text-blue-500'>healthier life</span>
-    content: ""
+    content: ''
     variant: default
     buttons: []
     photo:
       image: /img/video-bg.jpg
   - type: title
-    content: "Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live
-      a healthier life. Follow Dr Zac on
-      Instagram [@drzac.co](https://www.instagram.com/drzac.co) for a daily dose
-      of health tips, hacks and facts."
+    alignment: centered
+    title:
+      "Dr. Zac regular vlogs his #DrZacsTips to share insights on how to live
+      a healthier life. Follow Dr Zac on Instagram <a target='_blank'
+      href='https://www.instagram.com/drzac.co/'
+      class='underlined-link'>@drzac.co</a> for a daily dose of health tips,
+      hacks and facts."
+    variant: small
     buttons:
       - button:
           variant: youtube
@@ -46,6 +50,6 @@ blocks:
       - drzac-tips-supplements
 seo:
   title: Videos Page
-  description: ""
+  description: ''
   ogimage: /img/frame-72.png
 ---

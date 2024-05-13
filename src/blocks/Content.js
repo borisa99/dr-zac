@@ -5,7 +5,7 @@ import Text from '@/components/UI/Text'
 
 export default function Content({ data }) {
   return (
-    <Section settings={data?.settings} className="py-10 lg:py-16">
+    <Section settings={data?.settings}>
       <Container>
         {data?.content && (
           <Text className="mx-auto w-full max-w-6xl">{data?.content}</Text>

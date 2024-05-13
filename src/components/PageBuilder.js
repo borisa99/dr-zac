@@ -156,7 +156,6 @@ export const query = graphql`
         }
         alt
       }
-      variant
       buttons {
         button {
           content
@@ -164,6 +163,8 @@ export const query = graphql`
           variant
         }
       }
+      variant
+      alignment
       settings {
         variant
         padding_top

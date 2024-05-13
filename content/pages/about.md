@@ -1,5 +1,5 @@
 ---
-excerpt: ""
+excerpt: ''
 id: 857ff8b7-56fe-4089-9dfe-ed8dafb19daa
 type: page
 layout: page-builder
@@ -9,18 +9,21 @@ blocks:
   - type: hero
     title: About <span class='text-blue-500'>me</span>
     variant: default
-    content: ""
+    content: ''
     photo:
       image: /img/about-bg.jpg
-      alt: ""
+      alt: ''
   - type: title
+    alignment: centered
+    variant: quote
     settings:
       variant: default
-      padding_top: md
-      padding_bottom: md
+      padding_top: xl
+      padding_bottom: lg
       margin_top: none
       margin_bottom: none
-    title: I am passionate about proactive, preventative healthcare, and inspiring
+    title:
+      I am passionate about proactive, preventative healthcare, and inspiring
       others to live happier and healthier for longer.
   - type: content_image
     variant: default

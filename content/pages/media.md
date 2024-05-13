@@ -4,20 +4,23 @@ type: page
 layout: media-page
 title: Media page
 permalink: /media/
-thumbnail: ""
+thumbnail: ''
 blocks:
   - type: hero
     title: Media
-    content: ""
+    content: ''
     variant: default
   - type: title
+    alignment: centered
+    variant: 'small'
     settings:
       variant: default
       padding_top: lg
       padding_bottom: md
       margin_top: none
       margin_bottom: none
-    title: If you would like to get in touch with Dr. Zac regarding media and public
+    title:
+      If you would like to get in touch with Dr. Zac regarding media and public
       speaking, please email <a href='mailto:info@doctorzac.com'
       class='text-blue-500 underlined-link'>info@doctorzac.com</a>.
   - type: media

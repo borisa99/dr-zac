@@ -47,9 +47,11 @@ exports.createSchemaCustomization = ({ actions }) => {
   type Blocks  {
     type: String
     category: String
-    decoration: String
     photo: Photo
     permalink: String
+    decoration: String
+    alignment: String
+    variant: String
     settings: Settings
     posts: [MarkdownRemark] @link(by: "frontmatter.id")
     media: [MarkdownRemark] @link(by: "frontmatter.id")

@@ -11,29 +11,25 @@ import Section from '@/components/UI/Section'
 //blog-1
 //blog-2
 
-export default function Blog({ data, preview }) {
+export default function Articles({ data, preview }) {
   const isVariantLarge = data?.variant === 'blog-1'
   const isHomepage = data?.variant === 'homepage'
 
   return (
-    <>
+    <Section settings={data?.settings} className={`bg-white pb-40 pt-28`}>
       {isHomepage ? (
-        <Section settings={data?.settings} className={`bg-white pb-40 pt-28`}>
-          <Container>
-            {data?.title && <BlogHeroTitle data={data} />}
-            <BlogHeroContent data={data} />
-            <PostList
-              authors={data.authors}
-              isVariant={isVariantLarge || isHomepage}
-              posts={data.posts}
-              preview={preview}
-            />
-            <BlogHeroButtons data={data} />
-          </Container>
-        </Section>
+        <Container>
+          <PostList
+            authors={data.authors}
+            isVariant={isVariantLarge || isHomepage}
+            posts={data.posts}
+            preview={preview}
+          />
+          <BlogHeroButtons data={data} />
+        </Container>
       ) : (
         <BlogPage preview={preview} data={data} />
       )}
-    </>
+    </Section>
   )
 }

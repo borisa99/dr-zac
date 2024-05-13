@@ -16,8 +16,14 @@ export default function Title({
     case 'lg':
       style = `${style} text-5xl lg:text-6xl`
       break
+    case 'italic':
+      style = `${style} text-5xl lg:text-6xl italic`
+      break
     case 'default':
       style = `${style} text-3xl lg:text-4xl`
+      break
+    case 'sm':
+      style = `${style} text-2xl lg:text-3xl`
       break
     case 'heading':
       style = `${style} text-4xl font-title`
