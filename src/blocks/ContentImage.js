@@ -8,7 +8,7 @@ import Section from '@/components/UI/Section'
 import { cn } from '@/lib/helper'
 
 export default function ContentImage({ data }) {
-  const isReversed = data?.variant !== 'reversed'
+  const isReversed = data?.variant === 'reversed'
   return (
     <Section settings={data?.settings}>
       <Container
