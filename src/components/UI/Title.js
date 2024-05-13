@@ -13,6 +13,9 @@ export default function Title({
     case 'hero':
       style = `${style} text-6xl lg:text-7xl xl:text-8xl`
       break
+    case 'lg':
+      style = `${style} text-5xl lg:text-6xl`
+      break
     case 'default':
       style = `${style} text-3xl lg:text-4xl`
       break
