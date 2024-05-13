@@ -7,26 +7,11 @@ permalink: /blog/
 blocks:
   - type: hero
     title: Doctor Zac’s Blog
-    variant: center
-    content: |-
-      Doctor Zac is featured on News.com.au in a weekly feature ‘Ask Dr. Zac’
-    buttons:
-      - button:
-          variant: blog
-          content: Medical
-          url: '/blog/medical/'
-      - button:
-          variant: blog
-          content: Aesthetics
-          url: '/blog/aesthetics/'
-      - button:
-          variant: blog
-          content: Diet & Exercise
-          url: '/blog/diet-exercise/'
-      - button:
-          variant: blog
-          content: Lifestyle
-          url: '/blog/lifestyle/'
+    variant: aside
+    content: Doctor Zac is featured on News.com.au in a weekly feature ‘Ask Dr. Zac’
+    photo:
+      image: /img/dr-zacs-blog.jpg
+      alt: Dr Zac in scrubs
   - type: blog
     title: Medical
     category: Medical
@@ -43,4 +28,6 @@ blocks:
     title: Lifestyle
     category: Lifestyle
     variant: blog-2
+seo:
+  ogimage: /img/dr-zac-home-two_1-removebg-1.png
 ---

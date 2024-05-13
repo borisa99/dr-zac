@@ -11,6 +11,7 @@ import { LocationProvider } from '@reach/router'
 import { graphql } from 'gatsby'
 
 export default function PageBuilder({ blocks, preview = false }) {
+  console.log(blocks)
   return (
     <>
       <LocationProvider>
@@ -18,8 +19,8 @@ export default function PageBuilder({ blocks, preview = false }) {
           blocks.map((block, i) => {
             switch (block.type) {
               case 'hero':
-                return <Hero key={i} data={block} />
-              case 'heading':
+                return <Hero key={i} data={block} preview={preview} />
+              case 'title':
                 return <Heading key={i} data={block} preview={preview} />
               case 'blog':
                 return <Blog key={i} data={block} preview={preview} />

@@ -2,7 +2,7 @@
 id: JUJDCFVbWC
 type: page
 layout: page-builder
-title: Home Page
+title: Home
 permalink: /
 thumbnail: ''
 blocks:
@@ -13,7 +13,7 @@ blocks:
       others to live happier and healthier for longer. My specialty is bespoke
       vitality, medication formulation, and aesthetics so that all my patients
       thrive in their everyday lives.
-    variant: full
+    variant: aside
     buttons:
       - button:
           variant: default
@@ -21,30 +21,10 @@ blocks:
           url: /
     photo:
       alt: Dr Zac
-      image: /img/header/drzac.png
+      image: /img/dr-zac-home.jpg
     photo2:
       alt: Dr Zac signature
       image: /img/header/signature.png
-  - type: heading
-    title: <span>#better<span class='text-blue-500'>lifechoices</span></span>
-    content: I believe that making small changes to your daily routine can have
-      massive lasting impact on the rest of your life.
-    buttons:
-      - button:
-          variant: default
-          content: Read my blog
-          url: /
-      - button:
-          variant: secondary
-          content: Watch my videos
-          url: /
-  - type: video
-    title: <>#better<span class='text-blue-500'>lifechoices</span></>
-    variant: homepage
-    permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
-    photo:
-      alt: Dr Zac Video
-      image: /img/video/videoPlaceholder.jpg
   - type: blog
     variant: homepage
     title: Dr. Zac’s Blog
@@ -60,6 +40,13 @@ blocks:
           variant: default
           content: View all articles
           url: /blog
+  - type: video
+    title: <>#better<span class='text-blue-500'>lifechoices</span></>
+    variant: homepage
+    permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
+    photo:
+      alt: Dr Zac Video
+      image: /img/video/videoPlaceholder.jpg
   - type: perks
     buttons:
       - button:
@@ -81,6 +68,12 @@ blocks:
         photo:
           alt: Dr Zac Media Videos
           image: /img/columns/drzac-videos.jpg
+    settings:
+      variant: default
+      padding_top: none
+      padding_bottom: none
+      margin_top: none
+      margin_bottom: none
 seo:
   ogimage: /img/dr-zac-home-two_1-removebg-1.png
 ---

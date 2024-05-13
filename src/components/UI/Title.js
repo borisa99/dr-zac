@@ -11,10 +11,10 @@ export default function Title({
   let style = 'leading-[5rem] text-black'
   switch (variant) {
     case 'hero':
-      style = `${style} tracking-tight text-5xl  xl:text-7xl  text-center xl:text-left title-font`
+      style = `${style} text-6xl lg:text-7xl xl:text-8xl title-font`
       break
     case 'heading':
-      style = `${style} tracking-tighter text-4xl title-font`
+      style = `${style} text-4xl title-font`
       break
     case 'article':
       style = `${style} text-[1.25rem] xl:text-[2rem] tracking-tight`

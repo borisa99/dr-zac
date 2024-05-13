@@ -7,7 +7,7 @@ import Section from '@/components/UI/Section'
 
 export default function Heading({ data }) {
   return (
-    <Section settings={data?.settings} className="bg-white pb-16 pt-[7.063rem]">
+    <Section settings={data?.settings} className="bg-white">
       <Container className="w-full text-center xl:w-[50rem]">
         {data?.title && (
           <Title variant="heading" children={data?.title} className="mb-4 " />
@@ -16,11 +16,7 @@ export default function Heading({ data }) {
           <Text className="mx-auto mb-8 w-full">{data?.content}</Text>
         )}
         {data?.buttons && (
-          <Buttons
-            buttonClassName="w-[10.313rem]"
-            buttons={data?.buttons}
-            className="justify-center"
-          />
+          <Buttons buttons={data?.buttons} className="justify-center" />
         )}
       </Container>
     </Section>

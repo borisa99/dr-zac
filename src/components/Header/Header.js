@@ -31,7 +31,7 @@ function Header() {
 
   return (
     <header className="absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2 bg-transparent  text-[0.813rem]  text-black">
-      <Container className="m-auto flex items-start justify-between  border-[1px] border-transparent border-b-[#E7E7E7] py-5 xl:justify-between">
+      <Container className="m-auto flex items-start justify-between py-5 xl:justify-between">
         <Link to="/" className="cursor-pointer text-2xl font-bold">
           <Image alt="Dr Zac Logo" src={logo} className="antialiased" />
         </Link>
@@ -44,13 +44,13 @@ function Header() {
           >
             <div className="absolute left-6 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
               <span
-                className={`text-blue-500 absolute block h-0.5 w-7 transform bg-current transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : ' -translate-y-1.5'}`}
+                className={`absolute block h-0.5 w-7 transform bg-current text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : ' -translate-y-1.5'}`}
               ></span>
               <span
-                className={`text-blue-500 absolute  block h-0.5 w-5 transform   bg-current transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
+                className={`absolute block  h-0.5 w-5 transform bg-current   text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
               ></span>
               <span
-                className={`text-blue-500 absolute  block h-0.5 w-7 transform bg-current  transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : ' translate-y-1.5'}`}
+                className={`absolute block  h-0.5 w-7 transform bg-current text-blue-500  transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : ' translate-y-1.5'}`}
               ></span>
             </div>
           </button>

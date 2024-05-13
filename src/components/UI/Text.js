@@ -7,12 +7,17 @@ export default function Text({ children, className, ...props }) {
     <ReactMarkdown
       components={{
         a: ({ node, ...props }) => (
-          <a href={props.href} target="_blank" rel="noreferrer">
+          <a
+            href={props.href}
+            target="_blank"
+            rel="noreferrer"
+            className="underlined-link"
+          >
             {props.children}
           </a>
         ),
       }}
-      className={cn('prose dark:prose-invert ', className)}
+      className={cn('prose ', className)}
       {...props}
     >
       {children}

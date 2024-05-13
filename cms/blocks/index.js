@@ -16,20 +16,21 @@ const Config = {
       label: 'Hero',
       name: 'hero',
       widget: 'object',
+      summary: '{{fields.title}}',
       fields: [
         Title,
         Content,
         Buttons,
         ImageField(),
-        SelectField('default', ['default', 'centered', 'full']),
+        SelectField('default', ['default', 'aside']),
       ],
     },
     {
-      label: 'Heading',
-      name: 'heading',
+      label: 'Title',
+      name: 'title',
       widget: 'object',
-      fields: [Title, Content, Buttons],
-      SettingsGroup,
+      summary: '{{fields.title}}',
+      fields: [Title, Content, Buttons, SettingsGroup],
     },
     {
       label: 'Video',
@@ -100,9 +101,6 @@ const Config = {
       summary: '{{fields.title}}',
       widget: 'object',
       fields: [
-        Title,
-        Content,
-        Buttons,
         {
           label: 'Columns',
           name: 'columns',
@@ -110,12 +108,14 @@ const Config = {
           summary: '{{fields.title}}',
           fields: [Title, Content, ImageField()],
         },
+        SettingsGroup,
       ],
     },
     {
       label: 'Blog',
       name: 'blog',
       widget: 'object',
+      summary: '{{fields.title}}',
       fields: [
         Title,
         {
@@ -143,6 +143,7 @@ const Config = {
       label: 'Form',
       name: 'form',
       widget: 'object',
+      summary: '{{fields.form.title}}',
       fields: [
         {
           label: 'Form',
