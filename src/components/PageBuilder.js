@@ -13,7 +13,7 @@ import { graphql } from 'gatsby'
 export default function PageBuilder({ blocks, preview = false }) {
   console.log(blocks)
   return (
-    <>
+    <main>
       <LocationProvider>
         {blocks &&
           blocks.map((block, i) => {
@@ -45,7 +45,7 @@ export default function PageBuilder({ blocks, preview = false }) {
             }
           })}
       </LocationProvider>
-    </>
+    </main>
   )
 }
 

@@ -7,7 +7,7 @@ const Layout = ({ nav = false, children }) => {
     <>
       <div className="flex min-h-screen flex-col bg-white">
         {nav && <Header />}
-        <main className="wrapper">{children}</main>
+        {children}
         <Footer />
       </div>
     </>
