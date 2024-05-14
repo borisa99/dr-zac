@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '@/assets/Images/header/drzac.svg'
+import logo from '@/assets/Images/Header/drzac.svg'
 import Button from '../UI/Button'
 import Container from '../UI/Container'
 import HeaderNavList from './HeaderNavList'
