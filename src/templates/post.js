@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import CategoryLink from '../components/Post/CategoryLink'
 import PostList from '../components/Post/PostList'
+import Section from '../components/UI/Section'
+import Text from '../components/UI/Text'
 import Image from '../resolvers/Image'
 import DefaultHead from '@/components/Head/DefaultHead'
 import Layout from '@/components/Layout'
@@ -54,10 +56,18 @@ const Post = ({ data }) => {
           ></main>
           {/* <PostRecentBlock authors={data.authorData.edges} /> */}
         </Container>
+      </article>
+      <Section settings={{ padding_top: 'sm', padding_bottom: 'lg' }}>
         <Container>
+          <div className="mb-12">
+            <Title variant="lg">More articles</Title>
+            <Text>
+              Got any medical questions or concerns? Dr. Zac’s got your back.
+            </Text>
+          </div>
           <PostList posts={data.articles.edges} />
         </Container>
-      </article>
+      </Section>
     </Layout>
   )
 }
@@ -108,7 +118,7 @@ export const basicPageQuery = graphql`
       }
     }
     articles: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "article" }, id: { ne: $id } } }
+      filter: { frontmatter: { type: { eq: "article" } }, id: { ne: $id } }
       limit: 3
     ) {
       edges {

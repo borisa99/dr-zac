@@ -26,7 +26,7 @@ blocks:
     content: Got any medical questions or concerns? Dr. Zac’s got your back.
     relation: 5
     settings:
-      padding_top: md
+      padding_top: none
       padding_bottom: md
       margin_top: none
       margin_bottom: none

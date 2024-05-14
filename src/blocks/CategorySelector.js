@@ -6,8 +6,6 @@ import { useCategories } from '../hooks/useCategories'
 
 function CategorySelector({ data }) {
   const categories = useCategories()
-
-  console.log(categories)
   return (
     <Section settings={data?.settings}>
       <Container>
