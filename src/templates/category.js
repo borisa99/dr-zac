@@ -9,8 +9,6 @@ import DefaultHead from '@/components/Head/DefaultHead'
 import Layout from '@/components/Layout'
 
 const Category = ({ data, pageContext }) => {
-  console.log(data)
-  const hasMorePages = pageContext.currentPage < pageContext.numPages
   return (
     <Layout>
       <div className="bg-blue-100 pb-32">

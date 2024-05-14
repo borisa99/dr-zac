@@ -112,6 +112,50 @@ export const query = graphql`
         margin_top
         margin_bottom
       }
+      videos {
+        fields {
+          slug
+        }
+        frontmatter {
+          type
+          id
+          title
+          excerpt
+          permalink
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                quality: 71
+                layout: FULL_WIDTH
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
+      }
+      media {
+        fields {
+          slug
+        }
+        frontmatter {
+          id
+          type
+          title
+          permalink
+          excerpt
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                quality: 71
+                layout: FULL_WIDTH
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
+      }
     }
   }
 `

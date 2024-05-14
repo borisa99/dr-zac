@@ -7,8 +7,6 @@ import { cn } from '@/lib/helper'
 import Link from '@/resolvers/Link'
 
 export default function PostCard({ item, promoted = false, preview }) {
-  console.log(item)
-
   return (
     <Link
       to={item.permalink}

@@ -55,7 +55,6 @@ const Post = ({ data }) => {
             className="prose mx-auto mb-14 max-w-3xl text-lg leading-loose lg:text-xl lg:leading-loose xl:mb-40"
             dangerouslySetInnerHTML={{ __html: html }}
           ></main>
-          {/* <PostRecentBlock authors={data.authorData.edges} /> */}
         </Container>
       </article>
       <Section settings={{ padding_top: 'sm', padding_bottom: 'lg' }}>

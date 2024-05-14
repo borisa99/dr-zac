@@ -164,7 +164,6 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     result.data.categories.edges.forEach(({ node }) => {
-      console.log(result.data.catsGroup)
       const articles = result.data.catsGroup.group.find(
         (edge) => edge.fieldValue === node.id,
       )
