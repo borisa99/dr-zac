@@ -10,8 +10,8 @@ export default function Link({ to, className, children, ...props }) {
           href={to}
           className={className}
           target="_blank"
-          {...props}
           rel="noopener noreferrer"
+          {...props}
         >
           {children}
         </a>

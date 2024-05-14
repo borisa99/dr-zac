@@ -9,6 +9,8 @@ import TitleBlock from '@/blocks/TitleBlock'
 import Video from '@/blocks/Video'
 import { LocationProvider } from '@reach/router'
 import { graphql } from 'gatsby'
+import CategorySelector from '../blocks/CategorySelector'
+import RecentArticles from '../blocks/RecentArticles'
 
 export default function PageBuilder({ blocks, preview = false }) {
   return (
@@ -21,8 +23,14 @@ export default function PageBuilder({ blocks, preview = false }) {
                 return <Hero key={i} data={block} preview={preview} />
               case 'title':
                 return <TitleBlock key={i} data={block} preview={preview} />
-              case 'articles':
+              case 'category_articles':
                 return <Articles key={i} data={block} preview={preview} />
+              case 'category_selector':
+                return (
+                  <CategorySelector key={i} data={block} preview={preview} />
+                )
+              case 'recent_articles':
+                return <RecentArticles key={i} data={block} preview={preview} />
               case 'content_image':
                 return <ContentImage key={i} data={block} preview={preview} />
               case 'video':
@@ -53,54 +61,10 @@ export const query = graphql`
     blocks {
       type
       title
-      category
       content
       decoration
-      videos {
-        fields {
-          slug
-        }
-        frontmatter {
-          type
-          id
-          title
-          excerpt
-          permalink
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200
-                quality: 71
-                layout: FULL_WIDTH
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-        }
-      }
-      media {
-        fields {
-          slug
-        }
-        frontmatter {
-          id
-          type
-          title
-          permalink
-          excerpt
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200
-                quality: 71
-                layout: FULL_WIDTH
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-        }
-      }
       permalink
+      relation
       columns {
         title
         content
@@ -138,6 +102,7 @@ export const query = graphql`
           variant
         }
       }
+
       variant
       alignment
       settings {

@@ -1,36 +1,45 @@
 import React from 'react'
-import BlogHeroButtons from '@/components/Blog/BlogHeroButtons'
-import BlogHeroContent from '@/components/Blog/BlogHeroContent'
-import BlogHeroTitle from '@/components/Blog/BlogHeroTitle'
-import BlogPage from '@/components/Blog/BlogPage'
-import PostList from '@/components/Post/PostList'
+import CategoryArticles from '../components/Articles/CategoryArticles'
+import Buttons from '../components/UI/Buttons'
+import Text from '../components/UI/Text'
+import Title from '../components/UI/Title'
 import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 
-//homepage
-//blog-1
-//blog-2
-
-export default function Articles({ data, preview }) {
-  console.log(data)
-  const isVariantLarge = data?.variant === 'blog-1'
-  const isHomepage = data?.variant === 'homepage'
-
+export default function Articles({ data, preview = false }) {
   return (
     <Section settings={data?.settings}>
-      {isHomepage ? (
-        <Container>
-          <PostList
-            authors={data.authors}
-            isVariant={isVariantLarge || isHomepage}
-            posts={data.posts}
-            preview={preview}
-          />
-          <BlogHeroButtons data={data} />
-        </Container>
-      ) : (
-        <BlogPage preview={preview} data={data} />
-      )}
+      <Container>
+        <div className="mb-12 flex flex-col justify-between md:mb-12 md:flex-row md:items-end">
+          <div>
+            <Title variant="lg">{data.title}</Title>
+            <Text>{data.content}</Text>
+          </div>
+          {data?.buttons && (
+            <Buttons
+              buttons={data?.buttons}
+              className="hidden md:block"
+            ></Buttons>
+          )}
+        </div>
+
+        {preview ? (
+          'Show the articles here'
+        ) : (
+          <>
+            <CategoryArticles
+              category={data.relation}
+              promoted={data.variant == 'promoted'}
+            />
+          </>
+        )}
+        {data?.buttons && (
+          <Buttons
+            buttons={data?.buttons}
+            className="mt-12 items-center justify-center text-center md:hidden"
+          ></Buttons>
+        )}
+      </Container>
     </Section>
   )
 }

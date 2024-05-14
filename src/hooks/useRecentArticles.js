@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const useRecentArticles = () => {
+export const useRecentArticles = (promoted = false) => {
   const {
     allMarkdownRemark: { edges: posts },
   } = useStaticQuery(graphql`
@@ -18,5 +18,5 @@ export const useRecentArticles = () => {
       }
     }
   `)
-  return posts
+  return promoted ? posts : posts.slice(0, 3)
 }

@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const useCategoryArticles = (category) => {
+export const useCategoryArticles = (category, promoted) => {
   const {
     allMarkdownRemark: { group: items },
   } = useStaticQuery(graphql`
@@ -11,9 +11,9 @@ export const useCategoryArticles = (category) => {
       ) {
         group(
           field: {
-            frontmatter: { categories: { frontmatter: { name: SELECT } } }
+            frontmatter: { categories: { frontmatter: { id: SELECT } } }
           }
-          limit: 3
+          limit: 4
         ) {
           fieldValue
           edges {
@@ -26,5 +26,7 @@ export const useCategoryArticles = (category) => {
     }
   `)
 
-  return items
+  const result = items.find((i) => i.fieldValue === category)?.edges
+
+  return promoted ? result : result.slice(0, 3)
 }

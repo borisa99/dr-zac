@@ -1,14 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import CategoryLink from '../components/Post/CategoryLink'
 import PostList from '../components/Post/PostList'
 import Image from '../resolvers/Image'
-import Link from '../resolvers/Link'
 import DefaultHead from '@/components/Head/DefaultHead'
 import Layout from '@/components/Layout'
 import PostAuthor from '@/components/Post/PostAuthor'
 // import PostRecentBlock from '@/components/Post/PostRecentBlock'
-import PostTag from '@/components/Post/PostTag'
 import Container from '@/components/UI/Container'
 import Title from '@/components/UI/Title'
 
@@ -25,16 +24,7 @@ const Post = ({ data }) => {
                 {post.categories && (
                   <>
                     {post.categories.map((cat, i) => {
-                      return (
-                        <Link
-                          to={cat.permalink}
-                          key={i}
-                          className="flex cursor-pointer gap-1 rounded-full border border-blue-200 bg-transparent px-5 py-3 text-xs font-semibold uppercase text-blue-500 transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
-                          dangerouslySetInnerHTML={{
-                            __html: cat.frontmatter.name,
-                          }}
-                        ></Link>
-                      )
+                      return <CategoryLink key={i} category={cat} />
                     })}
                   </>
                 )}
@@ -93,7 +83,6 @@ export const basicPageQuery = graphql`
     post: markdownRemark(id: { eq: $id }) {
       id
       html
-      rawMarkdownBody
       frontmatter {
         title
         categories {

@@ -48,6 +48,8 @@ exports.createSchemaCustomization = ({ actions }) => {
   type Blocks  {
     type: String
     category: String
+    relation: String
+    display: String
     photo: Photo
     permalink: String
     decoration: String

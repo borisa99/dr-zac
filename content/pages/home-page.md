@@ -26,8 +26,9 @@ blocks:
       image: /img/header/signature.png
     decoration: signature
   - type: title
+    variant: default
+    alignment: default
     settings:
-      variant: default
       padding_top: lg
       padding_bottom: none
       margin_top: none
@@ -35,19 +36,13 @@ blocks:
     title: Dr. Zac's Blog
     content: I believe that making small changes to your daily routine can have
       massive lasting impact on the rest of your life.
-    alignment: default
-    variant: default
-  - type: articles
+  - type: recent_articles
     variant: promoted
-    title: Dr. Zac’s Blog
-    content: I believe that making small changes to your daily routine can have
-      massive lasting impact on the rest of your life.
     buttons:
       - button:
           variant: default
           content: View all articles
           url: /blog
-    display: recent
     settings:
       variant: default
       padding_top: sm

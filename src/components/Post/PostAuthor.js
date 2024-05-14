@@ -9,10 +9,10 @@ const PostAuthor = ({ author, item, preview, ...props }) => {
       {author.thumbnail && (
         <Image
           src={author.thumbnail}
-          className="h-12 w-12 overflow-hidden rounded-full"
+          className="h-11 w-11 overflow-hidden rounded-full"
         />
       )}
-      <div className="text-sm leading-5">
+      <div className="text-sm">
         <p className="mb-0.5 font-semibold text-black">{author.name}</p>
         <p className="text-gray-500">{item.date}</p>
       </div>

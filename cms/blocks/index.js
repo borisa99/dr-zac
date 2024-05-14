@@ -66,6 +66,13 @@ const Config = {
       ],
     },
     {
+      label: 'Blog Category Selector',
+      name: 'category_selector',
+      summary: 'Displays a list of category links',
+      widget: 'object',
+      fields: [SettingsGroup],
+    },
+    {
       label: 'Columns',
       name: 'columns',
       summary: '{{fields.title}}',
@@ -82,8 +89,19 @@ const Config = {
       ],
     },
     {
-      label: 'Articles',
-      name: 'articles',
+      label: 'Recent Articles',
+      name: 'recent_articles',
+      widget: 'object',
+      summary: '{{fields.title}}',
+      fields: [
+        Buttons,
+        SelectField('default', ['default', 'promoted']),
+        SettingsGroup,
+      ],
+    },
+    {
+      label: 'Category Articles',
+      name: 'category_articles',
       widget: 'object',
       summary: '{{fields.title}}',
       fields: [
@@ -101,12 +119,6 @@ const Config = {
           required: false,
         },
         SelectField('default', ['default', 'promoted']),
-        SelectField(
-          'by_category',
-          ['by_category', 'recent'],
-          'Display',
-          'display',
-        ),
         SettingsGroup,
       ],
     },

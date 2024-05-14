@@ -78,7 +78,7 @@ export const SettingsGroup = {
   widget: 'object',
   collapsed: true,
   fields: [
-    SelectField('default', ['default', 'dark', 'gray']),
+    // SelectField('default', ['default', 'dark', 'gray']),
     SelectField(
       'md',
       ['none', 'sm', 'md', 'lg', 'xl'],
