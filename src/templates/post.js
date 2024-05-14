@@ -44,6 +44,7 @@ const Post = ({ data }) => {
               <Image
                 src={post.thumbnail}
                 fill="true"
+                loading="eager"
                 className="mb-10 aspect-[1.49] rounded-xl xl:mb-20"
               />
             )}

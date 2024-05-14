@@ -5,7 +5,7 @@ export default function PostList({ posts, promoted = false, preview = false }) {
   return (
     <>
       {posts.length > 0 && (
-        <div className="gay-y-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map(({ node: { frontmatter: item } }, i) => {
             return (
               <PostCard

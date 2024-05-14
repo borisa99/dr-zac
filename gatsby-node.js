@@ -3,6 +3,8 @@ const path = require('path')
 const fs = require('fs')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const postsPerPage = 9
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const defs = `
@@ -106,6 +108,29 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      catsGroup: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { type: { eq: "article" } } }
+        limit: 2000
+      ) {
+        group(field: { frontmatter: { categories: { id: SELECT } } }) {
+          fieldValue
+          totalCount
+        }
+      }
+      categories: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "category" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              name
+              permalink
+            }
+          }
+        }
+      }
     }
   `).then((result) => {
     if (result.errors) {
@@ -136,6 +161,29 @@ exports.createPages = ({ actions, graphql }) => {
           },
         })
       }
+    })
+
+    result.data.categories.edges.forEach(({ node }) => {
+      console.log(result.data.catsGroup)
+      const articles = result.data.catsGroup.group.find(
+        (edge) => edge.fieldValue === node.id,
+      )
+      if (!articles) return
+      const numPages = Math.ceil(articles.totalCount / postsPerPage)
+      Array.from({ length: numPages }).forEach((_, i) => {
+        const url = node.frontmatter.permalink
+        createPage({
+          path: i === 0 ? url : `${url}${i + 1}/`,
+          component: path.resolve(`src/templates/category.js`),
+          context: {
+            category: articles.fieldValue,
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1,
+          },
+        })
+      })
     })
   })
 }
