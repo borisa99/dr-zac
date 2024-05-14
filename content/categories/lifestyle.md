@@ -2,5 +2,5 @@
 id: 4
 type: category
 name: Lifestyle
-slug: lifestyle
+permalink: /blog/category/lifestyle/
 ---

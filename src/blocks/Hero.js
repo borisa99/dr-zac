@@ -12,7 +12,6 @@ import Image from '@/resolvers/Image'
 export default function Hero({ data }) {
   const isDefault = data?.variant === 'default'
   const isSideImage = data?.variant === 'aside'
-  console.log(data)
 
   return (
     <Section

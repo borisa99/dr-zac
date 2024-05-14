@@ -1,24 +1,20 @@
-import React, { useMemo } from 'react'
-import { getDate } from '@/utils/helpers'
+import React from 'react'
+import { cn } from '@/lib/helper'
 import Image from '@/resolvers/Image'
 
-const PostAuthor = ({ author, data, preview }) => {
-  const date = useMemo(() => getDate(data), [data])
-
+const PostAuthor = ({ author, item, preview, ...props }) => {
+  const { className } = props
   return (
-    <div className="flex items-start justify-center gap-3 xl:justify-start">
-      <Image
-        src={
-          preview
-            ? author?.thumbnail.childImageSharp?.gatsbyImageData?.images
-                .fallback.src
-            : author?.thumbnail
-        }
-        className="h-[2.75rem] w-[2.75rem] rounded-full border"
-      />
+    <div className={cn('flex items-start gap-3', className)}>
+      {author.thumbnail && (
+        <Image
+          src={author.thumbnail}
+          className="h-12 w-12 overflow-hidden rounded-full"
+        />
+      )}
       <div className="text-sm leading-5">
-        <p className="mb-1 font-semibold">{author?.title}</p>
-        <p className="text-[#6D6D6D]">{date}</p>
+        <p className="mb-0.5 font-semibold text-black">{author.name}</p>
+        <p className="text-gray-500">{item.date}</p>
       </div>
     </div>
   )

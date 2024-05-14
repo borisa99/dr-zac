@@ -2,23 +2,25 @@
 id: 857
 type: article
 layout: post
+thumbnail: /img/dr-zac-skin.jpg
 title: Doctor Zac reveals the one food that can trigger spots and acne!
 date: '2020-11-02T01:37:28'
-slug: /blog/doctor-zac-reveals-the-one-food-that-can-trigger-spots-and-acne/
+permalink: /blog/doctor-zac-reveals-the-one-food-that-can-trigger-spots-and-acne/
 excerpt: >-
   This week Dr Zac Turner looks at how your diet can affect your skin, in
   particular acne. QUESTION: Hi Dr Zac, after reading your column about the
   dangers of sunscreen chemicals, I…
 categories:
   - 4
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: >-
     Doctor Zac reveals the one food that can trigger spots and acne! - Doctor
     Zac
   description: "This week Dr Zac Turner looks at how your diet can affect your skin, in particular acne. QUESTION:\_Hi Dr Zac, after reading\_your column about the dangers of sunscreen chemicals, I..."
-thumbnail: /img/dr-zac-skin..jpg
+  ogimage: /img/dr-zac-skin.jpg
 ---
+
 This week Dr Zac Turner looks at how your diet can affect your skin, in particular acne.
 
 _**QUESTION:** Hi Dr Zac, after reading [your column about the dangers of sunscreen chemicals](https://www.news.com.au/lifestyle/health/health-problems/how-to-prevent-skin-cancer-doctor-on-chemicals-to-avoid-in-sunscreen/news-story/501acdb046d5705f0280c86aef6f5a62), I began to read all the bottles in my bathroom and realised so many others are filled with crap too! Can you tell me some other common lotions/products we use that are riddled with chemicals?_
@@ -37,9 +39,9 @@ Now, to get to the cause of your acne troubles. Acne is a result of the sebaceou
 
 Dairy is very common in flaring up some people’s reactive rosacea acne. Whey and Casein proteins are found in cow’s milk, which is the base ingredient in all dairy products. These two proteins stimulate hormone production in cows, and surprise surprise, it causes the same in humans. Extra hormones lead to extra sebum production leading to acne flare ups.
 
-* Stress and anxiety – cortisol production from stress is linked to acne flare ups. Feel good, look good.
-* Sunburn – damaged skins causes excess oil production leading to clog pores.
-* Frequent touching of skin – don’t touch your face, your hands are dirty! Best advice for those with acne is to refrain from touching your face entirely.
-* Chocolate and greasy foods – mixture of high dairy and high glycerin in diets has been linked to some types of acne flare ups
+- Stress and anxiety – cortisol production from stress is linked to acne flare ups. Feel good, look good.
+- Sunburn – damaged skins causes excess oil production leading to clog pores.
+- Frequent touching of skin – don’t touch your face, your hands are dirty! Best advice for those with acne is to refrain from touching your face entirely.
+- Chocolate and greasy foods – mixture of high dairy and high glycerin in diets has been linked to some types of acne flare ups
 
 Will, you are going to have to say goodbye to pizza and ice-cream. Live like a lactose-intolerant person and eat some yummy vegan dairy products. My favourite is coconut yoghurt in the morning with fresh, organic berries. And I am known to have some vegan pizza every now and then. Enjoy!

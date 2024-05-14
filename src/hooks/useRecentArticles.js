@@ -1,22 +1,18 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const usePosts = () => {
+export const useRecentArticles = () => {
   const {
     allMarkdownRemark: { edges: posts },
   } = useStaticQuery(graphql`
-    query PostsQuery {
+    query RecentArticlesQuery {
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
-        filter: { frontmatter: { type: { eq: "post" } } }
+        filter: { frontmatter: { type: { eq: "article" } } }
         limit: 4
       ) {
         edges {
           node {
-            id
-            fields {
-              slug
-            }
-            ...PostData
+            ...ArticleCard
           }
         }
       }

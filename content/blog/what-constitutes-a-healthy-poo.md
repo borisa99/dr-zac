@@ -2,26 +2,28 @@
 id: 899
 type: article
 layout: post
+thumbnail: /img/screen-shot-2021-02-16-at-12.44.21-pm.png
 title: What constitutes a healthy poo?
 date: '2021-02-16T20:46:29'
-slug: /blog/899/
+permalink: /blog/899/
 excerpt: >-
   This week Dr Zac Turner tackles the heady topic of what a healthy poo looks
   like. QUESTION: Hi Dr Zac, I’ve always been curious about what constitutes a
   healthy poo,…
 categories:
-  - 3
-  - 4
-  - 5
-author: 4
+  - '3'
+  - '4'
+  - '5'
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: What constitutes a healthy poo? - Doctor Zac
   description: "This week Dr Zac Turner tackles the heady topic of what a healthy poo looks like. QUESTION:\_ Hi Dr Zac, I’ve always been curious about what constitutes a healthy poo,..."
-thumbnail: /img/screen-shot-2021-02-16-at-12.44.21-pm..png
+  ogimage: /img/screen-shot-2021-02-16-at-12.44.21-pm.png
 ---
+
 This week Dr Zac Turner tackles the heady topic of what a healthy poo looks like.
 
-**QUESTION:** 
+**QUESTION:**
 
 **Hi Dr Zac, I’ve always been curious about what constitutes a healthy poo, especially how many times should we go to the bathroom in a day/week and what should it look like?**
 

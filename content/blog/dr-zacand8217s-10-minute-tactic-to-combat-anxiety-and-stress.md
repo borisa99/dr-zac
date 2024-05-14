@@ -2,9 +2,10 @@
 id: 861
 type: article
 layout: post
+thumbnail: /img/dr-zac-meditaton.jpg
 title: Dr Zac&#8217;s 10-minute tactic to combat anxiety and stress
 date: '2020-11-09T21:28:43'
-slug: /blog/dr-zacs-10-minute-tactic-to-combat-anxiety-and-stress/
+permalink: /blog/dr-zacs-10-minute-tactic-to-combat-anxiety-and-stress/
 excerpt: >-
   This week Dr Zac Turner looks at how to combat stress in these uncertain
   times. QUESTION: Hi Dr Zac, this may seem strange – but I’m feeling more
@@ -12,15 +13,16 @@ excerpt: >-
 categories:
   - 4
   - 5
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Dr Zac's 10-minute tactic to combat anxiety and stress - Doctor Zac
   description: "This week Dr Zac Turner looks at how to combat stress in these uncertain times. QUESTION:\_ Hi Dr Zac, this may seem strange &#8211; but I’m feeling more stressed now..."
-thumbnail: /img/dr-zac-meditaton..jpg
+  ogimage: /img/dr-zac-meditaton.jpg
 ---
+
 This week Dr Zac Turner looks at how to combat stress in these uncertain times.
 
-**_QUESTION:_** 
+**_QUESTION:_**
 
 **_Hi Dr Zac, this may seem strange – but I’m feeling more stressed now that my home town of Melbourne is finally beginning to reopen. My anxiety relates to things returning to ‘normal’ – there is so much uncertainty still, from touching things in public, to mixing with other people._**
 
@@ -48,13 +50,13 @@ I recently did a number of guided transcendence meditation sessions with Sydney-
 
 Poppy, I recommend you start with a short 10 minute meditation once a day for a week. Challenge yourself to keep to it and I guarantee you’ll keep going. Maybe even suggest your workplace do a group meditation to help boost productivity!
 
-**Dr. Zac’s Tips for Meditation:** 
+**Dr. Zac’s Tips for Meditation:**
 
-* **Start with no expectations – meditation isn’t a quick fix. It requires effort, time and patience**
-* **Choose a time to meditate and stick to it**
-* **Create a designated space to meditate**
-* **Before you start, take some time to wind down**
-* **Start with a few deep breaths to calm the body**
-* **Be kind to yourself, some days are easier than others**
-* **Come back the next day, even if you don’t feel like it!**
-* **Get in touch online or email [info@doctorzac.com](mailto:info@doctorzac.com) if you’d like to know how to join an online meditation group**
+- **Start with no expectations – meditation isn’t a quick fix. It requires effort, time and patience**
+- **Choose a time to meditate and stick to it**
+- **Create a designated space to meditate**
+- **Before you start, take some time to wind down**
+- **Start with a few deep breaths to calm the body**
+- **Be kind to yourself, some days are easier than others**
+- **Come back the next day, even if you don’t feel like it!**
+- **Get in touch online or email [info@doctorzac.com](mailto:info@doctorzac.com) if you’d like to know how to join an online meditation group**

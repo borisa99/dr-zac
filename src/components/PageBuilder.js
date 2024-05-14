@@ -1,5 +1,5 @@
 import React from 'react'
-import Blog from '@/blocks/Blog'
+import Articles from '@/blocks/Articles'
 import Columns from '@/blocks/Columns'
 import Content from '@/blocks/Content'
 import ContentImage from '@/blocks/ContentImage'
@@ -11,7 +11,6 @@ import { LocationProvider } from '@reach/router'
 import { graphql } from 'gatsby'
 
 export default function PageBuilder({ blocks, preview = false }) {
-  console.log(blocks)
   return (
     <main>
       <LocationProvider>
@@ -22,8 +21,8 @@ export default function PageBuilder({ blocks, preview = false }) {
                 return <Hero key={i} data={block} preview={preview} />
               case 'title':
                 return <TitleBlock key={i} data={block} preview={preview} />
-              case 'blog':
-                return <Blog key={i} data={block} preview={preview} />
+              case 'articles':
+                return <Articles key={i} data={block} preview={preview} />
               case 'content_image':
                 return <ContentImage key={i} data={block} preview={preview} />
               case 'video':
@@ -95,30 +94,6 @@ export const query = graphql`
                 width: 200
                 quality: 71
                 layout: FULL_WIDTH
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-        }
-      }
-      posts {
-        fields {
-          slug
-        }
-        frontmatter {
-          id
-          title
-          excerpt
-          date(formatString: "MMMM DD, YYYY")
-          author
-          tags
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(
-                width: 690
-                quality: 72
-                layout: FULL_WIDTH
-                placeholder: DOMINANT_COLOR
                 formats: [AUTO, WEBP, AVIF]
               )
             }

@@ -72,9 +72,6 @@ export default class PagePreview extends React.Component {
       }
     })
 
-    console.log(videos)
-    console.log(blocks)
-
     return (
       <div>
         {blocksUpdated.length > 0 ? (

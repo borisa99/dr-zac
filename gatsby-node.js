@@ -13,8 +13,9 @@ exports.createSchemaCustomization = ({ actions }) => {
   type MarkdownRemarkFrontmatter {
     id: String
     title: String
-    author: String
     tags: [String]
+    author: MarkdownRemark @link(by: "frontmatter.id") @dontInfer
+    categories: [MarkdownRemark] @link(by: "frontmatter.id")
     thumbnail: File @fileByRelativePath @dontInfer
     seo: MarkdownRemarkFrontmatterSeo
     rows: [MarkdownRemarkFrontmatterRows]
@@ -173,196 +174,195 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 // gatsby-node.js
-exports.onPostBuild = async ({ graphql }) => {
-  const result = await graphql(`
-    query PostsQuery {
-      allMarkdownRemark(
-        sort: { frontmatter: { date: DESC } }
-        filter: { frontmatter: { type: { eq: "post" } } }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              id
-              excerpt
-              title
-              date(formatString: "MMMM DD, YYYY")
-              author
-              tags
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 690
-                    quality: 72
-                    layout: FULL_WIDTH
-                    placeholder: DOMINANT_COLOR
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-  if (result.errors) {
-    console.error('Error fetching posts:', result.errors)
-    throw new Error(result.errors)
-  }
-  const posts = result.data.allMarkdownRemark.edges.map(({ node }) => ({
-    id: node.frontmatter.id,
-    title: node.frontmatter.title,
-    date: node.frontmatter.date,
-    excerpt: node.frontmatter.excerpt,
-    thumbnail: node.frontmatter.thumbnail,
-    tags: node.frontmatter.tags,
-    author: node.frontmatter.author,
-  }))
+// exports.onPostBuild = async ({ graphql }) => {
+//   const result = await graphql(`
+//     query PostsQuery {
+//       allMarkdownRemark(
+//         sort: { frontmatter: { date: DESC } }
+//         filter: { frontmatter: { type: { eq: "post" } } }
+//       ) {
+//         edges {
+//           node {
+//             id
+//             fields {
+//               slug
+//             }
+//             frontmatter {
+//               id
+//               excerpt
+//               title
+//               date(formatString: "MMMM DD, YYYY")
+//               tags
+//               thumbnail {
+//                 childImageSharp {
+//                   gatsbyImageData(
+//                     width: 690
+//                     quality: 72
+//                     layout: FULL_WIDTH
+//                     placeholder: DOMINANT_COLOR
+//                     formats: [AUTO, WEBP, AVIF]
+//                   )
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   if (result.errors) {
+//     console.error('Error fetching posts:', result.errors)
+//     throw new Error(result.errors)
+//   }
+//   const posts = result.data.allMarkdownRemark.edges.map(({ node }) => ({
+//     id: node.frontmatter.id,
+//     title: node.frontmatter.title,
+//     date: node.frontmatter.date,
+//     excerpt: node.frontmatter.excerpt,
+//     thumbnail: node.frontmatter.thumbnail,
+//     tags: node.frontmatter.tags,
+//     author: node.frontmatter.author,
+//   }))
 
-  fs.writeFileSync('./static/posts.json', JSON.stringify(posts))
+//   fs.writeFileSync('./static/posts.json', JSON.stringify(posts))
 
-  // Fetch media
-  const mediaResult = await graphql(`
-    {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "media" } } }) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              id
-              type
-              title
-              permalink
-              excerpt
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 200
-                    quality: 71
-                    layout: FULL_WIDTH
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+//   // Fetch media
+//   const mediaResult = await graphql(`
+//     {
+//       allMarkdownRemark(filter: { frontmatter: { type: { eq: "media" } } }) {
+//         edges {
+//           node {
+//             id
+//             fields {
+//               slug
+//             }
+//             frontmatter {
+//               id
+//               type
+//               title
+//               permalink
+//               excerpt
+//               thumbnail {
+//                 childImageSharp {
+//                   gatsbyImageData(
+//                     width: 200
+//                     quality: 71
+//                     layout: FULL_WIDTH
+//                     formats: [AUTO, WEBP, AVIF]
+//                   )
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  if (mediaResult.errors) {
-    throw new Error('Error fetching media data')
-  }
+//   if (mediaResult.errors) {
+//     throw new Error('Error fetching media data')
+//   }
 
-  const media = mediaResult.data.allMarkdownRemark.edges.map(({ node }) => ({
-    id: node.frontmatter.id,
-    title: node.frontmatter.title,
-    permalink: node.frontmatter.permalink,
-    excerpt: node.frontmatter.excerpt,
-    thumbnail: node.frontmatter.thumbnail,
-  }))
+//   const media = mediaResult.data.allMarkdownRemark.edges.map(({ node }) => ({
+//     id: node.frontmatter.id,
+//     title: node.frontmatter.title,
+//     permalink: node.frontmatter.permalink,
+//     excerpt: node.frontmatter.excerpt,
+//     thumbnail: node.frontmatter.thumbnail,
+//   }))
 
-  // Write media data to a JSON file
-  fs.writeFileSync('./static/media.json', JSON.stringify(media))
+//   // Write media data to a JSON file
+//   fs.writeFileSync('./static/media.json', JSON.stringify(media))
 
-  // Fetch videos
-  const videoResult = await graphql(`
-    {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "videos" } } }) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              type
-              id
-              title
-              excerpt
-              permalink
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 200
-                    quality: 71
-                    layout: FULL_WIDTH
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+//   // Fetch videos
+//   const videoResult = await graphql(`
+//     {
+//       allMarkdownRemark(filter: { frontmatter: { type: { eq: "videos" } } }) {
+//         edges {
+//           node {
+//             id
+//             fields {
+//               slug
+//             }
+//             frontmatter {
+//               type
+//               id
+//               title
+//               excerpt
+//               permalink
+//               thumbnail {
+//                 childImageSharp {
+//                   gatsbyImageData(
+//                     width: 200
+//                     quality: 71
+//                     layout: FULL_WIDTH
+//                     formats: [AUTO, WEBP, AVIF]
+//                   )
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  if (videoResult.errors) {
-    throw new Error('Error fetching video data')
-  }
+//   if (videoResult.errors) {
+//     throw new Error('Error fetching video data')
+//   }
 
-  const videos = videoResult.data.allMarkdownRemark.edges.map(({ node }) => ({
-    id: node.frontmatter.id,
-    title: node.frontmatter.title,
-    permalink: node.frontmatter.permalink,
-    excerpt: node.frontmatter.excerpt,
-    thumbnail: node.frontmatter.thumbnail,
-  }))
+//   const videos = videoResult.data.allMarkdownRemark.edges.map(({ node }) => ({
+//     id: node.frontmatter.id,
+//     title: node.frontmatter.title,
+//     permalink: node.frontmatter.permalink,
+//     excerpt: node.frontmatter.excerpt,
+//     thumbnail: node.frontmatter.thumbnail,
+//   }))
 
-  // Write video data to a JSON file
-  fs.writeFileSync('./static/videos.json', JSON.stringify(videos))
+//   // Write video data to a JSON file
+//   fs.writeFileSync('./static/videos.json', JSON.stringify(videos))
 
-  // Fetch authors
-  const authorResults = await graphql(`
-    {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "author" } } }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              type
-              id
-              title
-              thumbnail {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 200
-                    quality: 71
-                    layout: FULL_WIDTH
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+//   // Fetch authors
+//   const authorResults = await graphql(`
+//     {
+//       allMarkdownRemark(filter: { frontmatter: { type: { eq: "author" } } }) {
+//         edges {
+//           node {
+//             id
+//             frontmatter {
+//               type
+//               id
+//               title
+//               thumbnail {
+//                 childImageSharp {
+//                   gatsbyImageData(
+//                     width: 200
+//                     quality: 71
+//                     layout: FULL_WIDTH
+//                     formats: [AUTO, WEBP, AVIF]
+//                   )
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  if (authorResults.errors) {
-    throw new Error('Error fetching author data')
-  }
+//   if (authorResults.errors) {
+//     throw new Error('Error fetching author data')
+//   }
 
-  const authors = authorResults.data.allMarkdownRemark.edges.map(
-    ({ node }) => ({
-      id: node.frontmatter.id,
-      title: node.frontmatter.title,
-      title: node.frontmatter.title,
-      thumbnail: node.frontmatter.thumbnail,
-    }),
-  )
+//   const authors = authorResults.data.allMarkdownRemark.edges.map(
+//     ({ node }) => ({
+//       id: node.frontmatter.id,
+//       title: node.frontmatter.title,
+//       title: node.frontmatter.title,
+//       thumbnail: node.frontmatter.thumbnail,
+//     }),
+//   )
 
-  // Write video data to a JSON file
-  fs.writeFileSync('./static/authors.json', JSON.stringify(authors))
-}
+//   // Write video data to a JSON file
+//   fs.writeFileSync('./static/authors.json', JSON.stringify(authors))
+// }

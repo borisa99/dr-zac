@@ -2,9 +2,10 @@
 id: 866
 type: article
 layout: post
+thumbnail: /img/dr-zac-bush-fruit-better-than-apples-and-oranges.jpg
 title: Dr Zac talks about Aussie bush fruit that’s 50 times better than oranges
 date: '2020-11-18T18:47:00'
-slug: >-
+permalink: >-
   /blog/dr-zac-talks-about-how-aussie-bush-fruit-thats-50-times-better-than-oranges/
 excerpt: >-
   This week Dr Zac Turner delves into the world of Indigenous medicine.
@@ -13,17 +14,18 @@ excerpt: >-
 categories:
   - 3
   - 4
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: >-
     Dr Zac talks about Aussie bush fruit that’s 50 times better than oranges -
     Doctor Zac
   description: "This week Dr Zac Turner delves into the world of Indigenous medicine. QUESTION:\_ Hi Dr Zac, I am intrigued by the world of natural remedies and want to learn more...."
-thumbnail: /img/dr-zac-bush-fruit-better-than-apples-and-oranges..jpg
+  ogimage: /img/dr-zac-bush-fruit-better-than-apples-and-oranges.jpg
 ---
+
 This week Dr Zac Turner delves into the world of Indigenous medicine.
 
-**_QUESTION:_** 
+**_QUESTION:_**
 
 **_Hi Dr Zac, I am intrigued by the world of natural remedies and want to learn more. With it being NAIDOC week this week, it got me thinking about Australian natural remedies used by Indigenous Australians. Do you know of any that we should all incorporate into our lives for better health? Since I can’t travel overseas, I’m more inclined to explore Australia and its natural world – especially its plants! – Weryk, 24 Brisbane_**
 

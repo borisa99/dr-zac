@@ -9,7 +9,7 @@ const collection = {
   description: 'Blog Authors',
   folder: 'content/authors',
   slug: '{{slug}}',
-  summary: '{{title}}',
+  summary: '{{name}}',
   create: true,
   fields: [
     ID,
@@ -21,7 +21,7 @@ const collection = {
     },
     {
       label: 'Name',
-      name: 'title',
+      name: 'name',
       widget: 'string',
       default: '',
     },

@@ -2,9 +2,10 @@
 id: 870
 type: article
 layout: post
+thumbnail: /img/dr-zac-veganism.png
 title: Veganism and Where Vegans get their Protein
 date: '2020-11-30T22:16:37'
-slug: /blog/veganism-and-where-vegans-get-their-protein/
+permalink: /blog/veganism-and-where-vegans-get-their-protein/
 excerpt: >-
   This week Dr Zac Turner talks about veganism and where vegans get their
   protein. QUESTION: Hi Dr Zac, I’ve been vegan for six months and it has been a
@@ -13,15 +14,16 @@ categories:
   - 3
   - 4
   - 1
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Veganism and Where Vegans get their Protein - Doctor Zac
   description: "This week Dr Zac Turner talks about veganism and where vegans get their protein. QUESTION:\_ Hi Dr Zac, I’ve been vegan for six months and it has been a breeze...."
-thumbnail: /img/dr-zac-veganism..png
+  ogimage: /img/dr-zac-veganism.png
 ---
+
 This week Dr Zac Turner talks about veganism and where vegans get their protein.
 
-_**QUESTION:**_ 
+_**QUESTION:**_
 
 _**Hi Dr Zac, I’ve been vegan for six months and it has been a breeze. What hasn’t been so lovely are the discussions with carnivores who accuse me of being protein deficient.**_
 

@@ -2,9 +2,10 @@
 id: 873
 type: article
 layout: post
+thumbnail: /img/sr-zac-sleep.png
 title: Revealing the perfect number of hours to sleep per night!
 date: '2020-12-11T03:11:04'
-slug: /blog/revealing-the-perfect-number-of-hours-to-sleep-per-night/
+permalink: /blog/revealing-the-perfect-number-of-hours-to-sleep-per-night/
 excerpt: >-
   This week Dr Zac Turner looks at how good sleep can change your life.
   QUESTION: Hi Dr Zac, I’m preparing to reinvigorate my life next year and my
@@ -12,12 +13,13 @@ excerpt: >-
 categories:
   - 3
   - 4
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Revealing the perfect number of hours to sleep per night! - Doctor Zac
   description: "This week Dr Zac Turner looks at how good sleep can change your life. QUESTION:\_Hi Dr Zac, I’m preparing to reinvigorate my life next year and my first point of..."
-thumbnail: /img/sr-zac-sleep..png
+  ogimage: /img/sr-zac-sleep.png
 ---
+
 This week Dr Zac Turner looks at how good sleep can change your life.
 
 **_QUESTION: Hi Dr Zac, I’m preparing to reinvigorate my life next year and my first point of action is working on my sleeping patterns. At the moment I’m trying to squeeze as much as possible into my days, which means I’m currently only getting about five hours sleep._**
@@ -26,7 +28,7 @@ This week Dr Zac Turner looks at how good sleep can change your life.
 
 **_I’ve heard that you’re supposed to get eight hours of sleep every night – but what are the benefits? I seem to be coping on five hours of sleep at the moment. – Nelson, 33 Wagga Wagga_**
 
-**ANSWER:** 
+**ANSWER:**
 
 Great question Nelson, did you know two hours of extra sleep each night can make a huge difference for your health and wellbeing? To put this into perspective, if you went from five hours to seven, that’s an extra 730 hours of sleep you’ll be gaining each year. Just as important is that people who are sleep-deprived can show the same responses and signs as those that are intoxicated.
 

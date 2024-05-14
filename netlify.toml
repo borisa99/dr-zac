@@ -20,3 +20,304 @@
   to = "https://henlo.cleancommit.io/:splat"
   status = 301
   force = true
+
+
+[[redirects]]
+  from = "https://doctorzac.com/2021/02/899/"
+  to = "https://doctorzac.com/blog/899/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2021/02/doctor-zac-reveals-trick-that-helped-rebecca-gibney-lose-weight/"
+  to = "https://doctorzac.com/blog/doctor-zac-reveals-trick-that-helped-rebecca-gibney-lose-weight/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2021/02/doctor-zac-debunks-common-detox-juice-cleanse-diet-myth/"
+  to = "https://doctorzac.com/blog/doctor-zac-debunks-common-detox-juice-cleanse-diet-myth/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/12/doctor-zac-reveals-real-reason-behind-3pm-slump-on-christmas-day/"
+  to = "https://doctorzac.com/blog/doctor-zac-reveals-real-reason-behind-3pm-slump-on-christmas-day/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/12/876/"
+  to = "https://doctorzac.com/blog/876/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/12/revealing-the-perfect-number-of-hours-to-sleep-per-night/"
+  to = "https://doctorzac.com/blog/revealing-the-perfect-number-of-hours-to-sleep-per-night/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/11/veganism-and-where-vegans-get-their-protein/"
+  to = "https://doctorzac.com/blog/veganism-and-where-vegans-get-their-protein/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/11/dr-zac-talks-about-how-aussie-bush-fruit-thats-50-times-better-than-oranges/"
+  to = "https://doctorzac.com/blog/dr-zac-talks-about-how-aussie-bush-fruit-thats-50-times-better-than-oranges/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/11/dr-zacs-10-minute-tactic-to-combat-anxiety-and-stress/"
+  to = "https://doctorzac.com/blog/dr-zacs-10-minute-tactic-to-combat-anxiety-and-stress/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/11/doctor-zac-reveals-the-one-food-that-can-trigger-spots-and-acne/"
+  to = "https://doctorzac.com/blog/doctor-zac-reveals-the-one-food-that-can-trigger-spots-and-acne/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/10/how-to-prevent-skin-cancer-doctor-on-chemicals-to-avoid-in-sunscreen/"
+  to = "https://doctorzac.com/blog/how-to-prevent-skin-cancer-doctor-on-chemicals-to-avoid-in-sunscreen/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/10/what-foods-can-you-eat-to-cure-a-hangover/"
+  to = "https://doctorzac.com/blog/what-foods-can-you-eat-to-cure-a-hangover/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/10/is-an-air-fryer-more-healthy-than-a-deep-fryer-doctor-zac-outlines-the-healthiest-option/"
+  to = "https://doctorzac.com/blog/is-an-air-fryer-more-healthy-than-a-deep-fryer-doctor-zac-outlines-the-healthiest-option/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/09/is-vaping-safer-than-smoking-doctor-zac-reveals-the-truth/"
+  to = "https://doctorzac.com/blog/is-vaping-safer-than-smoking-doctor-zac-reveals-the-truth/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/08/coronavirus-what-are-the-risks-for-pregnant-women-and-can-my-newborn-have-visitors/"
+  to = "https://doctorzac.com/blog/coronavirus-what-are-the-risks-for-pregnant-women-and-can-my-newborn-have-visitors/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2020/04/coronavirus-doctor-zac-turner-shows-us-how-to-makes-face-masks-out-of-t-shirt/"
+  to = "https://doctorzac.com/blog/coronavirus-doctor-zac-turner-shows-us-how-to-makes-face-masks-out-of-t-shirt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/11/does-sugar-cause-alzheimers-disease/"
+  to = "https://doctorzac.com/blog/does-sugar-cause-alzheimers-disease/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/11/what-is-brain-fog-and-how-you-can-beat-it/"
+  to = "https://doctorzac.com/blog/what-is-brain-fog-and-how-you-can-beat-it/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/10/why-vitamin-d-is-an-asthma-sufferers-best-friend/"
+  to = "https://doctorzac.com/blog/why-vitamin-d-is-an-asthma-sufferers-best-friend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/09/how-to-break-up-with-your-doctor-or-gp/"
+  to = "https://doctorzac.com/blog/how-to-break-up-with-your-doctor-or-gp/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/09/hayfever-hacks-how-to-treat-hayfever/"
+  to = "https://doctorzac.com/blog/hayfever-hacks-how-to-treat-hayfever/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/08/home-health-tech-test-for-skin-cancer-at-home-with-skinvision-app/"
+  to = "https://doctorzac.com/blog/home-health-tech-test-for-skin-cancer-at-home-with-skinvision-app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/08/home-health-tech-measure-your-uv-exposure-with-my-uv-patch-app/"
+  to = "https://doctorzac.com/blog/home-health-tech-measure-your-uv-exposure-with-my-uv-patch-app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/08/home-health-tech-ada-the-doctor-in-your-pocket-app/"
+  to = "https://doctorzac.com/blog/home-health-tech-ada-the-doctor-in-your-pocket-app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/08/home-health-tech-test-glucose-levels-for-diabetes-via-patch/"
+  to = "https://doctorzac.com/blog/home-health-tech-test-glucose-levels-for-diabetes-via-patch/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/07/5-tips-that-will-change-your-diet-forever/"
+  to = "https://doctorzac.com/blog/5-tips-that-will-change-your-diet-forever/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/07/winter-workout-hacks-to-lose-weight/"
+  to = "https://doctorzac.com/blog/winter-workout-hacks-to-lose-weight/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/07/winter-workout-hacks-to-build-muscle/"
+  to = "https://doctorzac.com/blog/winter-workout-hacks-to-build-muscle/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/07/winter-workout-hacks-for-core-and-six-pack-success/"
+  to = "https://doctorzac.com/blog/winter-workout-hacks-for-core-and-six-pack-success/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/07/these-supplements-will-burn-fat-whilst-you-sleep-meet-l-carnatine-and-glutanine/"
+  to = "https://doctorzac.com/blog/these-supplements-will-burn-fat-whilst-you-sleep-meet-l-carnatine-and-glutanine/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/06/5-symptoms-you-dont-want-to-ignore/"
+  to = "https://doctorzac.com/blog/5-symptoms-you-dont-want-to-ignore/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/05/these-5-triggers-could-cause-your-migraine-attack/"
+  to = "https://doctorzac.com/blog/these-5-triggers-could-cause-your-migraine-attack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/04/what-is-thai-massage/"
+  to = "https://doctorzac.com/blog/what-is-thai-massage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/04/so-youre-thinking-about-getting-a-boob-job/"
+  to = "https://doctorzac.com/blog/so-youre-thinking-about-getting-a-boob-job/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/brotox-and-the-rise-of-mens-cosmetic-procedures/"
+  to = "https://doctorzac.com/blog/brotox-and-the-rise-of-mens-cosmetic-procedures/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/face-facts-best-skin-care-regime-for-night/"
+  to = "https://doctorzac.com/blog/face-facts-best-skin-care-regime-for-night/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/face-facts-best-skin-care-regime-for-day/"
+  to = "https://doctorzac.com/blog/face-facts-best-skin-care-regime-for-day/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/beautiful-body-natural-skin-remedies/"
+  to = "https://doctorzac.com/blog/beautiful-body-natural-skin-remedies/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/beautiful-body-how-to-treat-rashes-and-blemishes/"
+  to = "https://doctorzac.com/blog/beautiful-body-how-to-treat-rashes-and-blemishes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/beautiful-body-spotlight-on-spots/"
+  to = "https://doctorzac.com/blog/beautiful-body-spotlight-on-spots/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/face-facts-laser-skin-treatment-which-one-is-right-for-you/"
+  to = "https://doctorzac.com/blog/face-facts-laser-skin-treatment-which-one-is-right-for-you/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/altmeds-chiropractic-therapy/"
+  to = "https://doctorzac.com/blog/altmeds-chiropractic-therapy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/altmeds-osteopathy/"
+  to = "https://doctorzac.com/blog/altmeds-osteopathy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/03/altmeds-physiotherapy/"
+  to = "https://doctorzac.com/blog/altmeds-physiotherapy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/cosmetic-procedures-a-philosophy/"
+  to = "https://doctorzac.com/blog/cosmetic-procedures-a-philosophy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/tired-of-looking-tired/"
+  to = "https://doctorzac.com/blog/tired-of-looking-tired/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/what-are-peptides-and-how-do-they-work/"
+  to = "https://doctorzac.com/blog/what-are-peptides-and-how-do-they-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/measles-risks-symptoms-and-the-school-system/"
+  to = "https://doctorzac.com/blog/measles-risks-symptoms-and-the-school-system/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/the-lowdown-on-vitamin-infusions/"
+  to = "https://doctorzac.com/blog/the-lowdown-on-vitamin-infusions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://doctorzac.com/2017/01/to-exfoliate-or-not-to-exfoliate/"
+  to = "https://doctorzac.com/blog/to-exfoliate-or-not-to-exfoliate/"
+  status = 301
+  force = true

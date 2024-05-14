@@ -1,55 +1,51 @@
-import React, { useMemo } from 'react'
+import React from 'react'
+import Image from '../../resolvers/Image'
+import Text from '../UI/Text'
+import Title from '../UI/Title'
 import PostAuthor from './PostAuthor'
-import PostCardContent from './PostCard/PostCardContent'
-import PostCardImage from './PostCard/PostCardImage'
-import PostCardTitle from './PostCard/PostCardTitle'
 import { cn } from '@/lib/helper'
 import Link from '@/resolvers/Link'
 
-export default function PostCard({ data, variant, authors, preview }) {
-  const variant1 = variant === '1'
-  const variant2 = variant === '2'
-  const variantVal = useMemo(() => variant1 ?? variant2, [variant1, variant2])
-
-  // const author = useMemo(() => {
-  //   const authorID =
-  //     data?.author ??
-  //     data?.frontmatter?.author ??
-  //     data?.node?.frontmatter?.author
-  //   return authors.find((authorData) => {
-  //     return (authorData?.node?.frontmatter.id || authorData.id) === authorID
-  //   })
-  // }, [data, authors])
+export default function PostCard({ item, promoted = false, preview }) {
+  console.log(item)
 
   return (
-    <Link to={data?.fields?.slug ?? data?.node?.fields.slug}>
-      <article className={cn({ 'mb-16': variant1 })}>
+    <Link
+      to={item.permalink}
+      className={cn({ 'md:col-span-2 lg:col-span-3 lg:mb-8': promoted })}
+    >
+      <article>
         <div
-          className={cn(
-            'flex w-full flex-col items-center gap-6 ',
-            { 'xl:flex-row xl:gap-16 ': variant1 },
-            {
-              'flex-col gap-6': variant2,
-            },
-          )}
+          className={cn('grid w-full grid-cols-1 gap-6 ', {
+            'lg:grid-cols-2 lg:items-center lg:gap-0': promoted,
+          })}
         >
-          <PostCardImage data={data} variant={variantVal} />
+          {item.thumbnail && (
+            <Image
+              fill="true"
+              src={item.thumbnail}
+              className={cn('aspect-[1.49] w-full max-w-full rounded-xl')}
+            />
+          )}
           <div
-            className={cn(
-              'h-full',
-              { 'w-full xl:w-[35rem]': variant1 },
-              { 'w-full xl:w-[24.5rem]': variant2 },
-            )}
+            className={cn({
+              'lg:pl-6 xl:pl-16': promoted,
+            })}
           >
-            <div className="flex flex-col items-center justify-between text-center xl:h-[11.75rem] xl:items-start xl:text-left">
-              <PostCardTitle data={data} variant={variantVal} />
-              <PostCardContent data={data} variant={variantVal} />
-              {/* <PostAuthor
-                author={author?.node?.frontmatter ?? author}
-                data={data}
-                preview={preview}
-              /> */}
-            </div>
+            <Title
+              variant={promoted ? 'default' : 'xs'}
+              children={item.title}
+              className={cn('mb-4')}
+            />
+            <Text className={'line-clamp-2 text-md text-gray-500'}>
+              {item.excerpt}
+            </Text>
+            <PostAuthor
+              author={item?.author?.frontmatter}
+              className="mt-6"
+              item={item}
+              preview={preview}
+            />
           </div>
         </div>
       </article>

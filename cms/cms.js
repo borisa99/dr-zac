@@ -2,6 +2,7 @@ import CMS from 'decap-cms-app'
 import { Widget as UuidWidget } from 'netlify-cms-widget-id'
 import { Widget as PermalinkWidget } from 'netlify-cms-widget-permalink'
 import authors from './collections/authors'
+import categories from './collections/categories'
 import forms from './collections/forms'
 import media from './collections/media'
 import pages from './collections/pages'
@@ -27,7 +28,16 @@ const config = {
     },
     media_folder: '/static/img',
     public_folder: '/img',
-    collections: [pages, posts, authors, forms, settings, media, videos],
+    collections: [
+      pages,
+      posts,
+      categories,
+      authors,
+      forms,
+      settings,
+      media,
+      videos,
+    ],
   },
 }
 

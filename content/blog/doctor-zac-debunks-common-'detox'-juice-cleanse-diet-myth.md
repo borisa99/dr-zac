@@ -2,23 +2,25 @@
 id: 893
 type: article
 layout: post
+thumbnail: /img/pexels-photo-5947078.jpg
 title: Doctor Zac debunks common ‘detox’ juice cleanse diet myth
 date: '2021-02-04T23:35:52'
-slug: /blog/doctor-zac-debunks-common-detox-juice-cleanse-diet-myth/
+permalink: /blog/doctor-zac-debunks-common-detox-juice-cleanse-diet-myth/
 excerpt: >-
   It’s often touted as the miracle answer to a heavy few days of eating and
   drinking but a doctor has slammed this diet trend as a “myth”. This week Dr…
 categories:
   - 3
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Doctor Zac debunks common ‘detox’ juice cleanse diet myth - Doctor Zac
   description: >-
     It’s often touted as the miracle answer to a heavy few days of eating and
     drinking but a doctor has slammed this diet trend as a “myth”. This week
     Dr...
-thumbnail: /img/pexels-photo-5947078..jpg
+  ogimage: /img/pexels-photo-5947078.jpg
 ---
+
 It’s often touted as the miracle answer to a heavy few days of eating and drinking but a doctor has slammed this diet trend as a “myth”.
 
 This week Dr Zac Turner unpicks the benefits of a juice cleanse.

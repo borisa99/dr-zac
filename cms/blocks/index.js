@@ -83,30 +83,30 @@ const Config = {
     },
     {
       label: 'Articles',
-      name: 'blog',
+      name: 'articles',
       widget: 'object',
       summary: '{{fields.title}}',
       fields: [
         Title,
         Content,
-        {
-          label: 'Category',
-          name: 'category',
-          widget: 'string',
-          required: false,
-        },
         Buttons,
         {
-          label: 'Posts',
-          name: 'posts',
+          label: 'Relation',
+          name: 'relation',
           widget: 'relation',
-          collection: 'blog', // This should match the name of your posts collection
-          search_fields: ['title'], // Fields to search for to populate the dropdown
-          display_fields: ['{{id}} - {{title}}'], // Fields to display in the dropdown
-          value_field: 'id', // Usually the id, but could be any unique aspect of the posts
-          multiple: true, // Set to true if you want to allow selection of multiple posts
+          collection: 'categories',
+          search_fields: ['name'],
+          display_fields: ['{{id}} - {{name}}'],
+          value_field: 'id',
           required: false,
         },
+        SelectField('default', ['default', 'promoted']),
+        SelectField(
+          'by_category',
+          ['by_category', 'recent'],
+          'Display',
+          'display',
+        ),
         SettingsGroup,
       ],
     },

@@ -2,9 +2,10 @@
 id: 880
 type: article
 layout: post
+thumbnail: /img/screen-shot-2020-12-22-at-1.51.35-pm.png
 title: Dr. Zac reveals real reason behind 3pm slump on Christmas Day.
 date: '2020-12-22T21:53:06'
-slug: /blog/doctor-zac-reveals-real-reason-behind-3pm-slump-on-christmas-day/
+permalink: /blog/doctor-zac-reveals-real-reason-behind-3pm-slump-on-christmas-day/
 excerpt: >-
   This week Dr. Zac Turner looks at why you go into a “food coma” after
   Christmas lunch. QUESTION: Hi Dr. Zac, every Christmas I encounter the exact
@@ -12,15 +13,16 @@ excerpt: >-
 categories:
   - 3
   - 4
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Dr. Zac reveals real reason behind 3pm slump on Christmas Day. - Doctor Zac
   description: "This week Dr. Zac Turner looks at why you go into a &#8220;food coma&#8221; after Christmas lunch. QUESTION:\_ Hi Dr. Zac, every Christmas I encounter the exact same conundrum. I..."
-thumbnail: /img/screen-shot-2020-12-22-at-1.51.35-pm..png
+  ogimage: /img/screen-shot-2020-12-22-at-1.51.35-pm.png
 ---
+
 This week Dr. Zac Turner looks at why you go into a “food coma” after Christmas lunch.
 
-_**QUESTION:**_ 
+_**QUESTION:**_
 
 _**Hi Dr. Zac, every Christmas I encounter the exact same conundrum. I wake up with bounding energy but right after lunch, around 3 pm, I become lethargic to the point I must have a nap. Can you explain the science behind my Christmas food coma?**_
 

@@ -37,14 +37,9 @@ blocks:
       massive lasting impact on the rest of your life.
     alignment: default
     variant: default
-  - type: blog
-    variant: homepage
+  - type: articles
+    variant: promoted
     title: Dr. Zac’s Blog
-    posts:
-      - post-detox-juice-myth
-      - post-prefect-sleeping-hours
-      - post-christmas-slump
-      - post-healthy-christmas-presents
     content: I believe that making small changes to your daily routine can have
       massive lasting impact on the rest of your life.
     buttons:
@@ -52,6 +47,13 @@ blocks:
           variant: default
           content: View all articles
           url: /blog
+    display: recent
+    settings:
+      variant: default
+      padding_top: sm
+      padding_bottom: lg
+      margin_top: none
+      margin_bottom: none
   - type: columns
     buttons:
       - button:

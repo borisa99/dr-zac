@@ -2,9 +2,10 @@
 id: 876
 type: article
 layout: post
+thumbnail: /img/pexels-photo-4834893.jpg
 title: '&#8220;Healthy&#8221; Christmas presents that aren&#8217;t that good for you!'
 date: '2020-12-22T21:21:06'
-slug: /blog/876/
+permalink: /blog/876/
 excerpt: >-
   This week, Dr. Zac Turner looks at “healthy” Christmas presents that aren’t
   that good for you. QUESTION: Hi Dr. Zac, my mum has become obsessed with
@@ -12,15 +13,16 @@ excerpt: >-
 categories:
   - 4
   - 5
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: '"Healthy" Christmas presents that aren''t that good for you! - Doctor Zac'
   description: "This week, Dr. Zac Turner looks at &#8220;healthy&#8221; Christmas presents that aren&#8217;t that good for you. QUESTION:\_ Hi Dr. Zac, my mum has become obsessed with health and nutrition this..."
-thumbnail: /img/pexels-photo-4834893..jpg
+  ogimage: /img/pexels-photo-4834893.jpg
 ---
+
 This week, Dr. Zac Turner looks at “healthy” Christmas presents that aren’t that good for you.
 
-_**QUESTION:**_ 
+_**QUESTION:**_
 
 _**Hi Dr. Zac, my mum has become obsessed with health and nutrition this year – I love her dearly and want to get something good for her as a Christmas gift. I’ve been researching some gifts that are health-centric but I can’t tell what’s a sham and what’s legit. So far I’ve found massage guns, air fryers, teeth whiteners, health trackers, pore vacuum and weighted blankets.**_
 

@@ -2,9 +2,10 @@
 id: 896
 type: article
 layout: post
+thumbnail: /img/pexels-photo-4348050.jpg
 title: Doctor Zac reveals trick that helped Rebecca Gibney lose weight
 date: '2021-02-04T23:41:55'
-slug: /blog/doctor-zac-reveals-trick-that-helped-rebecca-gibney-lose-weight/
+permalink: /blog/doctor-zac-reveals-trick-that-helped-rebecca-gibney-lose-weight/
 excerpt: >-
   Rebecca Gibney credited him with helping her lose weight, now Dr Zac Turner
   has revealed the one tip to drop those COVID kilos. This week Dr Zac Turner
@@ -12,15 +13,16 @@ excerpt: >-
 categories:
   - 3
   - 4
-author: 4
+author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Doctor Zac reveals trick that helped Rebecca Gibney lose weight - Doctor Zac
   description: >-
     Rebecca Gibney credited him with helping her lose weight, now Dr Zac Turner
     has revealed the one tip to drop those COVID kilos. This week Dr Zac Turner
     looks at...
-thumbnail: /img/pexels-photo-4348050..jpg
+  ogimage: /img/pexels-photo-4348050.jpg
 ---
+
 Rebecca Gibney credited him with helping her lose weight, now Dr Zac Turner has revealed the one tip to drop those COVID kilos.
 
 This week Dr Zac Turner looks at the best way to lose 10 kilos.

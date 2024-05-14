@@ -28,11 +28,11 @@ export default function Title({
     case 'sm':
       style = `${style} text-2xl lg:text-3xl`
       break
+    case 'xs':
+      style = `${style} text-2xl`
+      break
     case 'heading':
       style = `${style} text-4xl font-title`
-      break
-    case 'article':
-      style = `${style} text-2xl`
       break
     case 'article-variant':
       style = `${style} text-[1.25rem] -tracking-[0.3px]`

@@ -1,5 +1,9 @@
 import cliProgress from 'cli-progress'
+import fs from 'fs'
 import fetch from 'node-fetch'
+import path, { dirname } from 'path'
+import toml from 'toml'
+import { fileURLToPath } from 'url'
 
 export function recursivelyRemoveEmptyElements(element) {
   if (element.children().length === 0 && element.text().trim() === '') {
@@ -28,4 +32,33 @@ export const initiateProgressBar = () => {
     },
     cliProgress.Presets.shades_classic,
   )
+}
+
+export const addRedirect = (from, to, status = 301) => {
+  const rootDir = path.dirname(process.cwd())
+  const netlifyConfigPath = path.join(rootDir, 'netlify.toml')
+  let netlifyConfig = fs.readFileSync(netlifyConfigPath, 'utf8')
+
+  // Parse the existing redirects
+  const existingConfig = toml.parse(netlifyConfig)
+  const existingRedirects = existingConfig.redirects || []
+
+  // Check if the redirect already exists
+  const duplicate = existingRedirects.find(
+    (redirect) => redirect.from === from && redirect.to === to,
+  )
+
+  // If the redirect doesn't exist, add it
+  if (!duplicate) {
+    const redirect = `
+[[redirects]]
+  from = "${from}"
+  to = "${to}"
+  status = ${status}
+  force = true
+`
+
+    netlifyConfig += redirect
+    fs.writeFileSync(netlifyConfigPath, netlifyConfig)
+  }
 }

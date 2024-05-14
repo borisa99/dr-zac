@@ -2,5 +2,5 @@
 id: 5
 type: category
 name: Medical
-slug: medical
+permalink: /blog/category/medical/
 ---
