@@ -7,7 +7,7 @@ import Container from '@/components/UI/Container'
 import Section from '@/components/UI/Section'
 
 export default function TitleBlock({ data }) {
-  const isCentered = data?.alignment == 'centered'
+  const isCentered = data?.alignment === 'centered'
   let titleVariant = 'default'
   let containerClass = 'max-w-[808px]'
   switch (data?.variant) {

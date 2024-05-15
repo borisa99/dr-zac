@@ -1,9 +1,8 @@
 import React from 'react'
-import { useLocation } from '@reach/router'
 import Link from '@/resolvers/Link'
 import nav from '@/settings/main.json'
 
-export default function HeaderNavMobileList() {
+export default function HeaderNavMobileList({ closeList = () => {} }) {
   return (
     <div
       className={`fixed left-0 top-0 z-40 flex h-screen w-full items-center bg-white uppercase leading-4 xl:hidden`}
@@ -13,6 +12,10 @@ export default function HeaderNavMobileList() {
           activeClassName={`text-blue-500`}
           className={`cursor-pointer text-[0.938rem] font-semibold leading-4 `}
           to="/"
+          onClick={() => {
+            document.documentElement.classList.remove('overflow-hidden')
+            closeList()
+          }}
         >
           Home
         </Link>
@@ -23,6 +26,10 @@ export default function HeaderNavMobileList() {
               activeClassName={`text-blue-500`}
               partiallyActive={true}
               to={item.permalink}
+              onClick={() => {
+                document.documentElement.classList.remove('overflow-hidden')
+                closeList()
+              }}
               key={i}
             >
               {item.name}

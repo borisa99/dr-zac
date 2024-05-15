@@ -11,7 +11,7 @@ function RecentArticles({ data, preview = false }) {
         {preview ? (
           'Show the articles here'
         ) : (
-          <LatestArticles promoted={data.variant == 'promoted'} />
+          <LatestArticles promoted={data.variant === 'promoted'} />
         )}
         {data?.buttons && (
           <Buttons

@@ -33,6 +33,7 @@ export default function VideoPlaceholder({
             ) : (
               <img
                 src={`https://i.ytimg.com/vi/${videoID}/hqdefault.jpg`}
+                alt="Play video"
                 className="h-full w-full object-cover"
               />
             )}

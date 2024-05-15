@@ -29,7 +29,7 @@ export default function Articles({ data, preview = false }) {
           <>
             <CategoryArticles
               category={data.relation}
-              promoted={data.variant == 'promoted'}
+              promoted={data.variant === 'promoted'}
             />
           </>
         )}

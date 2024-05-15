@@ -14,13 +14,9 @@ function Header() {
   const handleNav = () => {
     setIsOpen((prev) => {
       if (prev) {
-        document
-          .getElementsByTagName('body')[0]
-          .classList.remove('overflow-hidden')
+        document.documentElement.classList.remove('overflow-hidden')
       } else {
-        document
-          .getElementsByTagName('body')[0]
-          .classList.add('overflow-hidden')
+        document.documentElement.classList.add('overflow-hidden')
       }
       return !prev
     })
@@ -30,9 +26,7 @@ function Header() {
     const closeNavOnScroll = () => {
       if (isOpen) {
         setIsOpen(false)
-        document
-          .getElementsByTagName('body')[0]
-          .classList.remove('overflow-hidden')
+        document.documentElement.classList.remove('overflow-hidden')
       }
     }
 
@@ -79,7 +73,7 @@ function Header() {
           </div>
         </Container>
       </header>
-      {isOpen && <HeaderNavMobileList />}
+      {isOpen && <HeaderNavMobileList closeList={() => setIsOpen(false)} />}
     </>
   )
 }

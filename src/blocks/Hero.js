@@ -60,7 +60,7 @@ export default function Hero({ data }) {
               )}
             />
           )}
-          {data?.decoration == 'signature' && (
+          {data?.decoration === 'signature' && (
             <div className="mt-8">
               <Signature width={129} height={64} />
             </div>

@@ -11,7 +11,7 @@ export default function PostList({ posts, promoted = false, preview = false }) {
               <PostCard
                 key={i}
                 item={item}
-                promoted={promoted ? i == 0 : false}
+                promoted={promoted ? i === 0 : false}
               />
             )
           })}
