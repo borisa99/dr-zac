@@ -83,6 +83,12 @@ Post.propTypes = {
 export const Head = ({ data }) => (
   <DefaultHead data={data.post.frontmatter.seo}>
     <meta id="oty" property="og:type" content="article" />
+    {data?.post?.frontmatter?.author?.frontmatter?.name && (
+      <meta
+        property="author"
+        content={data.post.frontmatter.author.frontmatter.name}
+      />
+    )}
   </DefaultHead>
 )
 

@@ -11,20 +11,20 @@
 
 [[redirects]]
   from = "https://henlo.netlify.app"
-  to = "https://henlo.cleancommit.io"
+  to = "https://doctorzac.com"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://henlo.netlify.app/*"
-  to = "https://henlo.cleancommit.io/:splat"
+  to = "https://doctorzac.com/:splat"
   status = 301
   force = true
 
 
 [[redirects]]
   from = "https://doctorzac.com/2021/02/899/"
-  to = "https://doctorzac.com/blog/899/"
+  to = "https://doctorzac.com/blog/what-constitutes-a-healthy-poo/"
   status = 301
   force = true
 
