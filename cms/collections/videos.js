@@ -45,7 +45,7 @@ const collection = {
       name: 'permalink',
       widget: 'string',
       default: '',
-      required: false,
+      required: true,
     },
   ],
 }

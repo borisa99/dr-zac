@@ -14,7 +14,7 @@ export default function Video({ data }) {
     >
       <Container className="w-full">
         {/* Video homepage block */}
-        <div> {isHomepage && <VideoPlayer data={data} />}</div>
+        <div> {isHomepage && <VideoPlayer data={data} single />}</div>
 
         {/* Video page block list */}
         {!isHomepage && data.videos.length > 0 && (

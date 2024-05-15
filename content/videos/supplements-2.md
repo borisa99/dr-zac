@@ -1,8 +1,7 @@
 ---
 id: drzac-tips-supplements-2
 type: videos
-title: Supplements <span>#drzacstip</span>
-permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
-thumbnail: /img/video/videos/supplements3.jpg
-excerpt: Dr Zac sheds some light on the supplements L-Carnatine and Glutamine and their uses – find out how these exercise supplements can benefit you!
+title: All About Vitamins
+permalink: https://www.youtube-nocookie.com/embed/4B74JRRQKd0
+excerpt: Are you getting too many vitamins? Dr Zac discusses the the signs and symptoms.
 ---

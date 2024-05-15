@@ -11,15 +11,15 @@ import Layout from '@/components/Layout'
 const Category = ({ data, pageContext }) => {
   return (
     <Layout>
-      <div className="bg-blue-100 pb-32">
-        <Container className="pt-[14.25rem]">
-          <Title Tag="h1" variant="hero">
+      <div className="bg-blue-100 pb-16 lg:pb-32">
+        <Container className="pt-40 lg:pt-64 xl:pt-80">
+          <Title Tag="h1" variant="hero" className="text-center lg:text-left">
             {data?.category.frontmatter?.name}
           </Title>
         </Container>
       </div>
       <CategorySelector
-        data={{ settings: { padding_top: 'md', padding_bottom: 'sm' } }}
+        data={{ settings: { padding_top: 'md', padding_bottom: 'md' } }}
       />
       <Container>
         <PostList posts={data.posts.edges}></PostList>

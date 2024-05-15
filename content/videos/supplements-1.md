@@ -1,8 +1,7 @@
 ---
 id: drzac-tips-supplements-1
 type: videos
-title: Supplements <span>#drzacstip</span>
-permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
-thumbnail: /img/video/videos/supplements2.jpg
-excerpt: Dr Zac sheds some light on the supplements L-Carnatine and Glutamine and their uses – find out how these exercise supplements can benefit you!
+title: All About Supplements
+permalink: https://www.youtube-nocookie.com/embed/dovWcHRa13k
+excerpt: Dr Zac explains what pre-workouts are and how they can help you achieve your fitness goals.
 ---

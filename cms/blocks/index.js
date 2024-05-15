@@ -163,6 +163,7 @@ const Config = {
           multiple: true,
           required: false,
         },
+        SettingsGroup,
       ],
     },
     {

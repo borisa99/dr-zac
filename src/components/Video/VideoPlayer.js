@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import VideoPlaceholder from './VideoPlaceholder'
 
-export default function VideoPlayer({ data }) {
+export default function VideoPlayer({ data, single = false }) {
   const [isPlaying, setIsPlaying] = useState(false)
 
   const videoUrl = useMemo(
@@ -12,7 +12,7 @@ export default function VideoPlayer({ data }) {
   return (
     <>
       <div
-        className={`relative mx-auto flex h-full w-full max-w-[40rem] justify-center overflow-hidden rounded-[1.25rem] pt-[52.25%] md:max-w-full`}
+        className={`relative mx-auto flex aspect-video w-full justify-center overflow-hidden rounded-[1.25rem]`}
       >
         {isPlaying && (
           <iframe
@@ -25,7 +25,11 @@ export default function VideoPlayer({ data }) {
           />
         )}
         {!isPlaying && (
-          <VideoPlaceholder onIsPlaying={setIsPlaying} data={data} />
+          <VideoPlaceholder
+            onIsPlaying={setIsPlaying}
+            data={data}
+            single={single}
+          />
         )}
       </div>
     </>

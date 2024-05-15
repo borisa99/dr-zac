@@ -2,7 +2,6 @@
 id: drzac-tips-summerbody
 type: videos
 title: Summer Body <span>#drzacstip</span>
-permalink: https://www.youtube-nocookie.com/embed/Ao1n4G3mVdo
-thumbnail: /img/video/videos/summer1.jpg
-excerpt: Dr Zac shares his morning smoothie booster ideas for those days when you’re too rushed to think about breakfast.
+permalink: https://www.youtube-nocookie.com/embed/gosDDd-m7t0
+excerpt: Dr Zac shares his diet tips on which winter comfort foods to avoid that will help you achieve that summer body!
 ---

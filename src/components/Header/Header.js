@@ -12,59 +12,75 @@ import Link from '@/resolvers/Link'
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const handleNav = () => {
-    setIsOpen((prev) => !prev)
+    setIsOpen((prev) => {
+      if (prev) {
+        document
+          .getElementsByTagName('body')[0]
+          .classList.remove('overflow-hidden')
+      } else {
+        document
+          .getElementsByTagName('body')[0]
+          .classList.add('overflow-hidden')
+      }
+      return !prev
+    })
   }
 
   useEffect(() => {
     const closeNavOnScroll = () => {
       if (isOpen) {
         setIsOpen(false)
+        document
+          .getElementsByTagName('body')[0]
+          .classList.remove('overflow-hidden')
       }
     }
 
-    window.addEventListener('scroll', closeNavOnScroll)
+    window.addEventListener('resize', closeNavOnScroll)
 
     return () => {
-      window.removeEventListener('scroll', closeNavOnScroll)
+      window.removeEventListener('resize', closeNavOnScroll)
     }
   }, [isOpen])
 
   return (
-    <header className="absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2 bg-transparent  text-[0.813rem]  text-black">
-      <Container className="m-auto flex items-start justify-between py-5 xl:justify-between">
-        <Link to="/" className="cursor-pointer text-2xl font-bold">
-          <Image alt="Dr Zac Logo" src={logo} className="antialiased" />
-        </Link>
-        <div className="flex items-center gap-[2rem]">
-          <HeaderNavList />
-          <button
-            aria-label={isOpen ? 'Close' : 'Open'}
-            onClick={handleNav}
-            className="relative z-50 h-14 w-14 rounded bg-transparent focus:outline-none xl:hidden"
-          >
-            <div className="absolute left-6 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
-              <span
-                className={`absolute block h-0.5 w-7 transform bg-current text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : ' -translate-y-1.5'}`}
-              ></span>
-              <span
-                className={`absolute block  h-0.5 w-5 transform bg-current   text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
-              ></span>
-              <span
-                className={`absolute block  h-0.5 w-7 transform bg-current text-blue-500  transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : ' translate-y-1.5'}`}
-              ></span>
-            </div>
-          </button>
-          {isOpen && <HeaderNavMobileList />}
-          <Button
-            button={{
-              url: 'https://conciergedoctors.com.au/pages/new-patient?ref=drzac',
-            }}
-            children="Book a consultation"
-            className="hidden xl:inline-block"
-          />
-        </div>
-      </Container>
-    </header>
+    <>
+      <header className="absolute left-1/2 top-0 z-[50] flex w-full -translate-x-1/2 bg-transparent  text-[0.813rem]  text-black">
+        <Container className="m-auto flex items-start justify-between py-5 xl:justify-between">
+          <Link to="/" className="cursor-pointer text-2xl font-bold">
+            <Image alt="Dr Zac Logo" src={logo} className="antialiased" />
+          </Link>
+          <div className="flex items-center gap-[2rem]">
+            <HeaderNavList />
+            <button
+              aria-label={isOpen ? 'Close' : 'Open'}
+              onClick={handleNav}
+              className="relative z-50 h-14 w-14 rounded bg-transparent focus:outline-none xl:hidden"
+            >
+              <div className="absolute left-6 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
+                <span
+                  className={`absolute block h-0.5 w-7 transform bg-current text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : ' -translate-y-1.5'}`}
+                ></span>
+                <span
+                  className={`absolute block  h-0.5 w-5 transform bg-current   text-blue-500 transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
+                ></span>
+                <span
+                  className={`absolute block  h-0.5 w-7 transform bg-current text-blue-500  transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : ' translate-y-1.5'}`}
+                ></span>
+              </div>
+            </button>
+            <Button
+              button={{
+                url: 'https://conciergedoctors.com.au/pages/new-patient?ref=drzac',
+              }}
+              children="Book a consultation"
+              className="hidden xl:inline-block"
+            />
+          </div>
+        </Container>
+      </header>
+      {isOpen && <HeaderNavMobileList />}
+    </>
   )
 }
 

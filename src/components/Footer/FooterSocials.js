@@ -7,10 +7,18 @@ import Image from '@/resolvers/Image'
 import Link from '@/resolvers/Link'
 
 const socials = [
-  { src: fb, url: 'https://www.facebook.com' },
-  { src: inst, url: 'https://www.instagram.com' },
-  { src: yt, url: 'https://www.youtube.com' },
-  { src: twit, url: 'https://twitter.com' },
+  { src: fb, url: 'https://www.facebook.com/Drzacturner/', name: 'Facebook' },
+  {
+    src: inst,
+    url: 'https://www.instagram.com/drzacturner/',
+    name: 'Instagram',
+  },
+  {
+    src: yt,
+    url: 'https://www.youtube.com/channel/UCpp-gbC1f3hZ6nBapnRzYYw/videos',
+    name: 'YouTube',
+  },
+  // { src: twit, url: 'https://twitter.com' },
 ]
 
 export default function FooterSocials() {
@@ -27,6 +35,7 @@ export default function FooterSocials() {
               className="cursor-pointer text-black"
               target="_blank"
             >
+              <div className="sr-only">Dr Zac's {social.name}</div>
               {/* <social.Icon /> */}
               <Image src={social.src} />
             </Link>

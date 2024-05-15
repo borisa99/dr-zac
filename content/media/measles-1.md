@@ -1,7 +1,6 @@
 ---
 id: drzac-media-measles-1
 type: media
-title: Dr Zac Talks Measles Warning With Today Extra
-permalink: https://www.youtube-nocookie.com/embed/FbfHclUaYGo
-thumbnail: /img/media/measles.jpg
+title: Dr Zac Talks Fix Your Sleep With Today Extra
+permalink: https://www.youtube-nocookie.com/embed/D9_Iu4SGU7Q
 ---

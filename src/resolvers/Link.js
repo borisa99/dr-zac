@@ -9,7 +9,7 @@ export default function Link({ to, className, children, ...props }) {
         <a
           href={to}
           className={className}
-          target="_blank"
+          target={to.startsWith('http') ? '_blank' : '_self'}
           rel="noopener noreferrer"
           {...props}
         >

@@ -32,7 +32,7 @@ export default function Hero({ data }) {
         </div>
       )}
       <Container
-        className={cn('flex flex-col items-center pt-[14.25rem] xl:flex-row', {
+        className={cn('flex flex-col items-center pt-[12.25rem] xl:flex-row', {
           'relative col-start-1 row-start-1 justify-center pb-32': isDefault,
           'grid-cols-2 gap-6 lg:grid': isSideImage,
         })}

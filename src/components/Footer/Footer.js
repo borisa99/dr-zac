@@ -10,7 +10,7 @@ import footer from '@/settings/footer.json'
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 mt-auto w-full bg-white pt-10 text-paragraph ">
+    <footer className="text-paragraph bottom-0 mt-auto w-full bg-white pt-10 ">
       <Container>
         <FooterNewsletter />
         <div className="flex flex-col items-center justify-center gap-6 pb-10 pt-[3.75rem] xl:flex-row xl:items-start xl:justify-between ">
@@ -20,7 +20,7 @@ export default function Footer() {
           <FooterCTA />
           <div className="flex flex-col items-center justify-center xl:items-start ">
             <h3 className="mb-3 text-[0.813rem] uppercase text-[#888]">Menu</h3>
-            <ul className="flex flex-col gap-y-2">
+            <nav className="flex flex-col gap-y-2">
               {footer.footer.map((item, i) => (
                 <Link
                   className="cursor-pointer text-center text-black xl:text-left"
@@ -30,7 +30,7 @@ export default function Footer() {
                   {item.name}
                 </Link>
               ))}
-            </ul>
+            </nav>
           </div>
           <FooterSocials />
         </div>
