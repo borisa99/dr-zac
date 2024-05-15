@@ -14,7 +14,6 @@ export default function HeaderNavMobileList({ closeList = () => {} }) {
           to="/"
           onClick={() => {
             document.documentElement.classList.remove('overflow-hidden')
-            closeList()
           }}
         >
           Home
@@ -28,7 +27,6 @@ export default function HeaderNavMobileList({ closeList = () => {} }) {
               to={item.permalink}
               onClick={() => {
                 document.documentElement.classList.remove('overflow-hidden')
-                closeList()
               }}
               key={i}
             >
