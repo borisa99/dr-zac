@@ -13,7 +13,6 @@ excerpt: >-
 categories:
   - 4
   - 5
-  - 1
 author: 'a1d1172a-8736-47c1-831d-3e508729fee2'
 seo:
   title: Is vaping safer than smoking? Doctor Zac reveals the truth! - Doctor Zac

@@ -61,6 +61,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     posts: [MarkdownRemark] @link(by: "frontmatter.id")
     media: [MarkdownRemark] @link(by: "frontmatter.id")
     videos: [MarkdownRemark] @link(by: "frontmatter.id")
+    columns: [Column]
+  }
+
+  type Column {
+    title: String
+    content: String
+    photo: Photo
   }
 
   type Settings {
