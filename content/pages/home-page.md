@@ -4,11 +4,12 @@ type: page
 layout: page-builder
 title: Home
 permalink: /
-thumbnail: ""
+thumbnail: ''
 blocks:
   - type: hero
     title: Hi, I'm <span class='text-blue-500'>Doctor Zac</span>
-    content: I am passionate about proactive, preventative healthcare, and inspiring
+    content:
+      I am passionate about proactive, preventative healthcare, and inspiring
       others to live happier and healthier for longer. My specialty is bespoke
       vitality, medication formulation, and aesthetics so that all my patients
       thrive in their everyday lives.
@@ -21,9 +22,6 @@ blocks:
     photo:
       alt: Dr Zac
       image: /img/dr-zac-home.jpg
-    photo2:
-      alt: Dr Zac signature
-      image: /img/header/signature.png
     decoration: signature
   - type: title
     variant: default
