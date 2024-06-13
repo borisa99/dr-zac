@@ -17,10 +17,10 @@ const config = {
   config: {
     load_config_file: false,
     display_url: process.env.GATSBY_APP_URL,
-    local_backend: true,
+    // local_backend: true,
     backend: {
       name: 'git-gateway',
-      // branch: 'next',
+      branch: 'main',
     },
     slug: {
       encoding: 'ascii',
