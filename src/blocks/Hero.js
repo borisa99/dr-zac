@@ -11,15 +11,17 @@ import Image from '@/resolvers/Image'
 export default function Hero({ data }) {
   const isDefault = data?.variant === 'default'
   const isSideImage = data?.variant === 'aside'
+  const isFull = data?.variant === 'full-light'
 
   return (
     <Section
       settings={data?.settings}
       className={cn('relative bg-blue-100', {
         'grid grid-cols-1 grid-rows-1 justify-center text-center': isDefault,
+        'grid grid-cols-1 grid-rows-1': isFull,
       })}
     >
-      {data?.photo?.image && isDefault && (
+      {data?.photo?.image && (isDefault || isFull) && (
         <div className="col-span-1 col-start-1 row-start-1">
           <Image
             src={data?.photo?.image}
@@ -33,6 +35,8 @@ export default function Hero({ data }) {
       <Container
         className={cn('flex flex-col items-center pt-[12.25rem] xl:flex-row', {
           'relative col-start-1 row-start-1 justify-center pb-32': isDefault,
+          'relative col-start-1 row-start-1 pb-32 lg:flex-row lg:pt-[256px]':
+            isFull,
           'grid-cols-2 gap-6 lg:grid': isSideImage,
         })}
       >
@@ -40,11 +44,19 @@ export default function Hero({ data }) {
           <Title
             Tag="h1"
             variant="hero"
-            className={cn('mb-3', { 'xl:text-center': isDefault })}
+            className={cn('mb-3', {
+              'xl:text-center': isDefault,
+              'text-center text-white lg:text-left': isFull,
+            })}
           >
             {data?.title}
           </Title>
-          <Text className={cn({ 'mx-auto text-center': isDefault })}>
+          <Text
+            className={cn({
+              'mx-auto text-center': isDefault,
+              'text-center text-white lg:text-left': isFull,
+            })}
+          >
             {data?.content}
           </Text>
           {data?.buttons && (
@@ -56,12 +68,20 @@ export default function Hero({ data }) {
                 {
                   'justify-center': isDefault,
                 },
+                {
+                  'lg:justify-start': isFull,
+                },
                 { 'xl:justify-start': !isDefault },
               )}
             />
           )}
           {data?.decoration === 'signature' && (
-            <div className="mt-8">
+            <div
+              className={cn('mt-8', {
+                'mx-auto text-white lg:mx-0': isFull,
+                'text-black': !isFull,
+              })}
+            >
               <Signature width={129} height={64} />
             </div>
           )}

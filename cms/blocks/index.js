@@ -23,7 +23,7 @@ const Config = {
         Buttons,
         ImageField(),
         SelectField('none', ['none', 'signature'], 'Decoration', 'decoration'),
-        SelectField('default', ['default', 'aside']),
+        SelectField('default', ['default', 'aside', 'full-light']),
       ],
     },
     {

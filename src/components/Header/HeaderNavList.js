@@ -1,10 +1,16 @@
 import React from 'react'
+import { cn } from '../../lib/helper'
 import Link from '@/resolvers/Link'
 import nav from '@/settings/main.json'
 
-export default function HeaderNavList() {
+export default function HeaderNavList({ className = '' }) {
   return (
-    <div className="hidden items-center uppercase leading-4 xl:flex">
+    <div
+      className={cn(
+        'hidden items-center uppercase leading-4 xl:flex',
+        className,
+      )}
+    >
       <nav className="flex gap-10">
         {nav.nav.map((item, i) => {
           return (

@@ -1,5 +1,5 @@
 import Blocks from '../blocks'
-import { ID } from '../fields'
+import { ID, SelectField } from '../fields'
 import { PermalinkField } from '../fields/permalink-field'
 import seo from '../fields/seo'
 
@@ -28,6 +28,7 @@ const collection = {
       name: 'title',
       widget: 'string',
     },
+    SelectField('default', ['default', 'light'], 'Header Type', 'header'),
     PermalinkField(),
     Blocks,
     seo,

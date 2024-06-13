@@ -17,7 +17,7 @@ const Page = ({ data }) => {
   })
 
   return (
-    <Layout nav={true}>
+    <Layout nav={true} header={data?.page?.frontmatter?.header || 'default'}>
       <PageBuilder blocks={blocksUpdated} />
     </Layout>
   )
@@ -49,6 +49,7 @@ export const basicPageQuery = graphql`
       frontmatter {
         id
         title
+        header
         ...Blocks
         ...Seo
       }

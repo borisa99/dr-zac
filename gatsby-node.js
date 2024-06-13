@@ -15,6 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type MarkdownRemarkFrontmatter {
     id: String
     title: String
+    header: String
     tags: [String]
     author: MarkdownRemark @link(by: "frontmatter.id") @dontInfer
     categories: [MarkdownRemark] @link(by: "frontmatter.id")
